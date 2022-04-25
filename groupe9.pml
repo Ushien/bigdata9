@@ -159,7 +159,16 @@ databases {
 }
 
 physical schemas {
-	
+	relational schema myRelSchema : MySQL{
+		table Categories{
+			columns{
+				categoryId,
+				categoryName,
+				description,
+				picture
+			}
+		}
+	}
 }
 
 mapping rules{
