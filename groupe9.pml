@@ -55,7 +55,38 @@ conceptual schema conceptualSchema{
 			territoryID
 		}          
 	}
-
+	entity type Customers {
+		customerId : string,
+		companyName : string,
+		contactName : string,
+		contactTitle : string,
+		address : string,
+		city : string,
+		region : string,
+		postalCode : string,
+		coutry : string,
+		phone : string,
+		fax : string
+		identifier {
+			customerId
+		}
+	}
+	entity type Suppliers {
+		supplierId : string,
+		companyName : string,
+		contactName : string,
+		address : string,
+		city : string,
+		region : string,
+		postalCode : string,
+		country : string,
+		phone : string,
+		fax : string,
+		homePage : string
+		identifier {
+			supplierId
+		}	
+	}
 }
 
 databases {
