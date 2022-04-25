@@ -1,4 +1,40 @@
 conceptual schema conceptualSchema{
+	
+	entity type Categories{
+		categoryId : int,
+		categoryName : string,
+		description : string,
+		picture : blob
+		identifier {
+			categoryId
+		}
+	}
+	
+	entity type Orders{
+		orderId : int,
+		freight : float,
+		orderDate : datetime,
+		requiredDate : string
+		identifier {
+			orderId
+		}
+	}
+	
+	entity type ShipmentInfo{
+		shipperId : int,
+		companyName : string,
+		phone : string,
+		shippedDate : datetime,
+		shipName : string,
+		shipAddress : string,
+		shipCity : string,
+		shipRegion : string,
+		shipPostalCode : string,
+		shipCountry : string
+		identifier {
+			shipperId
+		}
+	}
 
 	entity type Products {
 		productId : int,
