@@ -205,6 +205,24 @@ physical schemas {
 			}
 		}
 	}
+	key value schema myRedisSchema : Redis{
+		kvpairs SuppliersKV{
+			key : "SUPPLIER:"[id],
+			value : hash{
+				CompanyName,
+				ContactName,
+				ContactTitle,
+				Address,
+				City,
+				Region,
+				PostalCode,
+				Country,
+				Phone,
+				Fax,
+				HomePage
+			}
+		}
+	}
 }
 
 mapping rules{
