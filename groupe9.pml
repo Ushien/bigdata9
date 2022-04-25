@@ -204,6 +204,27 @@ physical schemas {
 				picture
 			}
 		}
+		table Region{
+			columns{
+				RegionID,
+				RegionDescription
+			}
+		}
+		table Territories{
+			columns{
+				TerritoryID,
+				TerritoryDescription	
+			}
+			references{
+				RegionRef : RegionRef -> Region.RegionID
+			}
+		}
+		table EmployeeTerritories{
+			references{
+				EmployeeRef : EmployeeRef -> Employees.EmployeeId
+				TerritoryRef : TerritoryRef -> Territories.TerritoryId
+			}
+		}
 	}
 	key value schema myRedisSchema : Redis{
 		kvpairs SuppliersKV{
