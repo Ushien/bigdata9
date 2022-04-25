@@ -130,7 +130,7 @@ conceptual schema conceptualSchema{
 	
 	relationship type concern{
 		product[0-N] : Products,
-		category[1] : Category
+		category[1] : Categories
 	}
 	
 	relationship type orders_details{
