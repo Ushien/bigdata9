@@ -3,6 +3,8 @@ conceptual schema conceptualSchema{
 	entity type Products {
 		productId : int,
 		productName : string,
+		supplierRef : int,
+		categoryRef : int,
 		quantityPerUnit : string,
 		unitPrice : float,
 		unitsInStock : int,
@@ -11,42 +13,6 @@ conceptual schema conceptualSchema{
 		discontinued : bool
 		identifier {
 			productId
-		}
-	}
-	
-	entity type Categories{
-		categoryId : int,
-		categoryName : string,
-		description : string,
-		picture : blob
-		identifier {
-			categoryId
-		}
-	}
-	
-	entity type Orders{
-		orderId : int,
-		freight : float,
-		orderDate : datetime,
-		requiredDate : string
-		identifier {
-			orderId
-		}
-	}
-	
-	entity type ShipmentInfo{
-		shipperId : int,
-		companyName : string,
-		phone : string,
-		shippedDate : datetime,
-		shipName : string,
-		shipAddress : string,
-		shipCity : string,
-		shipRegion : string,
-		shipPostalCode : string,
-		shipCountry : string
-		identifier {
-			shipperId
 		}
 	}
 	
@@ -120,6 +86,53 @@ conceptual schema conceptualSchema{
 		identifier {
 			supplierId
 		}	
+	}
+	relationship type supply{
+		suppliedProduct[0-N] : Products,
+		supplier[1] : Suppliers
+	}
+	
+	relationship type concern{
+		product[0-N] : Products,
+		category[1] : Category
+	}
+	
+	relationship type orders_details{
+		ordered_product[0-N] : Products,
+		order[0-N] : Orders,
+		unitPrice : int,
+		qty : int,
+		discount : int
+	}
+	
+	relationship type submit{
+		orderedByCustomer[0-N] : Orders,
+		customer[1] : Customers
+	}
+	
+	relationship type accountableEmployee{
+		orders[0-N] : Orders,
+		accountableEmployee[1] : Employees
+	}
+	
+	relationship type hierarchy{
+		hasEmployees[0-N] : Employees,
+		subordinateOf[0-1] : Employees
+	}
+	
+	relationship type employeeTerritories{
+		territories[0-N] : Territories,
+		employee[0-N] : Employees
+	}
+	
+	relationship type territoryRegions{
+		territory[0-N] : Territories,
+		regions[1] : Region
+	}
+	
+	relationship type shipment{
+		orderShipped[1] : Orders,
+		shipper[0-1] : ShipmentInfo
 	}
 }
 
