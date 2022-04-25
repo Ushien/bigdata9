@@ -125,6 +125,24 @@ conceptual schema conceptualSchema{
 
 databases {
 	
+	mysql MySQL{
+		host : "localhost"
+		port : 3399
+		dbname : "reldata"
+		login : "root"
+		password : "password"
+	}
+	
+	redis Redis{
+		host : "localhost"
+		port : 6666
+	}
+	
+	mongodb Mongo{
+	host : "localhost"
+	port : 27777
+	dbname : "myMongoDB"
+	}	
 }
 
 physical schemas {
