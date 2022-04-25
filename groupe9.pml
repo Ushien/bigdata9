@@ -204,45 +204,29 @@ physical schemas {
 				picture
 			}
 		}
-		table Region{
+		
+		table Products
 			columns{
-				RegionID,
-				RegionDescription
-			}
-		}
-		table Territories{
+				ProductID: int
+				ProductName: string
+				SupplierRef: int
+				CategoryRef: int
+				QuantityPerUnit : string
+				UnitPrice: float
+				UnitIsInStock: bool
+				UnitsOnOrder: int
+				ReorderLevel: int
+				Discountinued: int}
+				
+		
+		table Order_Details
 			columns{
-				TerritoryID,
-				TerritoryDescription	
-			}
-			references{
-				RegionRef : RegionRef -> Region.RegionID
-			}
-		}
-		table EmployeeTerritories{
-			references{
-				EmployeeRef : EmployeeRef -> Employees.EmployeeId
-				TerritoryRef : TerritoryRef -> Territories.TerritoryId
-			}
-		}
-	}
-	key value schema myRedisSchema : Redis{
-		kvpairs SuppliersKV{
-			key : "SUPPLIER:"[id],
-			value : hash{
-				CompanyName,
-				ContactName,
-				ContactTitle,
-				Address,
-				City,
-				Region,
-				PostalCode,
-				Country,
-				Phone,
-				Fax,
-				HomePage
-			}
-		}
+				OrderRef: int
+				ProductRef: int
+				UnitPrice: float
+				Quantity: int
+				Discount: int}
+					
 	}
 }
 
