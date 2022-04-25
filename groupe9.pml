@@ -148,17 +148,17 @@ conceptual schema conceptualSchema{
 	
 	relationship type accountableEmployee{
 		orders[0-N] : Orders,
-		accountableEmployee[1] : Employees
+		accountableEmployee[1] : Employee
 	}
 	
 	relationship type hierarchy{
-		hasEmployees[0-N] : Employees,
-		subordinateOf[0-1] : Employees
+		hasEmployees[0-N] : Employee,
+		subordinateOf[0-1] : Employee
 	}
 	
 	relationship type employeeTerritories{
 		territories[0-N] : Territories,
-		employee[0-N] : Employees
+		employee[0-N] : Employee
 	}
 	
 	relationship type territoryRegions{
