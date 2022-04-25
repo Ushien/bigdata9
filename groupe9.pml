@@ -201,7 +201,7 @@ physical schemas {
 				categoryId,
 				categoryName,
 				description,
-				pictures
+				picture
 			}
 		}
 	}
