@@ -136,7 +136,7 @@ conceptual schema conceptualSchema{
 	relationship type orders_details{
 		ordered_product[0-N] : Products,
 		order[0-N] : Orders,
-		unitPrice : int,
+		unitPrice : float,
 		qty : int,
 		discount : int
 	}
