@@ -231,5 +231,9 @@ physical schemas {
 }
 
 mapping rules{
-	
+	conceptualSchema.Products(productId, productName, supplierRef, categoryRef, quantityPerUnit, unitPrice, unitPrice,
+	 unitsInStock, unitsOnOrder, reorderLevel, discontinued -> myRelSchema.Products(ProductID, ProductName, SupplierRef,
+	 CategoryRef, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued)
+	conceptualSchema.orders_details(ordered_product, order, UnitPrice, qty, discount) -> myRelSchema.Order_Details(OrderRef,
+	ProductRef, UnitPrice, Quantity, Discount)
 }
