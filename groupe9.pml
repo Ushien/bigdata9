@@ -205,35 +205,76 @@ physical schemas {
 			}
 		}
 		
-		table Products
+		table Territories{
 			columns{
-				ProductID: int
-				ProductName: string
-				SupplierRef: int
-				CategoryRef: int
-				QuantityPerUnit : string
-				UnitPrice: float
-				UnitIsInStock: bool
-				UnitsOnOrder: int
-				ReorderLevel: int
-				Discountinued: int}
-				
+				TerritoryID,
+				TerritoryDescription	
+			}
+			references{
+				RegionRef : RegionRef -> Region.RegionID
+			}
+		}
 		
-		table Order_Details
+		table EmployeeTerritories{
 			columns{
-				OrderRef: int
-				ProductRef: int
-				UnitPrice: float
-				Quantity: int
-				Discount: int}
-					
+				EmployeeRef,
+				TerritoryRef
+			}
+			references{
+				EmployeeRef : EmployeeRef -> Employees.EmployeeId
+				TerritoryRef : TerritoryRef -> Territories.TerritoryId
+			}
+		}
+		
+		table Products{
+			columns{
+				ProductID,
+				ProductName,
+				SupplierRef,
+				CategoryRef,
+				QuantityPerUnit,
+				UnitPrice,
+				UnitIsInStock,
+				UnitsOnOrder,
+				ReorderLevel,
+				Discountinued
+			}	
+		}
+		
+		table Order_Details{
+			columns{
+				OrderRef,
+				ProductRef,
+				UnitPrice,
+				Quantity,
+				Discount
+			}
+		}				
+	}
+	key value schema myRedisSchema : Redis{
+		kvpairs SuppliersKV{
+			key : "SUPPLIER:"[id],
+			value : hash{
+				CompanyName,
+				ContactName,
+				ContactTitle,
+				Address,
+				City,
+				Region,
+				PostalCode,
+				Country,
+				Phone,
+				Fax,
+				HomePage
+			}
+		}
 	}
 }
 
 mapping rules{
-	conceptualSchema.Products(productId, productName, supplierRef, categoryRef, quantityPerUnit, unitPrice, unitPrice,
-	 unitsInStock, unitsOnOrder, reorderLevel, discontinued -> myRelSchema.Products(ProductID, ProductName, SupplierRef,
-	 CategoryRef, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued)
+	conceptualSchema.Products(productId, productName, supplierRef, categoryRef, quantityPerUnit, unitPrice,
+	 unitsInStock, unitsOnOrder, reorderLevel, discontinued )-> myRelSchema.Products(ProductID, ProductName, SupplierRef,
+	 CategoryRef, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued),
 	conceptualSchema.orders_details(ordered_product, order, UnitPrice, qty, discount) -> myRelSchema.Order_Details(OrderRef,
 	ProductRef, UnitPrice, Quantity, Discount)
 }
