@@ -254,8 +254,8 @@ physical schemas {
 			columns{
 				ProductID,
 				ProductName,
-				//SupplierRef,
-				//CategoryRef,
+				\\SupplierRef,
+				\\CategoryRef,
 				QuantityPerUnit,
 				UnitPrice,
 				UnitIsInStock,
@@ -263,6 +263,9 @@ physical schemas {
 				ReorderLevel,
 				Discountinued
 			}	
+			//references{SupplierRef: SupplierRef -> myRedisSchema.key,
+			//CategoryRef: CategoryRef -> \\mettre nom schema.Categories.categoryId
+			
 		}
 		
 		table Order_Details{
@@ -273,7 +276,11 @@ physical schemas {
 				Quantity,
 				Discount
 			}
-		}				
+			//references {OrderRef: Order.OrderID -> myDocSchema.\\mettre nom schema._id,
+			//ProductRef: ProductRef-> myRelSchema.Products.ProductID }
+		}	
+	
+				
 	}
 	key value schema myRedisSchema : Redis{
 		kvpairs SuppliersKV{
