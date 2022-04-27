@@ -205,6 +205,30 @@ physical schemas {
 			}
 		}
 		
+		table Employees{
+			columns{
+				employeeID,     
+				lastName,      
+				firstName,   
+				title,        
+				titleOfCourtesy,
+				birthDate,
+				hireDate,    
+				address,        
+				city,        
+				region,         
+				postalCode,    
+				country,       
+				homePhone,
+				extension,     
+				photo,       
+				notes,       
+				reportsTo,      
+				photoPath,      
+				salary
+			}
+		}
+		
 		table Territories{
 			columns{
 				TerritoryID,
@@ -221,7 +245,7 @@ physical schemas {
 				TerritoryRef
 			}
 			references{
-				EmployeeRef : EmployeeRef -> Employees.EmployeeId
+				EmployeeRef : EmployeeRef -> Employees.employeeId
 				TerritoryRef : TerritoryRef -> Territories.TerritoryId
 			}
 		}
@@ -230,8 +254,8 @@ physical schemas {
 			columns{
 				ProductID,
 				ProductName,
-				SupplierRef,
-				CategoryRef,
+				//SupplierRef,
+				//CategoryRef,
 				QuantityPerUnit,
 				UnitPrice,
 				UnitIsInStock,
@@ -243,8 +267,8 @@ physical schemas {
 		
 		table Order_Details{
 			columns{
-				OrderRef,
-				ProductRef,
+				//OrderRef,
+				//ProductRef,
 				UnitPrice,
 				Quantity,
 				Discount
@@ -272,9 +296,7 @@ physical schemas {
 }
 
 mapping rules{
-	conceptualSchema.Products(productId, productName, supplierRef, categoryRef, quantityPerUnit, unitPrice,
-	 unitsInStock, unitsOnOrder, reorderLevel, discontinued )-> myRelSchema.Products(ProductID, ProductName, SupplierRef,
-	 CategoryRef, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued),
-	conceptualSchema.orders_details(ordered_product, order, UnitPrice, qty, discount) -> myRelSchema.Order_Details(OrderRef,
-	ProductRef, UnitPrice, Quantity, Discount)
+	conceptualSchema.Products(productId, productName, quantityPerUnit, unitPrice,
+	 unitsInStock, unitsOnOrder, reorderLevel, discontinued)
+	 -> myRelSchema.Products(ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued)
 }
