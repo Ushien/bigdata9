@@ -14,16 +14,7 @@ conceptual schema conceptualSchema{
 		orderId : int,
 		freight : float,
 		orderDate : datetime,
-		requiredDate : string
-		identifier {
-			orderId
-		}
-	}
-	
-	entity type ShipmentInfo{
-		shipperId : int,
-		companyName : string,
-		phone : string,
+		requiredDate : string,
 		shippedDate : datetime,
 		shipName : string,
 		shipAddress : string,
@@ -31,6 +22,15 @@ conceptual schema conceptualSchema{
 		shipRegion : string,
 		shipPostalCode : string,
 		shipCountry : string
+		identifier {
+			orderId
+		}
+	}
+	
+	entity type Shipper{
+		shipperId : int,
+		companyName : string,
+		phone : string
 		identifier {
 			shipperId
 		}
@@ -168,7 +168,7 @@ conceptual schema conceptualSchema{
 	
 	relationship type shipment{
 		orderShipped[1] : Orders,
-		shipper[0-1] : ShipmentInfo
+		shipper[0-1] : Shipper
 	}
 }
 
@@ -279,9 +279,44 @@ physical schemas {
 			//references {OrderRef: Order.OrderID -> myDocSchema.\\mettre nom schema._id,
 			//ProductRef: ProductRef-> myRelSchema.Products.ProductID }
 		}	
-	
-				
+		
 	}
+	
+	document schema mongoSchema: Mongo{
+		
+		collection ordersCol{
+			fields {
+				orderId,
+				customerRef,
+				employeeRef,
+				freight,
+				orderDate,
+				requiredDate,
+				shipperId,
+				shippedDate,
+				shipName,
+				shipAddress,
+				shipCity,
+				shipRegion,
+				shipPostalCode,
+				shipCountry
+			}
+			
+			references{
+				shipper : shipperId -> mongoSchema.shipperCol.shipperId
+			}
+		}
+		
+		collection shipperCol{
+			fields {
+				shipperId,
+				companyName,
+				phone
+			}
+		}
+		
+	}
+				
 	key value schema myRedisSchema : Redis{
 		kvpairs SuppliersKV{
 			key : "SUPPLIER:"[id],
@@ -297,6 +332,33 @@ physical schemas {
 				Phone,
 				Fax,
 				HomePage
+			}
+		}
+	}
+	
+	key value schema kv : Redis	{
+		kvpairs customerPairs {
+			key: "CUSTOMER:" [customerId],
+			value : hash{
+				companyName,
+				contactName,
+				contactTitle,
+				address,
+				city,
+				region,
+				postalCode,
+				country,
+				phone,
+				fax				
+			}
+		}
+		kvpairs customerPairs2 {
+			key: "CUSTOMER:" [customerId] ":ORDERS",
+			value : list{
+				orderId
+			}
+			references{
+				orders : orderId -> mongoSchema.ordersCol.orderId
 			}
 		}
 	}
