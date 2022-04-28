@@ -254,8 +254,8 @@ physical schemas {
 			columns{
 				ProductID,
 				ProductName,
-				\\SupplierRef,
-				\\CategoryRef,
+				SupplierRef,
+				CategoryRef,
 				QuantityPerUnit,
 				UnitPrice,
 				UnitIsInStock,
@@ -263,21 +263,21 @@ physical schemas {
 				ReorderLevel,
 				Discountinued
 			}	
-			//references{SupplierRef: SupplierRef -> myRedisSchema.key,
-			//CategoryRef: CategoryRef -> \\mettre nom schema.Categories.categoryId
+			references{SupplierRef: SupplierRef -> myRedisSchema.SuppliersKV.id,
+			CategoryRef: CategoryRef -> myRelSchema.Categories.categoryId
 			
 		}
 		
 		table Order_Details{
 			columns{
-				//OrderRef,
-				//ProductRef,
+				OrderRef,
+				ProductRef
 				UnitPrice,
 				Quantity,
 				Discount
 			}
-			//references {OrderRef: Order.OrderID -> myDocSchema.\\mettre nom schema._id,
-			//ProductRef: ProductRef-> myRelSchema.Products.ProductID }
+			references {OrderRef: Order.OrderID -> mongoSchema.ordersCol.orderId, // dans le cours "_id"
+			ProductRef: ProductRef-> myRelSchema.Products.ProductID }
 		}	
 		
 	}
@@ -370,4 +370,7 @@ mapping rules{
 	 -> myRelSchema.Products(ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued),
 	 conceptualSchema.orders_details(ordered_product, order, UnitPrice, qty, discount) -> myRelSchema.Order_Details(OrderRef,
 	ProductRef, UnitPrice, Quantity, Discount)
+	
+	rel : conceptualSchema.orders_details(UnitPrice, qty, discount)
+	-> myRelSchema.Order_Details(unitPrice, quantity, discount),
 }
