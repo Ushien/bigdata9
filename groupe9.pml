@@ -1,3 +1,25 @@
+databases {
+	
+	mysql MySQL{
+		host : "localhost"
+		port : 3399
+		dbname : "reldata"
+		login : "root"
+		password : "password"
+	}
+	
+	redis Redis{
+		host : "localhost"
+		port : 6666
+	}
+	
+	mongodb Mongo{
+	host : "localhost"
+	port : 27777
+	dbname : "myMongoDB"
+	}	
+}
+
 conceptual schema conceptualSchema{
 	
 	entity type Categories{
@@ -52,7 +74,7 @@ conceptual schema conceptualSchema{
 		}
 	}
 	
-	entity type Employee{
+	entity type Employee {
 		employeeID : int,     
 		lastName : string,      
 		firstName :string,    
@@ -124,13 +146,13 @@ conceptual schema conceptualSchema{
 		}	
 	}
 	relationship type supply{
-		suppliedProduct[0-N] : Products,
-		supplier[1] : Suppliers
+		suppliedProduct[1] : Products,
+		supplier[0-N] : Suppliers
 	}
 	
 	relationship type concern{
-		product[0-N] : Products,
-		category[1] : Categories
+		product[1] : Products,
+		category[0-N] : Categories
 	}
 	
 	relationship type orders_details{
@@ -142,13 +164,13 @@ conceptual schema conceptualSchema{
 	}
 	
 	relationship type submit{
-		orderedByCustomer[0-N] : Orders,
-		customer[1] : Customers
+		orderedByCustomer[1] : Orders,
+		customer[0-N] : Customers
 	}
 	
-	relationship type accountableEmployee{
-		orders[0-N] : Orders,
-		accountableEmployee[1] : Employee
+	relationship type handle{
+		orders[1] : Orders,
+		accountableEmployee[0-N] : Employee
 	}
 	
 	relationship type hierarchy{
@@ -162,8 +184,8 @@ conceptual schema conceptualSchema{
 	}
 	
 	relationship type territoryRegions{
-		territory[0-N] : Territories,
-		regions[1] : Region
+		territory[1] : Territories,
+		regions[1-N] : Region
 	}
 	
 	relationship type shipment{
@@ -172,27 +194,6 @@ conceptual schema conceptualSchema{
 	}
 }
 
-databases {
-	
-	mysql MySQL{
-		host : "localhost"
-		port : 3399
-		dbname : "reldata"
-		login : "root"
-		password : "password"
-	}
-	
-	redis Redis{
-		host : "localhost"
-		port : 6666
-	}
-	
-	mongodb Mongo{
-	host : "localhost"
-	port : 27777
-	dbname : "myMongoDB"
-	}	
-}
 
 physical schemas {
 	relational schema myRelSchema : MySQL{
@@ -227,15 +228,19 @@ physical schemas {
 				photoPath,      
 				salary
 			}
+			references{
+				reportsToFK: reportsTo -> Employees.employeeID
+			}
 		}
 		
 		table Territories{
 			columns{
 				TerritoryID,
-				TerritoryDescription	
+				TerritoryDescription,
+				RegionRef
 			}
 			references{
-				RegionRef : RegionRef -> Region.RegionID
+				RegionRefFK : RegionRef -> Region.regionId
 			}
 		}
 		
@@ -245,8 +250,15 @@ physical schemas {
 				TerritoryRef
 			}
 			references{
-				EmployeeRef : EmployeeRef -> Employees.employeeId
-				TerritoryRef : TerritoryRef -> Territories.TerritoryId
+				EmployeeRefFK : EmployeeRef -> Employees.employeeID
+				TerritoryRefFK : TerritoryRef -> Territories.TerritoryID
+			}
+		}
+		
+		table Region{
+			columns{
+				regionId,
+				regionDescription
 			}
 		}
 		
@@ -263,21 +275,26 @@ physical schemas {
 				ReorderLevel,
 				Discountinued
 			}	
-			references{SupplierRef: SupplierRef -> myRedisSchema.SuppliersKV.id,
-			CategoryRef: CategoryRef -> myRelSchema.Categories.categoryId
+			references{
+				SupplierRef: SupplierRef -> myRedisSchema.SuppliersKV.id
+				CategoryRef: CategoryRef -> Categories.categoryId
 			
-		}
+		    }
+		
+	   }
 		
 		table Order_Details{
 			columns{
 				OrderRef,
-				ProductRef
+				ProductRef,
 				UnitPrice,
 				Quantity,
 				Discount
 			}
-			references {OrderRef: Order.OrderID -> mongoSchema.ordersCol.orderId, // dans le cours "_id"
-			ProductRef: ProductRef-> myRelSchema.Products.ProductID }
+			references {
+				OrderRef: OrderRef -> mongoSchema.ordersCol.orderId
+				ProductRef: ProductRef-> Products.ProductID 
+				}
 		}	
 		
 	}
@@ -365,12 +382,16 @@ physical schemas {
 }
 
 mapping rules{
-	conceptualSchema.Products(productId, productName, quantityPerUnit, unitPrice,
-	 unitsInStock, unitsOnOrder, reorderLevel, discontinued)
-	 -> myRelSchema.Products(ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued),
-	 conceptualSchema.orders_details(ordered_product, order, UnitPrice, qty, discount) -> myRelSchema.Order_Details(OrderRef,
-	ProductRef, UnitPrice, Quantity, Discount)
 	
-	rel : conceptualSchema.orders_details(UnitPrice, qty, discount)
-	-> myRelSchema.Order_Details(unitPrice, quantity, discount),
+	/************ Products **********************/
+	conceptualSchema.Products(productId, productName, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued)
+	 -> myRelSchema.Products(ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued),
+	 //concern association
+	 conceptualSchema.concern.product -> myRelSchema.Products.CategoryRef,
+	 
+	 
+	/****** Order Detail (association relSchema and table physical *******/
+	rel : conceptualSchema.orders_details( unitPrice, qty, discount) -> myRelSchema.Order_Details( UnitPrice, Quantity, Discount)
+	
+	
 }
