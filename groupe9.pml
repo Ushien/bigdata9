@@ -383,7 +383,11 @@ physical schemas {
 }                                                                                                                                                                                                                                   
                                                                                                                                                                                                                                     
 mapping rules{                                                                                                                                                                                                                      
-	                                                                                                                                                                                                                                
+	            
+	/* Categories */           
+	conceptualSchema.Categories(categoryId, categoryName, description, picture)
+	-> myRelSchema.Categories(categoryId, categoryName, description, picture),
+	                                                                                                                                                                                                       
 	/* Products*/                                                                                                                                                                                                                   
 	conceptualSchema.Products(productId, productName, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued)                                                                                           
 	 -> myRelSchema.Products(ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued),                                                                                         
