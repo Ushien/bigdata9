@@ -96,7 +96,7 @@ conceptual schema conceptualSchema{
 		salary : float 
 		identifier{
 			employeeID
-		}        
+		}       
 	}
 	entity type Region{
 		regionID : int,          
@@ -122,7 +122,7 @@ conceptual schema conceptualSchema{
 		city : string,
 		region : string,
 		postalCode : string,
-		coutry : string,
+		country : string,
 		phone : string,
 		fax : string
 		identifier {
@@ -383,15 +383,77 @@ physical schemas {
 
 mapping rules{
 	
-	/************ Products **********************/
+	/* Products*/
 	conceptualSchema.Products(productId, productName, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued)
 	 -> myRelSchema.Products(ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitIsInStock, UnitsOnOrder, ReorderLevel, Discountinued),
-	 //concern association
+	 
+	 /*concern association*/
 	 conceptualSchema.concern.product -> myRelSchema.Products.CategoryRef,
 	 
 	 
-	/****** Order Detail (association relSchema and table physical *******/
-	rel : conceptualSchema.orders_details( unitPrice, qty, discount) -> myRelSchema.Order_Details( UnitPrice, Quantity, Discount)
+	/* Order Detail (association -> Table)*/
 	
+	conceptualSchema.orders_details.ordered_product -> myRelSchema.Order_Details.OrderRef,
+	
+	conceptualSchema.orders_details.order -> myRelSchema.Order_Details.ProductRef,
+	
+	rel : conceptualSchema.orders_details( unitPrice, qty, discount) -> myRelSchema.Order_Details( UnitPrice, Quantity, Discount),
+	
+
+	/*Customers */
+
+	conceptualSchema.Customers(customerId) -> kv.customerPairs(customerId),
+	
+	conceptualSchema.Customers(companyName, contactName, contactTitle, address, city, region, postalCode, country, phone, fax) ->
+	kv.customerPairs(companyName, contactName, contactTitle, address, city, region, postalCode, country, phone, fax),
+	
+	/*Orders */
+	conceptualSchema.Orders(orderId,freight,orderDate,requiredDate,shippedDate,shipName,shipAddress,shipCity,shipRegion,shipPostalCode,shipCountry)
+	-> mongoSchema.ordersCol(orderId,freight,orderDate,requiredDate,shippedDate,shipName,shipAddress,shipCity,shipRegion,shipPostalCode,shipCountry),
+	
+	/*Shipper */
+	conceptualSchema.Shipper(shipperId,companyName,phone)
+	-> mongoSchema.shipperCol(shipperId,companyName,phone),
+	
+	/*Region */
+	conceptualSchema.Region(regionID,regionDescription)
+	-> myRelSchema.Region(regionId,regionDescription),
+	
+	/*relation supply */
+	conceptualSchema.supply.suppliedProduct -> myRelSchema.Products.SupplierRef,
+	
+	/*relation submit */
+	conceptualSchema.submit.orderedByCustomer -> myRedisSchema.customerPairs2.orders,
+	
+	/*relation hierarchy */
+	conceptualSchema.hierarchy.subordinateOf -> myRelSchema.Employees.reportsToFK,
+	
+	/*relation employeeTerritories */
+	conceptualSchema.employeeTerritories.employee -> myRelSchema.EmployeeTerritories.EmployeeRefFK,
+	
+	conceptualSchema.employeeTerritories.territories -> myRelSchema.EmployeeTerritories.TerritoryRefFK,
+	
+	/*relation shipment */
+	conceptualSchema.shipment.shipper -> mongoSchema.ordersCol.shipper,
+	
+	/*handle*/
+	conceptualSchema.handle.accountableEmployee -> mongoSchema.ordersCol.employeeRef,
+	
+	/*Employee*/
+	conceptualSchema.Employee (employeeID, lastName, firstName, title, titleOfCourtesy, birthDate, hireDate, address, city, region, postalCode, country,homePhone,
+				extension, photo, notes, reportsTo, photoPath, salary) -> myRelSchema.Employee( employeeID, lastName, firstName, title, titleOfCourtesy, birthDate, hireDate, address, city, region, postalCode, country,homePhone,
+				extension, photo, notes, reportsTo, photoPath, salary),
+				
+	/*Territories*/
+	conceptualSchema.Territories(TerritoryID, TerritoryDescription) -> myRelSchema.Territories(TerritoryID, TerritoryDescription),
+	
+	/* OrderDetail */
+	conceptualSchema.OrderDetail(orderRef,productRef,unitPrice,quantity,discount)
+	-> Tables_ph.OrderDetails(orderRef,productRef,unitPrice,quantity,discount),
+	
+	/* TerritoryRegions */
+	conceptualSchema.territoryRegions.territory
+	-> myRelSchema.Territories.RegionRefFK
 	
 }
+
