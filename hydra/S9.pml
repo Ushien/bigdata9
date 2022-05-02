@@ -3,16 +3,16 @@ conceptual schema csmodel {
 
 entity type Orders {
 	id : int,
-   OrderDate : date,
-   RequiredDate : date,
-   ShippedDate : date,
-   Freight : float,
-   ShipName : string,
-   ShipAddress : string,
-   ShipCity : string,
-   ShipRegion : string,
-   ShipPostalCode : string,
-   ShipCountry : string
+   orderDate : date,
+   requiredDate : date,
+   shippedDate : date,
+   freight : float,
+   shipName : string,
+   shipAddress : string,
+   shipCity : string,
+   shipRegion : string,
+   shipPostalCode : string,
+   shipCountry : string
    identifier{
    	id
    }
@@ -21,13 +21,13 @@ entity type Orders {
 
 entity type Products {
    productId : int,
-   ProductName : string,
-   QuantityPerUnit : string,
-   UnitPrice : float,
-   UnitsInStock : int,
-   UnitsOnOrder : int,
-   ReorderLevel : int,
-   Discontinued : bool
+   productName : string,
+   quantityPerUnit : string,
+   unitPrice : float,
+   unitsInStock : int,
+   unitsOnOrder : int,
+   reorderLevel : int,
+   discontinued : bool
    identifier{
    	productId
    }
@@ -35,17 +35,17 @@ entity type Products {
 
 entity type Suppliers {
    supplierId : int,
-   CompanyName : string,
-   ContactName : string,
-   ContactTitle : string,
-   Address : string,
-   City : string,
-   Region : string,
-   PostalCode : string,
-   Country : string,
-   Phone : string,
-   Fax : string,
-   HomePage : text
+   companyName : string,
+   contactName : string,
+   contactTitle : string,
+   address : string,
+   city : string,
+   region : string,
+   postalCode : string,
+   country : string,
+   phone : string,
+   fax : string,
+   homePage : text
    identifier{
    	supplierId
    }
@@ -53,16 +53,16 @@ entity type Suppliers {
 
 entity type Customers {
    customerID : string,
-   CompanyName : string,
-   ContactName : string,
-   ContactTitle : string,
-   Address : string,
-   City : string,
-   Region : string,
-   PostalCode : string,
-   Country : string,
-   Phone : string,
-   Fax : string
+   companyName : string,
+   contactName : string,
+   contactTitle : string,
+   address : string,
+   city : string,
+   region : string,
+   postalCode : string,
+   country : string,
+   phone : string,
+   fax : string
    identifier {
    	customerID
    }
@@ -70,9 +70,9 @@ entity type Customers {
 
 entity type Categories {
    categoryID : int,
-   CategoryName : string,
-   Description : text,
-   Picture : blob
+   categoryName : string,
+   description : text,
+   picture : blob
    identifier {
    	categoryID
    }
@@ -80,8 +80,8 @@ entity type Categories {
 
 entity type Shippers {
    shipperID : int,
-   CompanyName : string,
-   Phone : string
+   companyName : string,
+   phone : string
    identifier{
    	shipperID
    }
@@ -89,23 +89,23 @@ entity type Shippers {
 
 entity type Employees {
    employeeID : int,
-   LastName : string,
-   FirstName : string,
-   Title : string,
-   TitleOfCourtesy : string,
-   BirthDate : date,
-   HireDate : date,
-   Address : string,
-   City : string,
-   Region : string,
-   PostalCode : string,
-   Country : string,
-   HomePhone : string,
-   Extension : string,
-   Photo : blob,
-   Notes : text,
-   PhotoPath : string,
-   Salary : float
+   lastName : string,
+   firstName : string,
+   title : string,
+   titleOfCourtesy : string,
+   birthDate : date,
+   hireDate : date,
+   address : string,
+   city : string,
+   region : string,
+   postalCode : string,
+   country : string,
+   homePhone : string,
+   extension : string,
+   photo : blob,
+   notes : text,
+   photoPath : string,
+   salary : float
    identifier{
    	employeeID
    }
@@ -114,7 +114,7 @@ entity type Employees {
 
 entity type Region {
    regionID : int,
-   RegionDescription : string
+   regionDescription : string
    identifier{
    	regionID
    }
@@ -122,7 +122,7 @@ entity type Region {
 
 entity type Territories {
    territoryID : string,
-   TerritoryDescription : string
+   territoryDescription : string
    identifier {
    	territoryID
    }
@@ -171,10 +171,11 @@ relationship type ships {
 relationship type composedOf {
 	order[0-N] : Orders,
 	orderedProducts[0-N] : Products,
-	UnitPrice : float,
-	Quantity : int,
-	Discount : float 
+	unitPrice : float,
+	quantity : int,
+	discount : float 
 }
+
 }
 physical schemas {
 	document schema mongoDB : myMongoDB{
@@ -356,20 +357,20 @@ physical schemas {
 }
 
 mapping rules {
-	csmodel.Orders(id, Freight, OrderDate,RequiredDate) -> mongoDB.Orders(OrderID,Freight,OrderDate,RequiredDate),
-	csmodel.Orders(ShipAddress,ShipCity, ShipCountry, ShipName, ShippedDate, ShipPostalCode, ShipRegion) -> mongoDB.Orders.ShipmentInfo(ShipAddress,ShipCity, ShipCountry, ShipName, ShippedDate, ShipPostalCode, ShipRegion),
-	csmodel.Products( productId,Discontinued,ProductName,QuantityPerUnit,ReorderLevel,UnitPrice,UnitsInStock,UnitsOnOrder) -> relDB.Products( ProductID,Discontinued,ProductName,QuantityPerUnit,ReorderLevel,UnitPrice,UnitsInStock,UnitsOnOrder),
-	csmodel.Suppliers( supplierId,Address,City,CompanyName,ContactName,ContactTitle,Country,Fax,HomePage,Phone,PostalCode,Region) -> kvDB.Suppliers( SupplierID,Address,City,CompanyName,ContactName,ContactTitle,Country,Fax,HomePage,Phone,PostalCode,Region), 
-	csmodel.Customers(customerID,Address,City,CompanyName,ContactName,ContactTitle,Country,Fax,Phone,PostalCode,Region) -> kvDB.Customers(custid, Address, City, CompanyName, ContactName,ContactTitle, Country,Fax,Phone, PostalCode, Region),
+	csmodel.Orders(id, freight, orderDate,requiredDate) -> mongoDB.Orders(OrderID,Freight,OrderDate,RequiredDate),
+	csmodel.Orders(shipAddress,shipCity, shipCountry, shipName, shippedDate, shipPostalCode, shipRegion) -> mongoDB.Orders.ShipmentInfo(ShipAddress,ShipCity, ShipCountry, ShipName, ShippedDate, ShipPostalCode, ShipRegion),
+	csmodel.Products( productId,discontinued,productName,quantityPerUnit,reorderLevel,unitPrice,unitsInStock,unitsOnOrder) -> relDB.Products( ProductID,Discontinued,ProductName,QuantityPerUnit,ReorderLevel,UnitPrice,UnitsInStock,UnitsOnOrder),
+	csmodel.Suppliers( supplierId,address,city,companyName,contactName,contactTitle,country,fax,homePage,phone,postalCode,region) -> kvDB.Suppliers( SupplierID,Address,City,CompanyName,ContactName,ContactTitle,Country,Fax,HomePage,Phone,PostalCode,Region), 
+	csmodel.Customers(customerID,address,city,companyName,contactName,contactTitle,country,fax,phone,postalCode,region) -> kvDB.Customers(custid, Address, City, CompanyName, ContactName,ContactTitle, Country,Fax,Phone, PostalCode, Region),
 	csmodel.Customers( customerID) -> kvDB.CustomersPurchased( customerid),
-	csmodel.Categories( categoryID,CategoryName,Description,Picture) -> relDB.Categories( CategoryID,CategoryName,Description,Picture),
-	csmodel.Shippers( shipperID,CompanyName,Phone) -> mongoDB.Orders.ShipmentInfo(ShipperID,CompanyName,Phone),
-	csmodel.Employees( employeeID,Address,BirthDate,City,Country,Extension,FirstName,LastName,HireDate,HomePhone,Notes,Photo,PhotoPath,PostalCode,Region,Salary,Title,TitleOfCourtesy)
+	csmodel.Categories( categoryID,categoryName,description,picture) -> relDB.Categories( CategoryID,CategoryName,Description,Picture),
+	csmodel.Shippers( shipperID,companyName,phone) -> mongoDB.Orders.ShipmentInfo(ShipperID,CompanyName,Phone),
+	csmodel.Employees( employeeID,address,birthDate,city,country,extension,firstName,lastName,hireDate,homePhone,notes,photo,photoPath,postalCode,region,salary,title,titleOfCourtesy)
 		->
 		relDB.Employees( EmployeeID,Address,BirthDate,City,Country,Extension,FirstName,LastName,HireDate,HomePhone,Notes,Photo,PhotoPath,PostalCode,Region,Salary,Title,TitleOfCourtesy),
-	csmodel.reportsTo.subordonee -> relDB.Employees.manager,  
-	csmodel.Region( regionID,RegionDescription) -> relDB.Region( RegionID,RegionDescription),
-	csmodel.Territories( territoryID,TerritoryDescription) -> relDB.Territories( TerritoryID,TerritoryDescription),
+	csmodel.reportsTo.subordonee -> relDB.Employees.manager,
+	csmodel.Region( regionID,regionDescription) -> relDB.Region( RegionID,RegionDescription),
+	csmodel.Territories( territoryID,territoryDescription) -> relDB.Territories( TerritoryID,TerritoryDescription),
 	csmodel.supply.suppliedProduct -> relDB.Products.supply,
 	csmodel.typeOf.product -> relDB.Products.isCategory,
 	csmodel.locatedIn.territories -> relDB.Territories.located,
@@ -377,7 +378,7 @@ mapping rules {
 	csmodel.register.processedOrder -> mongoDB.Orders.encoded,
 	csmodel.buy.boughtOrder -> mongoDB.Orders.bought,
 	csmodel.buy.customer -> kvDB.CustomersPurchased.purchases,
-	rel : csmodel.composedOf( Discount,Quantity,UnitPrice) -> relDB.Order_Details( Discount,Quantity,UnitPrice),
+	rel : csmodel.composedOf( discount,quantity,unitPrice) -> relDB.Order_Details( Discount,Quantity,UnitPrice),
 	csmodel.composedOf.orderedProducts -> relDB.Order_Details.purchasedProducts,
 	csmodel.composedOf.order -> relDB.Order_Details.order,
 	csmodel.works.employed -> relDB.EmployeeTerritories.employee,
