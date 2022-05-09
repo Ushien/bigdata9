@@ -77,8 +77,9 @@ public class test {
 		customersSet.forEach(System.out::println);
 		System.out.println(customersSet.size());
 		
-		}
+	}
 	
+	@Test
 	public void testGetAllSuppliers() {
 		supplierDataset = suppliersService.getSuppliersList(null);
 		supplierDataset.show();
