@@ -90,7 +90,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.OrderDate for field OrderDate			
+					// 	attribute Orders.orderDate for field OrderDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("OrderDate")) {
 						if(nestedRow.getAs("OrderDate") == null){
@@ -100,7 +100,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.RequiredDate for field RequiredDate			
+					// 	attribute Orders.requiredDate for field RequiredDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("RequiredDate")) {
 						if(nestedRow.getAs("RequiredDate") == null){
@@ -110,7 +110,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.Freight for field Freight			
+					// 	attribute Orders.freight for field Freight			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("Freight")) {
 						if(nestedRow.getAs("Freight") == null){
@@ -120,7 +120,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShippedDate for field ShippedDate			
+					// 	attribute Orders.shippedDate for field ShippedDate			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShippedDate")) {
@@ -131,7 +131,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipName for field ShipName			
+					// 	attribute Orders.shipName for field ShipName			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipName")) {
@@ -142,7 +142,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipAddress for field ShipAddress			
+					// 	attribute Orders.shipAddress for field ShipAddress			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipAddress")) {
@@ -153,7 +153,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCity for field ShipCity			
+					// 	attribute Orders.shipCity for field ShipCity			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCity")) {
@@ -164,7 +164,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipRegion for field ShipRegion			
+					// 	attribute Orders.shipRegion for field ShipRegion			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipRegion")) {
@@ -175,7 +175,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipPostalCode for field ShipPostalCode			
+					// 	attribute Orders.shipPostalCode for field ShipPostalCode			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipPostalCode")) {
@@ -186,7 +186,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCountry for field ShipCountry			
+					// 	attribute Orders.shipCountry for field ShipCountry			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCountry")) {
@@ -495,7 +495,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.OrderDate for field OrderDate			
+					// 	attribute Orders.orderDate for field OrderDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("OrderDate")) {
 						if(nestedRow.getAs("OrderDate") == null){
@@ -505,7 +505,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.RequiredDate for field RequiredDate			
+					// 	attribute Orders.requiredDate for field RequiredDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("RequiredDate")) {
 						if(nestedRow.getAs("RequiredDate") == null){
@@ -515,7 +515,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.Freight for field Freight			
+					// 	attribute Orders.freight for field Freight			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("Freight")) {
 						if(nestedRow.getAs("Freight") == null){
@@ -525,7 +525,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShippedDate for field ShippedDate			
+					// 	attribute Orders.shippedDate for field ShippedDate			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShippedDate")) {
@@ -536,7 +536,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipName for field ShipName			
+					// 	attribute Orders.shipName for field ShipName			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipName")) {
@@ -547,7 +547,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipAddress for field ShipAddress			
+					// 	attribute Orders.shipAddress for field ShipAddress			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipAddress")) {
@@ -558,7 +558,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCity for field ShipCity			
+					// 	attribute Orders.shipCity for field ShipCity			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCity")) {
@@ -569,7 +569,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipRegion for field ShipRegion			
+					// 	attribute Orders.shipRegion for field ShipRegion			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipRegion")) {
@@ -580,7 +580,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipPostalCode for field ShipPostalCode			
+					// 	attribute Orders.shipPostalCode for field ShipPostalCode			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipPostalCode")) {
@@ -591,7 +591,7 @@ public class BuyServiceImpl extends dao.services.BuyService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCountry for field ShipCountry			
+					// 	attribute Orders.shipCountry for field ShipCountry			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCountry")) {

@@ -130,44 +130,44 @@ public abstract class CustomersService {
 		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.customerID, conditions.Operator.EQUALS, customerID));
 	}
 	
-	public Dataset<Customers> getCustomersListByCompanyName(String CompanyName) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.CompanyName, conditions.Operator.EQUALS, CompanyName));
+	public Dataset<Customers> getCustomersListByCompanyName(String companyName) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.companyName, conditions.Operator.EQUALS, companyName));
 	}
 	
-	public Dataset<Customers> getCustomersListByContactName(String ContactName) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.ContactName, conditions.Operator.EQUALS, ContactName));
+	public Dataset<Customers> getCustomersListByContactName(String contactName) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.contactName, conditions.Operator.EQUALS, contactName));
 	}
 	
-	public Dataset<Customers> getCustomersListByContactTitle(String ContactTitle) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.ContactTitle, conditions.Operator.EQUALS, ContactTitle));
+	public Dataset<Customers> getCustomersListByContactTitle(String contactTitle) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.contactTitle, conditions.Operator.EQUALS, contactTitle));
 	}
 	
-	public Dataset<Customers> getCustomersListByAddress(String Address) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.Address, conditions.Operator.EQUALS, Address));
+	public Dataset<Customers> getCustomersListByAddress(String address) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.address, conditions.Operator.EQUALS, address));
 	}
 	
-	public Dataset<Customers> getCustomersListByCity(String City) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.City, conditions.Operator.EQUALS, City));
+	public Dataset<Customers> getCustomersListByCity(String city) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.city, conditions.Operator.EQUALS, city));
 	}
 	
-	public Dataset<Customers> getCustomersListByRegion(String Region) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.Region, conditions.Operator.EQUALS, Region));
+	public Dataset<Customers> getCustomersListByRegion(String region) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.region, conditions.Operator.EQUALS, region));
 	}
 	
-	public Dataset<Customers> getCustomersListByPostalCode(String PostalCode) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.PostalCode, conditions.Operator.EQUALS, PostalCode));
+	public Dataset<Customers> getCustomersListByPostalCode(String postalCode) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.postalCode, conditions.Operator.EQUALS, postalCode));
 	}
 	
-	public Dataset<Customers> getCustomersListByCountry(String Country) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.Country, conditions.Operator.EQUALS, Country));
+	public Dataset<Customers> getCustomersListByCountry(String country) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.country, conditions.Operator.EQUALS, country));
 	}
 	
-	public Dataset<Customers> getCustomersListByPhone(String Phone) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.Phone, conditions.Operator.EQUALS, Phone));
+	public Dataset<Customers> getCustomersListByPhone(String phone) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.phone, conditions.Operator.EQUALS, phone));
 	}
 	
-	public Dataset<Customers> getCustomersListByFax(String Fax) {
-		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.Fax, conditions.Operator.EQUALS, Fax));
+	public Dataset<Customers> getCustomersListByFax(String fax) {
+		return getCustomersList(conditions.Condition.simple(conditions.CustomersAttribute.fax, conditions.Operator.EQUALS, fax));
 	}
 	
 	
@@ -228,144 +228,144 @@ public abstract class CustomersService {
 					customers_res.setCustomerID(firstNotNull_customerID);
 					
 					// attribute 'Customers.companyName'
-					String firstNotNull_CompanyName = Util.getStringValue(r.getAs("companyName"));
+					String firstNotNull_companyName = Util.getStringValue(r.getAs("companyName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String companyName2 = Util.getStringValue(r.getAs("companyName_" + i));
-						if (firstNotNull_CompanyName != null && companyName2 != null && !firstNotNull_CompanyName.equals(companyName2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.companyName': " + firstNotNull_CompanyName + " and " + companyName2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.companyName': " + firstNotNull_CompanyName + " and " + companyName2 + "." );
+						if (firstNotNull_companyName != null && companyName2 != null && !firstNotNull_companyName.equals(companyName2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.companyName': " + firstNotNull_companyName + " and " + companyName2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.companyName': " + firstNotNull_companyName + " and " + companyName2 + "." );
 						}
-						if (firstNotNull_CompanyName == null && companyName2 != null) {
-							firstNotNull_CompanyName = companyName2;
+						if (firstNotNull_companyName == null && companyName2 != null) {
+							firstNotNull_companyName = companyName2;
 						}
 					}
-					customers_res.setCompanyName(firstNotNull_CompanyName);
+					customers_res.setCompanyName(firstNotNull_companyName);
 					
 					// attribute 'Customers.contactName'
-					String firstNotNull_ContactName = Util.getStringValue(r.getAs("contactName"));
+					String firstNotNull_contactName = Util.getStringValue(r.getAs("contactName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String contactName2 = Util.getStringValue(r.getAs("contactName_" + i));
-						if (firstNotNull_ContactName != null && contactName2 != null && !firstNotNull_ContactName.equals(contactName2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactName': " + firstNotNull_ContactName + " and " + contactName2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactName': " + firstNotNull_ContactName + " and " + contactName2 + "." );
+						if (firstNotNull_contactName != null && contactName2 != null && !firstNotNull_contactName.equals(contactName2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactName': " + firstNotNull_contactName + " and " + contactName2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactName': " + firstNotNull_contactName + " and " + contactName2 + "." );
 						}
-						if (firstNotNull_ContactName == null && contactName2 != null) {
-							firstNotNull_ContactName = contactName2;
+						if (firstNotNull_contactName == null && contactName2 != null) {
+							firstNotNull_contactName = contactName2;
 						}
 					}
-					customers_res.setContactName(firstNotNull_ContactName);
+					customers_res.setContactName(firstNotNull_contactName);
 					
 					// attribute 'Customers.contactTitle'
-					String firstNotNull_ContactTitle = Util.getStringValue(r.getAs("contactTitle"));
+					String firstNotNull_contactTitle = Util.getStringValue(r.getAs("contactTitle"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String contactTitle2 = Util.getStringValue(r.getAs("contactTitle_" + i));
-						if (firstNotNull_ContactTitle != null && contactTitle2 != null && !firstNotNull_ContactTitle.equals(contactTitle2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactTitle': " + firstNotNull_ContactTitle + " and " + contactTitle2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactTitle': " + firstNotNull_ContactTitle + " and " + contactTitle2 + "." );
+						if (firstNotNull_contactTitle != null && contactTitle2 != null && !firstNotNull_contactTitle.equals(contactTitle2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactTitle': " + firstNotNull_contactTitle + " and " + contactTitle2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.contactTitle': " + firstNotNull_contactTitle + " and " + contactTitle2 + "." );
 						}
-						if (firstNotNull_ContactTitle == null && contactTitle2 != null) {
-							firstNotNull_ContactTitle = contactTitle2;
+						if (firstNotNull_contactTitle == null && contactTitle2 != null) {
+							firstNotNull_contactTitle = contactTitle2;
 						}
 					}
-					customers_res.setContactTitle(firstNotNull_ContactTitle);
+					customers_res.setContactTitle(firstNotNull_contactTitle);
 					
 					// attribute 'Customers.address'
-					String firstNotNull_Address = Util.getStringValue(r.getAs("address"));
+					String firstNotNull_address = Util.getStringValue(r.getAs("address"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String address2 = Util.getStringValue(r.getAs("address_" + i));
-						if (firstNotNull_Address != null && address2 != null && !firstNotNull_Address.equals(address2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.address': " + firstNotNull_Address + " and " + address2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.address': " + firstNotNull_Address + " and " + address2 + "." );
+						if (firstNotNull_address != null && address2 != null && !firstNotNull_address.equals(address2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.address': " + firstNotNull_address + " and " + address2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.address': " + firstNotNull_address + " and " + address2 + "." );
 						}
-						if (firstNotNull_Address == null && address2 != null) {
-							firstNotNull_Address = address2;
+						if (firstNotNull_address == null && address2 != null) {
+							firstNotNull_address = address2;
 						}
 					}
-					customers_res.setAddress(firstNotNull_Address);
+					customers_res.setAddress(firstNotNull_address);
 					
 					// attribute 'Customers.city'
-					String firstNotNull_City = Util.getStringValue(r.getAs("city"));
+					String firstNotNull_city = Util.getStringValue(r.getAs("city"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String city2 = Util.getStringValue(r.getAs("city_" + i));
-						if (firstNotNull_City != null && city2 != null && !firstNotNull_City.equals(city2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.city': " + firstNotNull_City + " and " + city2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.city': " + firstNotNull_City + " and " + city2 + "." );
+						if (firstNotNull_city != null && city2 != null && !firstNotNull_city.equals(city2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.city': " + firstNotNull_city + " and " + city2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.city': " + firstNotNull_city + " and " + city2 + "." );
 						}
-						if (firstNotNull_City == null && city2 != null) {
-							firstNotNull_City = city2;
+						if (firstNotNull_city == null && city2 != null) {
+							firstNotNull_city = city2;
 						}
 					}
-					customers_res.setCity(firstNotNull_City);
+					customers_res.setCity(firstNotNull_city);
 					
 					// attribute 'Customers.region'
-					String firstNotNull_Region = Util.getStringValue(r.getAs("region"));
+					String firstNotNull_region = Util.getStringValue(r.getAs("region"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String region2 = Util.getStringValue(r.getAs("region_" + i));
-						if (firstNotNull_Region != null && region2 != null && !firstNotNull_Region.equals(region2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.region': " + firstNotNull_Region + " and " + region2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.region': " + firstNotNull_Region + " and " + region2 + "." );
+						if (firstNotNull_region != null && region2 != null && !firstNotNull_region.equals(region2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.region': " + firstNotNull_region + " and " + region2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.region': " + firstNotNull_region + " and " + region2 + "." );
 						}
-						if (firstNotNull_Region == null && region2 != null) {
-							firstNotNull_Region = region2;
+						if (firstNotNull_region == null && region2 != null) {
+							firstNotNull_region = region2;
 						}
 					}
-					customers_res.setRegion(firstNotNull_Region);
+					customers_res.setRegion(firstNotNull_region);
 					
 					// attribute 'Customers.postalCode'
-					String firstNotNull_PostalCode = Util.getStringValue(r.getAs("postalCode"));
+					String firstNotNull_postalCode = Util.getStringValue(r.getAs("postalCode"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String postalCode2 = Util.getStringValue(r.getAs("postalCode_" + i));
-						if (firstNotNull_PostalCode != null && postalCode2 != null && !firstNotNull_PostalCode.equals(postalCode2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.postalCode': " + firstNotNull_PostalCode + " and " + postalCode2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.postalCode': " + firstNotNull_PostalCode + " and " + postalCode2 + "." );
+						if (firstNotNull_postalCode != null && postalCode2 != null && !firstNotNull_postalCode.equals(postalCode2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.postalCode': " + firstNotNull_postalCode + " and " + postalCode2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.postalCode': " + firstNotNull_postalCode + " and " + postalCode2 + "." );
 						}
-						if (firstNotNull_PostalCode == null && postalCode2 != null) {
-							firstNotNull_PostalCode = postalCode2;
+						if (firstNotNull_postalCode == null && postalCode2 != null) {
+							firstNotNull_postalCode = postalCode2;
 						}
 					}
-					customers_res.setPostalCode(firstNotNull_PostalCode);
+					customers_res.setPostalCode(firstNotNull_postalCode);
 					
 					// attribute 'Customers.country'
-					String firstNotNull_Country = Util.getStringValue(r.getAs("country"));
+					String firstNotNull_country = Util.getStringValue(r.getAs("country"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String country2 = Util.getStringValue(r.getAs("country_" + i));
-						if (firstNotNull_Country != null && country2 != null && !firstNotNull_Country.equals(country2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.country': " + firstNotNull_Country + " and " + country2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.country': " + firstNotNull_Country + " and " + country2 + "." );
+						if (firstNotNull_country != null && country2 != null && !firstNotNull_country.equals(country2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.country': " + firstNotNull_country + " and " + country2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.country': " + firstNotNull_country + " and " + country2 + "." );
 						}
-						if (firstNotNull_Country == null && country2 != null) {
-							firstNotNull_Country = country2;
+						if (firstNotNull_country == null && country2 != null) {
+							firstNotNull_country = country2;
 						}
 					}
-					customers_res.setCountry(firstNotNull_Country);
+					customers_res.setCountry(firstNotNull_country);
 					
 					// attribute 'Customers.phone'
-					String firstNotNull_Phone = Util.getStringValue(r.getAs("phone"));
+					String firstNotNull_phone = Util.getStringValue(r.getAs("phone"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String phone2 = Util.getStringValue(r.getAs("phone_" + i));
-						if (firstNotNull_Phone != null && phone2 != null && !firstNotNull_Phone.equals(phone2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.phone': " + firstNotNull_Phone + " and " + phone2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.phone': " + firstNotNull_Phone + " and " + phone2 + "." );
+						if (firstNotNull_phone != null && phone2 != null && !firstNotNull_phone.equals(phone2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.phone': " + firstNotNull_phone + " and " + phone2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.phone': " + firstNotNull_phone + " and " + phone2 + "." );
 						}
-						if (firstNotNull_Phone == null && phone2 != null) {
-							firstNotNull_Phone = phone2;
+						if (firstNotNull_phone == null && phone2 != null) {
+							firstNotNull_phone = phone2;
 						}
 					}
-					customers_res.setPhone(firstNotNull_Phone);
+					customers_res.setPhone(firstNotNull_phone);
 					
 					// attribute 'Customers.fax'
-					String firstNotNull_Fax = Util.getStringValue(r.getAs("fax"));
+					String firstNotNull_fax = Util.getStringValue(r.getAs("fax"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String fax2 = Util.getStringValue(r.getAs("fax_" + i));
-						if (firstNotNull_Fax != null && fax2 != null && !firstNotNull_Fax.equals(fax2)) {
-							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.fax': " + firstNotNull_Fax + " and " + fax2 + "." );
-							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.fax': " + firstNotNull_Fax + " and " + fax2 + "." );
+						if (firstNotNull_fax != null && fax2 != null && !firstNotNull_fax.equals(fax2)) {
+							customers_res.addLogEvent("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.fax': " + firstNotNull_fax + " and " + fax2 + "." );
+							logger.warn("Data consistency problem for [Customers - id :"+customers_res.getCustomerID()+"]: different values found for attribute 'Customers.fax': " + firstNotNull_fax + " and " + fax2 + "." );
 						}
-						if (firstNotNull_Fax == null && fax2 != null) {
-							firstNotNull_Fax = fax2;
+						if (firstNotNull_fax == null && fax2 != null) {
+							firstNotNull_fax = fax2;
 						}
 					}
-					customers_res.setFax(firstNotNull_Fax);
+					customers_res.setFax(firstNotNull_fax);
 	
 					WrappedArray logEvents = r.getAs("logEvents");
 					if(logEvents != null)

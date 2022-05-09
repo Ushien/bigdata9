@@ -221,34 +221,34 @@ public abstract class LocatedInService {
 					String firstNotNull_territories_territoryID = Util.getStringValue(r.getAs("territories_0.territoryID"));
 					territories_res.setTerritoryID(firstNotNull_territories_territoryID);
 					// attribute 'Territories.territoryDescription'
-					String firstNotNull_territories_TerritoryDescription = Util.getStringValue(r.getAs("territories_0.territoryDescription"));
+					String firstNotNull_territories_territoryDescription = Util.getStringValue(r.getAs("territories_0.territoryDescription"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String territories_territoryDescription2 = Util.getStringValue(r.getAs("territories_" + i + ".territoryDescription"));
-						if (firstNotNull_territories_TerritoryDescription != null && territories_territoryDescription2 != null && !firstNotNull_territories_TerritoryDescription.equals(territories_territoryDescription2)) {
-							locatedIn_res.addLogEvent("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_TerritoryDescription + " and " + territories_territoryDescription2 + "." );
-							logger.warn("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_TerritoryDescription + " and " + territories_territoryDescription2 + "." );
+						if (firstNotNull_territories_territoryDescription != null && territories_territoryDescription2 != null && !firstNotNull_territories_territoryDescription.equals(territories_territoryDescription2)) {
+							locatedIn_res.addLogEvent("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_territoryDescription + " and " + territories_territoryDescription2 + "." );
+							logger.warn("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_territoryDescription + " and " + territories_territoryDescription2 + "." );
 						}
-						if (firstNotNull_territories_TerritoryDescription == null && territories_territoryDescription2 != null) {
-							firstNotNull_territories_TerritoryDescription = territories_territoryDescription2;
+						if (firstNotNull_territories_territoryDescription == null && territories_territoryDescription2 != null) {
+							firstNotNull_territories_territoryDescription = territories_territoryDescription2;
 						}
 					}
-					territories_res.setTerritoryDescription(firstNotNull_territories_TerritoryDescription);
+					territories_res.setTerritoryDescription(firstNotNull_territories_territoryDescription);
 					// attribute 'Region.regionID'
 					Integer firstNotNull_region_regionID = Util.getIntegerValue(r.getAs("region_0.regionID"));
 					region_res.setRegionID(firstNotNull_region_regionID);
 					// attribute 'Region.regionDescription'
-					String firstNotNull_region_RegionDescription = Util.getStringValue(r.getAs("region_0.regionDescription"));
+					String firstNotNull_region_regionDescription = Util.getStringValue(r.getAs("region_0.regionDescription"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String region_regionDescription2 = Util.getStringValue(r.getAs("region_" + i + ".regionDescription"));
-						if (firstNotNull_region_RegionDescription != null && region_regionDescription2 != null && !firstNotNull_region_RegionDescription.equals(region_regionDescription2)) {
-							locatedIn_res.addLogEvent("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_region_RegionDescription + " and " + region_regionDescription2 + "." );
-							logger.warn("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_region_RegionDescription + " and " + region_regionDescription2 + "." );
+						if (firstNotNull_region_regionDescription != null && region_regionDescription2 != null && !firstNotNull_region_regionDescription.equals(region_regionDescription2)) {
+							locatedIn_res.addLogEvent("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_region_regionDescription + " and " + region_regionDescription2 + "." );
+							logger.warn("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_region_regionDescription + " and " + region_regionDescription2 + "." );
 						}
-						if (firstNotNull_region_RegionDescription == null && region_regionDescription2 != null) {
-							firstNotNull_region_RegionDescription = region_regionDescription2;
+						if (firstNotNull_region_regionDescription == null && region_regionDescription2 != null) {
+							firstNotNull_region_regionDescription = region_regionDescription2;
 						}
 					}
-					region_res.setRegionDescription(firstNotNull_region_RegionDescription);
+					region_res.setRegionDescription(firstNotNull_region_regionDescription);
 	
 					locatedIn_res.setTerritories(territories_res);
 					locatedIn_res.setRegion(region_res);

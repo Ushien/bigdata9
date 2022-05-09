@@ -7,16 +7,16 @@ import java.util.Objects;
 public class Orders extends LoggingPojo {
 
 	private Integer id;
-	private LocalDate OrderDate;
-	private LocalDate RequiredDate;
-	private LocalDate ShippedDate;
-	private Double Freight;
-	private String ShipName;
-	private String ShipAddress;
-	private String ShipCity;
-	private String ShipRegion;
-	private String ShipPostalCode;
-	private String ShipCountry;
+	private LocalDate orderDate;
+	private LocalDate requiredDate;
+	private LocalDate shippedDate;
+	private Double freight;
+	private String shipName;
+	private String shipAddress;
+	private String shipCity;
+	private String shipRegion;
+	private String shipPostalCode;
+	private String shipCountry;
 
 	public enum buy {
 		boughtOrder
@@ -42,18 +42,18 @@ public class Orders extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Orders(Integer id,LocalDate OrderDate,LocalDate RequiredDate,LocalDate ShippedDate,Double Freight,String ShipName,String ShipAddress,String ShipCity,String ShipRegion,String ShipPostalCode,String ShipCountry) {
+	public Orders(Integer id,LocalDate orderDate,LocalDate requiredDate,LocalDate shippedDate,Double freight,String shipName,String shipAddress,String shipCity,String shipRegion,String shipPostalCode,String shipCountry) {
 		this.id = id;
-		this.OrderDate = OrderDate;
-		this.RequiredDate = RequiredDate;
-		this.ShippedDate = ShippedDate;
-		this.Freight = Freight;
-		this.ShipName = ShipName;
-		this.ShipAddress = ShipAddress;
-		this.ShipCity = ShipCity;
-		this.ShipRegion = ShipRegion;
-		this.ShipPostalCode = ShipPostalCode;
-		this.ShipCountry = ShipCountry;
+		this.orderDate = orderDate;
+		this.requiredDate = requiredDate;
+		this.shippedDate = shippedDate;
+		this.freight = freight;
+		this.shipName = shipName;
+		this.shipAddress = shipAddress;
+		this.shipCity = shipCity;
+		this.shipRegion = shipRegion;
+		this.shipPostalCode = shipPostalCode;
+		this.shipCountry = shipCountry;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -65,7 +65,7 @@ public class Orders extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Orders Orders = (Orders) o;
-		boolean eqSimpleAttr = Objects.equals(id,Orders.id) && Objects.equals(OrderDate,Orders.OrderDate) && Objects.equals(RequiredDate,Orders.RequiredDate) && Objects.equals(ShippedDate,Orders.ShippedDate) && Objects.equals(Freight,Orders.Freight) && Objects.equals(ShipName,Orders.ShipName) && Objects.equals(ShipAddress,Orders.ShipAddress) && Objects.equals(ShipCity,Orders.ShipCity) && Objects.equals(ShipRegion,Orders.ShipRegion) && Objects.equals(ShipPostalCode,Orders.ShipPostalCode) && Objects.equals(ShipCountry,Orders.ShipCountry);
+		boolean eqSimpleAttr = Objects.equals(id,Orders.id) && Objects.equals(orderDate,Orders.orderDate) && Objects.equals(requiredDate,Orders.requiredDate) && Objects.equals(shippedDate,Orders.shippedDate) && Objects.equals(freight,Orders.freight) && Objects.equals(shipName,Orders.shipName) && Objects.equals(shipAddress,Orders.shipAddress) && Objects.equals(shipCity,Orders.shipCity) && Objects.equals(shipRegion,Orders.shipRegion) && Objects.equals(shipPostalCode,Orders.shipPostalCode) && Objects.equals(shipCountry,Orders.shipCountry);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(customer, Orders.customer) &&
@@ -79,16 +79,16 @@ public class Orders extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Orders { " + "id="+id +", "+
-					"OrderDate="+OrderDate +", "+
-					"RequiredDate="+RequiredDate +", "+
-					"ShippedDate="+ShippedDate +", "+
-					"Freight="+Freight +", "+
-					"ShipName="+ShipName +", "+
-					"ShipAddress="+ShipAddress +", "+
-					"ShipCity="+ShipCity +", "+
-					"ShipRegion="+ShipRegion +", "+
-					"ShipPostalCode="+ShipPostalCode +", "+
-					"ShipCountry="+ShipCountry +"}"; 
+					"orderDate="+orderDate +", "+
+					"requiredDate="+requiredDate +", "+
+					"shippedDate="+shippedDate +", "+
+					"freight="+freight +", "+
+					"shipName="+shipName +", "+
+					"shipAddress="+shipAddress +", "+
+					"shipCity="+shipCity +", "+
+					"shipRegion="+shipRegion +", "+
+					"shipPostalCode="+shipPostalCode +", "+
+					"shipCountry="+shipCountry +"}"; 
 	}
 	
 	public Integer getId() {
@@ -99,74 +99,74 @@ public class Orders extends LoggingPojo {
 		this.id = id;
 	}
 	public LocalDate getOrderDate() {
-		return OrderDate;
+		return orderDate;
 	}
 
-	public void setOrderDate(LocalDate OrderDate) {
-		this.OrderDate = OrderDate;
+	public void setOrderDate(LocalDate orderDate) {
+		this.orderDate = orderDate;
 	}
 	public LocalDate getRequiredDate() {
-		return RequiredDate;
+		return requiredDate;
 	}
 
-	public void setRequiredDate(LocalDate RequiredDate) {
-		this.RequiredDate = RequiredDate;
+	public void setRequiredDate(LocalDate requiredDate) {
+		this.requiredDate = requiredDate;
 	}
 	public LocalDate getShippedDate() {
-		return ShippedDate;
+		return shippedDate;
 	}
 
-	public void setShippedDate(LocalDate ShippedDate) {
-		this.ShippedDate = ShippedDate;
+	public void setShippedDate(LocalDate shippedDate) {
+		this.shippedDate = shippedDate;
 	}
 	public Double getFreight() {
-		return Freight;
+		return freight;
 	}
 
-	public void setFreight(Double Freight) {
-		this.Freight = Freight;
+	public void setFreight(Double freight) {
+		this.freight = freight;
 	}
 	public String getShipName() {
-		return ShipName;
+		return shipName;
 	}
 
-	public void setShipName(String ShipName) {
-		this.ShipName = ShipName;
+	public void setShipName(String shipName) {
+		this.shipName = shipName;
 	}
 	public String getShipAddress() {
-		return ShipAddress;
+		return shipAddress;
 	}
 
-	public void setShipAddress(String ShipAddress) {
-		this.ShipAddress = ShipAddress;
+	public void setShipAddress(String shipAddress) {
+		this.shipAddress = shipAddress;
 	}
 	public String getShipCity() {
-		return ShipCity;
+		return shipCity;
 	}
 
-	public void setShipCity(String ShipCity) {
-		this.ShipCity = ShipCity;
+	public void setShipCity(String shipCity) {
+		this.shipCity = shipCity;
 	}
 	public String getShipRegion() {
-		return ShipRegion;
+		return shipRegion;
 	}
 
-	public void setShipRegion(String ShipRegion) {
-		this.ShipRegion = ShipRegion;
+	public void setShipRegion(String shipRegion) {
+		this.shipRegion = shipRegion;
 	}
 	public String getShipPostalCode() {
-		return ShipPostalCode;
+		return shipPostalCode;
 	}
 
-	public void setShipPostalCode(String ShipPostalCode) {
-		this.ShipPostalCode = ShipPostalCode;
+	public void setShipPostalCode(String shipPostalCode) {
+		this.shipPostalCode = shipPostalCode;
 	}
 	public String getShipCountry() {
-		return ShipCountry;
+		return shipCountry;
 	}
 
-	public void setShipCountry(String ShipCountry) {
-		this.ShipCountry = ShipCountry;
+	public void setShipCountry(String shipCountry) {
+		this.shipCountry = shipCountry;
 	}
 
 	

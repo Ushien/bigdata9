@@ -385,242 +385,242 @@ public abstract class SupplyService {
 					Integer firstNotNull_suppliedProduct_productId = Util.getIntegerValue(r.getAs("suppliedProduct_0.productId"));
 					suppliedProduct_res.setProductId(firstNotNull_suppliedProduct_productId);
 					// attribute 'Products.productName'
-					String firstNotNull_suppliedProduct_ProductName = Util.getStringValue(r.getAs("suppliedProduct_0.productName"));
+					String firstNotNull_suppliedProduct_productName = Util.getStringValue(r.getAs("suppliedProduct_0.productName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String suppliedProduct_productName2 = Util.getStringValue(r.getAs("suppliedProduct_" + i + ".productName"));
-						if (firstNotNull_suppliedProduct_ProductName != null && suppliedProduct_productName2 != null && !firstNotNull_suppliedProduct_ProductName.equals(suppliedProduct_productName2)) {
-							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_suppliedProduct_ProductName + " and " + suppliedProduct_productName2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_suppliedProduct_ProductName + " and " + suppliedProduct_productName2 + "." );
+						if (firstNotNull_suppliedProduct_productName != null && suppliedProduct_productName2 != null && !firstNotNull_suppliedProduct_productName.equals(suppliedProduct_productName2)) {
+							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_suppliedProduct_productName + " and " + suppliedProduct_productName2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_suppliedProduct_productName + " and " + suppliedProduct_productName2 + "." );
 						}
-						if (firstNotNull_suppliedProduct_ProductName == null && suppliedProduct_productName2 != null) {
-							firstNotNull_suppliedProduct_ProductName = suppliedProduct_productName2;
+						if (firstNotNull_suppliedProduct_productName == null && suppliedProduct_productName2 != null) {
+							firstNotNull_suppliedProduct_productName = suppliedProduct_productName2;
 						}
 					}
-					suppliedProduct_res.setProductName(firstNotNull_suppliedProduct_ProductName);
+					suppliedProduct_res.setProductName(firstNotNull_suppliedProduct_productName);
 					// attribute 'Products.quantityPerUnit'
-					String firstNotNull_suppliedProduct_QuantityPerUnit = Util.getStringValue(r.getAs("suppliedProduct_0.quantityPerUnit"));
+					String firstNotNull_suppliedProduct_quantityPerUnit = Util.getStringValue(r.getAs("suppliedProduct_0.quantityPerUnit"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String suppliedProduct_quantityPerUnit2 = Util.getStringValue(r.getAs("suppliedProduct_" + i + ".quantityPerUnit"));
-						if (firstNotNull_suppliedProduct_QuantityPerUnit != null && suppliedProduct_quantityPerUnit2 != null && !firstNotNull_suppliedProduct_QuantityPerUnit.equals(suppliedProduct_quantityPerUnit2)) {
-							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_suppliedProduct_QuantityPerUnit + " and " + suppliedProduct_quantityPerUnit2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_suppliedProduct_QuantityPerUnit + " and " + suppliedProduct_quantityPerUnit2 + "." );
+						if (firstNotNull_suppliedProduct_quantityPerUnit != null && suppliedProduct_quantityPerUnit2 != null && !firstNotNull_suppliedProduct_quantityPerUnit.equals(suppliedProduct_quantityPerUnit2)) {
+							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_suppliedProduct_quantityPerUnit + " and " + suppliedProduct_quantityPerUnit2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_suppliedProduct_quantityPerUnit + " and " + suppliedProduct_quantityPerUnit2 + "." );
 						}
-						if (firstNotNull_suppliedProduct_QuantityPerUnit == null && suppliedProduct_quantityPerUnit2 != null) {
-							firstNotNull_suppliedProduct_QuantityPerUnit = suppliedProduct_quantityPerUnit2;
+						if (firstNotNull_suppliedProduct_quantityPerUnit == null && suppliedProduct_quantityPerUnit2 != null) {
+							firstNotNull_suppliedProduct_quantityPerUnit = suppliedProduct_quantityPerUnit2;
 						}
 					}
-					suppliedProduct_res.setQuantityPerUnit(firstNotNull_suppliedProduct_QuantityPerUnit);
+					suppliedProduct_res.setQuantityPerUnit(firstNotNull_suppliedProduct_quantityPerUnit);
 					// attribute 'Products.unitPrice'
-					Double firstNotNull_suppliedProduct_UnitPrice = Util.getDoubleValue(r.getAs("suppliedProduct_0.unitPrice"));
+					Double firstNotNull_suppliedProduct_unitPrice = Util.getDoubleValue(r.getAs("suppliedProduct_0.unitPrice"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double suppliedProduct_unitPrice2 = Util.getDoubleValue(r.getAs("suppliedProduct_" + i + ".unitPrice"));
-						if (firstNotNull_suppliedProduct_UnitPrice != null && suppliedProduct_unitPrice2 != null && !firstNotNull_suppliedProduct_UnitPrice.equals(suppliedProduct_unitPrice2)) {
-							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_suppliedProduct_UnitPrice + " and " + suppliedProduct_unitPrice2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_suppliedProduct_UnitPrice + " and " + suppliedProduct_unitPrice2 + "." );
+						if (firstNotNull_suppliedProduct_unitPrice != null && suppliedProduct_unitPrice2 != null && !firstNotNull_suppliedProduct_unitPrice.equals(suppliedProduct_unitPrice2)) {
+							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_suppliedProduct_unitPrice + " and " + suppliedProduct_unitPrice2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_suppliedProduct_unitPrice + " and " + suppliedProduct_unitPrice2 + "." );
 						}
-						if (firstNotNull_suppliedProduct_UnitPrice == null && suppliedProduct_unitPrice2 != null) {
-							firstNotNull_suppliedProduct_UnitPrice = suppliedProduct_unitPrice2;
+						if (firstNotNull_suppliedProduct_unitPrice == null && suppliedProduct_unitPrice2 != null) {
+							firstNotNull_suppliedProduct_unitPrice = suppliedProduct_unitPrice2;
 						}
 					}
-					suppliedProduct_res.setUnitPrice(firstNotNull_suppliedProduct_UnitPrice);
+					suppliedProduct_res.setUnitPrice(firstNotNull_suppliedProduct_unitPrice);
 					// attribute 'Products.unitsInStock'
-					Integer firstNotNull_suppliedProduct_UnitsInStock = Util.getIntegerValue(r.getAs("suppliedProduct_0.unitsInStock"));
+					Integer firstNotNull_suppliedProduct_unitsInStock = Util.getIntegerValue(r.getAs("suppliedProduct_0.unitsInStock"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Integer suppliedProduct_unitsInStock2 = Util.getIntegerValue(r.getAs("suppliedProduct_" + i + ".unitsInStock"));
-						if (firstNotNull_suppliedProduct_UnitsInStock != null && suppliedProduct_unitsInStock2 != null && !firstNotNull_suppliedProduct_UnitsInStock.equals(suppliedProduct_unitsInStock2)) {
-							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_suppliedProduct_UnitsInStock + " and " + suppliedProduct_unitsInStock2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_suppliedProduct_UnitsInStock + " and " + suppliedProduct_unitsInStock2 + "." );
+						if (firstNotNull_suppliedProduct_unitsInStock != null && suppliedProduct_unitsInStock2 != null && !firstNotNull_suppliedProduct_unitsInStock.equals(suppliedProduct_unitsInStock2)) {
+							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_suppliedProduct_unitsInStock + " and " + suppliedProduct_unitsInStock2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_suppliedProduct_unitsInStock + " and " + suppliedProduct_unitsInStock2 + "." );
 						}
-						if (firstNotNull_suppliedProduct_UnitsInStock == null && suppliedProduct_unitsInStock2 != null) {
-							firstNotNull_suppliedProduct_UnitsInStock = suppliedProduct_unitsInStock2;
+						if (firstNotNull_suppliedProduct_unitsInStock == null && suppliedProduct_unitsInStock2 != null) {
+							firstNotNull_suppliedProduct_unitsInStock = suppliedProduct_unitsInStock2;
 						}
 					}
-					suppliedProduct_res.setUnitsInStock(firstNotNull_suppliedProduct_UnitsInStock);
+					suppliedProduct_res.setUnitsInStock(firstNotNull_suppliedProduct_unitsInStock);
 					// attribute 'Products.unitsOnOrder'
-					Integer firstNotNull_suppliedProduct_UnitsOnOrder = Util.getIntegerValue(r.getAs("suppliedProduct_0.unitsOnOrder"));
+					Integer firstNotNull_suppliedProduct_unitsOnOrder = Util.getIntegerValue(r.getAs("suppliedProduct_0.unitsOnOrder"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Integer suppliedProduct_unitsOnOrder2 = Util.getIntegerValue(r.getAs("suppliedProduct_" + i + ".unitsOnOrder"));
-						if (firstNotNull_suppliedProduct_UnitsOnOrder != null && suppliedProduct_unitsOnOrder2 != null && !firstNotNull_suppliedProduct_UnitsOnOrder.equals(suppliedProduct_unitsOnOrder2)) {
-							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_suppliedProduct_UnitsOnOrder + " and " + suppliedProduct_unitsOnOrder2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_suppliedProduct_UnitsOnOrder + " and " + suppliedProduct_unitsOnOrder2 + "." );
+						if (firstNotNull_suppliedProduct_unitsOnOrder != null && suppliedProduct_unitsOnOrder2 != null && !firstNotNull_suppliedProduct_unitsOnOrder.equals(suppliedProduct_unitsOnOrder2)) {
+							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_suppliedProduct_unitsOnOrder + " and " + suppliedProduct_unitsOnOrder2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_suppliedProduct_unitsOnOrder + " and " + suppliedProduct_unitsOnOrder2 + "." );
 						}
-						if (firstNotNull_suppliedProduct_UnitsOnOrder == null && suppliedProduct_unitsOnOrder2 != null) {
-							firstNotNull_suppliedProduct_UnitsOnOrder = suppliedProduct_unitsOnOrder2;
+						if (firstNotNull_suppliedProduct_unitsOnOrder == null && suppliedProduct_unitsOnOrder2 != null) {
+							firstNotNull_suppliedProduct_unitsOnOrder = suppliedProduct_unitsOnOrder2;
 						}
 					}
-					suppliedProduct_res.setUnitsOnOrder(firstNotNull_suppliedProduct_UnitsOnOrder);
+					suppliedProduct_res.setUnitsOnOrder(firstNotNull_suppliedProduct_unitsOnOrder);
 					// attribute 'Products.reorderLevel'
-					Integer firstNotNull_suppliedProduct_ReorderLevel = Util.getIntegerValue(r.getAs("suppliedProduct_0.reorderLevel"));
+					Integer firstNotNull_suppliedProduct_reorderLevel = Util.getIntegerValue(r.getAs("suppliedProduct_0.reorderLevel"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Integer suppliedProduct_reorderLevel2 = Util.getIntegerValue(r.getAs("suppliedProduct_" + i + ".reorderLevel"));
-						if (firstNotNull_suppliedProduct_ReorderLevel != null && suppliedProduct_reorderLevel2 != null && !firstNotNull_suppliedProduct_ReorderLevel.equals(suppliedProduct_reorderLevel2)) {
-							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_suppliedProduct_ReorderLevel + " and " + suppliedProduct_reorderLevel2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_suppliedProduct_ReorderLevel + " and " + suppliedProduct_reorderLevel2 + "." );
+						if (firstNotNull_suppliedProduct_reorderLevel != null && suppliedProduct_reorderLevel2 != null && !firstNotNull_suppliedProduct_reorderLevel.equals(suppliedProduct_reorderLevel2)) {
+							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_suppliedProduct_reorderLevel + " and " + suppliedProduct_reorderLevel2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_suppliedProduct_reorderLevel + " and " + suppliedProduct_reorderLevel2 + "." );
 						}
-						if (firstNotNull_suppliedProduct_ReorderLevel == null && suppliedProduct_reorderLevel2 != null) {
-							firstNotNull_suppliedProduct_ReorderLevel = suppliedProduct_reorderLevel2;
+						if (firstNotNull_suppliedProduct_reorderLevel == null && suppliedProduct_reorderLevel2 != null) {
+							firstNotNull_suppliedProduct_reorderLevel = suppliedProduct_reorderLevel2;
 						}
 					}
-					suppliedProduct_res.setReorderLevel(firstNotNull_suppliedProduct_ReorderLevel);
+					suppliedProduct_res.setReorderLevel(firstNotNull_suppliedProduct_reorderLevel);
 					// attribute 'Products.discontinued'
-					Boolean firstNotNull_suppliedProduct_Discontinued = Util.getBooleanValue(r.getAs("suppliedProduct_0.discontinued"));
+					Boolean firstNotNull_suppliedProduct_discontinued = Util.getBooleanValue(r.getAs("suppliedProduct_0.discontinued"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Boolean suppliedProduct_discontinued2 = Util.getBooleanValue(r.getAs("suppliedProduct_" + i + ".discontinued"));
-						if (firstNotNull_suppliedProduct_Discontinued != null && suppliedProduct_discontinued2 != null && !firstNotNull_suppliedProduct_Discontinued.equals(suppliedProduct_discontinued2)) {
-							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_suppliedProduct_Discontinued + " and " + suppliedProduct_discontinued2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_suppliedProduct_Discontinued + " and " + suppliedProduct_discontinued2 + "." );
+						if (firstNotNull_suppliedProduct_discontinued != null && suppliedProduct_discontinued2 != null && !firstNotNull_suppliedProduct_discontinued.equals(suppliedProduct_discontinued2)) {
+							supply_res.addLogEvent("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_suppliedProduct_discontinued + " and " + suppliedProduct_discontinued2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+suppliedProduct_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_suppliedProduct_discontinued + " and " + suppliedProduct_discontinued2 + "." );
 						}
-						if (firstNotNull_suppliedProduct_Discontinued == null && suppliedProduct_discontinued2 != null) {
-							firstNotNull_suppliedProduct_Discontinued = suppliedProduct_discontinued2;
+						if (firstNotNull_suppliedProduct_discontinued == null && suppliedProduct_discontinued2 != null) {
+							firstNotNull_suppliedProduct_discontinued = suppliedProduct_discontinued2;
 						}
 					}
-					suppliedProduct_res.setDiscontinued(firstNotNull_suppliedProduct_Discontinued);
+					suppliedProduct_res.setDiscontinued(firstNotNull_suppliedProduct_discontinued);
 					// attribute 'Suppliers.supplierId'
 					Integer firstNotNull_supplier_supplierId = Util.getIntegerValue(r.getAs("supplier_0.supplierId"));
 					supplier_res.setSupplierId(firstNotNull_supplier_supplierId);
 					// attribute 'Suppliers.companyName'
-					String firstNotNull_supplier_CompanyName = Util.getStringValue(r.getAs("supplier_0.companyName"));
+					String firstNotNull_supplier_companyName = Util.getStringValue(r.getAs("supplier_0.companyName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_companyName2 = Util.getStringValue(r.getAs("supplier_" + i + ".companyName"));
-						if (firstNotNull_supplier_CompanyName != null && supplier_companyName2 != null && !firstNotNull_supplier_CompanyName.equals(supplier_companyName2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.companyName': " + firstNotNull_supplier_CompanyName + " and " + supplier_companyName2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.companyName': " + firstNotNull_supplier_CompanyName + " and " + supplier_companyName2 + "." );
+						if (firstNotNull_supplier_companyName != null && supplier_companyName2 != null && !firstNotNull_supplier_companyName.equals(supplier_companyName2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.companyName': " + firstNotNull_supplier_companyName + " and " + supplier_companyName2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.companyName': " + firstNotNull_supplier_companyName + " and " + supplier_companyName2 + "." );
 						}
-						if (firstNotNull_supplier_CompanyName == null && supplier_companyName2 != null) {
-							firstNotNull_supplier_CompanyName = supplier_companyName2;
+						if (firstNotNull_supplier_companyName == null && supplier_companyName2 != null) {
+							firstNotNull_supplier_companyName = supplier_companyName2;
 						}
 					}
-					supplier_res.setCompanyName(firstNotNull_supplier_CompanyName);
+					supplier_res.setCompanyName(firstNotNull_supplier_companyName);
 					// attribute 'Suppliers.contactName'
-					String firstNotNull_supplier_ContactName = Util.getStringValue(r.getAs("supplier_0.contactName"));
+					String firstNotNull_supplier_contactName = Util.getStringValue(r.getAs("supplier_0.contactName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_contactName2 = Util.getStringValue(r.getAs("supplier_" + i + ".contactName"));
-						if (firstNotNull_supplier_ContactName != null && supplier_contactName2 != null && !firstNotNull_supplier_ContactName.equals(supplier_contactName2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactName': " + firstNotNull_supplier_ContactName + " and " + supplier_contactName2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactName': " + firstNotNull_supplier_ContactName + " and " + supplier_contactName2 + "." );
+						if (firstNotNull_supplier_contactName != null && supplier_contactName2 != null && !firstNotNull_supplier_contactName.equals(supplier_contactName2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactName': " + firstNotNull_supplier_contactName + " and " + supplier_contactName2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactName': " + firstNotNull_supplier_contactName + " and " + supplier_contactName2 + "." );
 						}
-						if (firstNotNull_supplier_ContactName == null && supplier_contactName2 != null) {
-							firstNotNull_supplier_ContactName = supplier_contactName2;
+						if (firstNotNull_supplier_contactName == null && supplier_contactName2 != null) {
+							firstNotNull_supplier_contactName = supplier_contactName2;
 						}
 					}
-					supplier_res.setContactName(firstNotNull_supplier_ContactName);
+					supplier_res.setContactName(firstNotNull_supplier_contactName);
 					// attribute 'Suppliers.contactTitle'
-					String firstNotNull_supplier_ContactTitle = Util.getStringValue(r.getAs("supplier_0.contactTitle"));
+					String firstNotNull_supplier_contactTitle = Util.getStringValue(r.getAs("supplier_0.contactTitle"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_contactTitle2 = Util.getStringValue(r.getAs("supplier_" + i + ".contactTitle"));
-						if (firstNotNull_supplier_ContactTitle != null && supplier_contactTitle2 != null && !firstNotNull_supplier_ContactTitle.equals(supplier_contactTitle2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactTitle': " + firstNotNull_supplier_ContactTitle + " and " + supplier_contactTitle2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactTitle': " + firstNotNull_supplier_ContactTitle + " and " + supplier_contactTitle2 + "." );
+						if (firstNotNull_supplier_contactTitle != null && supplier_contactTitle2 != null && !firstNotNull_supplier_contactTitle.equals(supplier_contactTitle2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactTitle': " + firstNotNull_supplier_contactTitle + " and " + supplier_contactTitle2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.contactTitle': " + firstNotNull_supplier_contactTitle + " and " + supplier_contactTitle2 + "." );
 						}
-						if (firstNotNull_supplier_ContactTitle == null && supplier_contactTitle2 != null) {
-							firstNotNull_supplier_ContactTitle = supplier_contactTitle2;
+						if (firstNotNull_supplier_contactTitle == null && supplier_contactTitle2 != null) {
+							firstNotNull_supplier_contactTitle = supplier_contactTitle2;
 						}
 					}
-					supplier_res.setContactTitle(firstNotNull_supplier_ContactTitle);
+					supplier_res.setContactTitle(firstNotNull_supplier_contactTitle);
 					// attribute 'Suppliers.address'
-					String firstNotNull_supplier_Address = Util.getStringValue(r.getAs("supplier_0.address"));
+					String firstNotNull_supplier_address = Util.getStringValue(r.getAs("supplier_0.address"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_address2 = Util.getStringValue(r.getAs("supplier_" + i + ".address"));
-						if (firstNotNull_supplier_Address != null && supplier_address2 != null && !firstNotNull_supplier_Address.equals(supplier_address2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.address': " + firstNotNull_supplier_Address + " and " + supplier_address2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.address': " + firstNotNull_supplier_Address + " and " + supplier_address2 + "." );
+						if (firstNotNull_supplier_address != null && supplier_address2 != null && !firstNotNull_supplier_address.equals(supplier_address2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.address': " + firstNotNull_supplier_address + " and " + supplier_address2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.address': " + firstNotNull_supplier_address + " and " + supplier_address2 + "." );
 						}
-						if (firstNotNull_supplier_Address == null && supplier_address2 != null) {
-							firstNotNull_supplier_Address = supplier_address2;
+						if (firstNotNull_supplier_address == null && supplier_address2 != null) {
+							firstNotNull_supplier_address = supplier_address2;
 						}
 					}
-					supplier_res.setAddress(firstNotNull_supplier_Address);
+					supplier_res.setAddress(firstNotNull_supplier_address);
 					// attribute 'Suppliers.city'
-					String firstNotNull_supplier_City = Util.getStringValue(r.getAs("supplier_0.city"));
+					String firstNotNull_supplier_city = Util.getStringValue(r.getAs("supplier_0.city"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_city2 = Util.getStringValue(r.getAs("supplier_" + i + ".city"));
-						if (firstNotNull_supplier_City != null && supplier_city2 != null && !firstNotNull_supplier_City.equals(supplier_city2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.city': " + firstNotNull_supplier_City + " and " + supplier_city2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.city': " + firstNotNull_supplier_City + " and " + supplier_city2 + "." );
+						if (firstNotNull_supplier_city != null && supplier_city2 != null && !firstNotNull_supplier_city.equals(supplier_city2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.city': " + firstNotNull_supplier_city + " and " + supplier_city2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.city': " + firstNotNull_supplier_city + " and " + supplier_city2 + "." );
 						}
-						if (firstNotNull_supplier_City == null && supplier_city2 != null) {
-							firstNotNull_supplier_City = supplier_city2;
+						if (firstNotNull_supplier_city == null && supplier_city2 != null) {
+							firstNotNull_supplier_city = supplier_city2;
 						}
 					}
-					supplier_res.setCity(firstNotNull_supplier_City);
+					supplier_res.setCity(firstNotNull_supplier_city);
 					// attribute 'Suppliers.region'
-					String firstNotNull_supplier_Region = Util.getStringValue(r.getAs("supplier_0.region"));
+					String firstNotNull_supplier_region = Util.getStringValue(r.getAs("supplier_0.region"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_region2 = Util.getStringValue(r.getAs("supplier_" + i + ".region"));
-						if (firstNotNull_supplier_Region != null && supplier_region2 != null && !firstNotNull_supplier_Region.equals(supplier_region2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.region': " + firstNotNull_supplier_Region + " and " + supplier_region2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.region': " + firstNotNull_supplier_Region + " and " + supplier_region2 + "." );
+						if (firstNotNull_supplier_region != null && supplier_region2 != null && !firstNotNull_supplier_region.equals(supplier_region2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.region': " + firstNotNull_supplier_region + " and " + supplier_region2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.region': " + firstNotNull_supplier_region + " and " + supplier_region2 + "." );
 						}
-						if (firstNotNull_supplier_Region == null && supplier_region2 != null) {
-							firstNotNull_supplier_Region = supplier_region2;
+						if (firstNotNull_supplier_region == null && supplier_region2 != null) {
+							firstNotNull_supplier_region = supplier_region2;
 						}
 					}
-					supplier_res.setRegion(firstNotNull_supplier_Region);
+					supplier_res.setRegion(firstNotNull_supplier_region);
 					// attribute 'Suppliers.postalCode'
-					String firstNotNull_supplier_PostalCode = Util.getStringValue(r.getAs("supplier_0.postalCode"));
+					String firstNotNull_supplier_postalCode = Util.getStringValue(r.getAs("supplier_0.postalCode"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_postalCode2 = Util.getStringValue(r.getAs("supplier_" + i + ".postalCode"));
-						if (firstNotNull_supplier_PostalCode != null && supplier_postalCode2 != null && !firstNotNull_supplier_PostalCode.equals(supplier_postalCode2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.postalCode': " + firstNotNull_supplier_PostalCode + " and " + supplier_postalCode2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.postalCode': " + firstNotNull_supplier_PostalCode + " and " + supplier_postalCode2 + "." );
+						if (firstNotNull_supplier_postalCode != null && supplier_postalCode2 != null && !firstNotNull_supplier_postalCode.equals(supplier_postalCode2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.postalCode': " + firstNotNull_supplier_postalCode + " and " + supplier_postalCode2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.postalCode': " + firstNotNull_supplier_postalCode + " and " + supplier_postalCode2 + "." );
 						}
-						if (firstNotNull_supplier_PostalCode == null && supplier_postalCode2 != null) {
-							firstNotNull_supplier_PostalCode = supplier_postalCode2;
+						if (firstNotNull_supplier_postalCode == null && supplier_postalCode2 != null) {
+							firstNotNull_supplier_postalCode = supplier_postalCode2;
 						}
 					}
-					supplier_res.setPostalCode(firstNotNull_supplier_PostalCode);
+					supplier_res.setPostalCode(firstNotNull_supplier_postalCode);
 					// attribute 'Suppliers.country'
-					String firstNotNull_supplier_Country = Util.getStringValue(r.getAs("supplier_0.country"));
+					String firstNotNull_supplier_country = Util.getStringValue(r.getAs("supplier_0.country"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_country2 = Util.getStringValue(r.getAs("supplier_" + i + ".country"));
-						if (firstNotNull_supplier_Country != null && supplier_country2 != null && !firstNotNull_supplier_Country.equals(supplier_country2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.country': " + firstNotNull_supplier_Country + " and " + supplier_country2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.country': " + firstNotNull_supplier_Country + " and " + supplier_country2 + "." );
+						if (firstNotNull_supplier_country != null && supplier_country2 != null && !firstNotNull_supplier_country.equals(supplier_country2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.country': " + firstNotNull_supplier_country + " and " + supplier_country2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.country': " + firstNotNull_supplier_country + " and " + supplier_country2 + "." );
 						}
-						if (firstNotNull_supplier_Country == null && supplier_country2 != null) {
-							firstNotNull_supplier_Country = supplier_country2;
+						if (firstNotNull_supplier_country == null && supplier_country2 != null) {
+							firstNotNull_supplier_country = supplier_country2;
 						}
 					}
-					supplier_res.setCountry(firstNotNull_supplier_Country);
+					supplier_res.setCountry(firstNotNull_supplier_country);
 					// attribute 'Suppliers.phone'
-					String firstNotNull_supplier_Phone = Util.getStringValue(r.getAs("supplier_0.phone"));
+					String firstNotNull_supplier_phone = Util.getStringValue(r.getAs("supplier_0.phone"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_phone2 = Util.getStringValue(r.getAs("supplier_" + i + ".phone"));
-						if (firstNotNull_supplier_Phone != null && supplier_phone2 != null && !firstNotNull_supplier_Phone.equals(supplier_phone2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.phone': " + firstNotNull_supplier_Phone + " and " + supplier_phone2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.phone': " + firstNotNull_supplier_Phone + " and " + supplier_phone2 + "." );
+						if (firstNotNull_supplier_phone != null && supplier_phone2 != null && !firstNotNull_supplier_phone.equals(supplier_phone2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.phone': " + firstNotNull_supplier_phone + " and " + supplier_phone2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.phone': " + firstNotNull_supplier_phone + " and " + supplier_phone2 + "." );
 						}
-						if (firstNotNull_supplier_Phone == null && supplier_phone2 != null) {
-							firstNotNull_supplier_Phone = supplier_phone2;
+						if (firstNotNull_supplier_phone == null && supplier_phone2 != null) {
+							firstNotNull_supplier_phone = supplier_phone2;
 						}
 					}
-					supplier_res.setPhone(firstNotNull_supplier_Phone);
+					supplier_res.setPhone(firstNotNull_supplier_phone);
 					// attribute 'Suppliers.fax'
-					String firstNotNull_supplier_Fax = Util.getStringValue(r.getAs("supplier_0.fax"));
+					String firstNotNull_supplier_fax = Util.getStringValue(r.getAs("supplier_0.fax"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_fax2 = Util.getStringValue(r.getAs("supplier_" + i + ".fax"));
-						if (firstNotNull_supplier_Fax != null && supplier_fax2 != null && !firstNotNull_supplier_Fax.equals(supplier_fax2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.fax': " + firstNotNull_supplier_Fax + " and " + supplier_fax2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.fax': " + firstNotNull_supplier_Fax + " and " + supplier_fax2 + "." );
+						if (firstNotNull_supplier_fax != null && supplier_fax2 != null && !firstNotNull_supplier_fax.equals(supplier_fax2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.fax': " + firstNotNull_supplier_fax + " and " + supplier_fax2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.fax': " + firstNotNull_supplier_fax + " and " + supplier_fax2 + "." );
 						}
-						if (firstNotNull_supplier_Fax == null && supplier_fax2 != null) {
-							firstNotNull_supplier_Fax = supplier_fax2;
+						if (firstNotNull_supplier_fax == null && supplier_fax2 != null) {
+							firstNotNull_supplier_fax = supplier_fax2;
 						}
 					}
-					supplier_res.setFax(firstNotNull_supplier_Fax);
+					supplier_res.setFax(firstNotNull_supplier_fax);
 					// attribute 'Suppliers.homePage'
-					String firstNotNull_supplier_HomePage = Util.getStringValue(r.getAs("supplier_0.homePage"));
+					String firstNotNull_supplier_homePage = Util.getStringValue(r.getAs("supplier_0.homePage"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String supplier_homePage2 = Util.getStringValue(r.getAs("supplier_" + i + ".homePage"));
-						if (firstNotNull_supplier_HomePage != null && supplier_homePage2 != null && !firstNotNull_supplier_HomePage.equals(supplier_homePage2)) {
-							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.homePage': " + firstNotNull_supplier_HomePage + " and " + supplier_homePage2 + "." );
-							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.homePage': " + firstNotNull_supplier_HomePage + " and " + supplier_homePage2 + "." );
+						if (firstNotNull_supplier_homePage != null && supplier_homePage2 != null && !firstNotNull_supplier_homePage.equals(supplier_homePage2)) {
+							supply_res.addLogEvent("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.homePage': " + firstNotNull_supplier_homePage + " and " + supplier_homePage2 + "." );
+							logger.warn("Data consistency problem for [Suppliers - id :"+supplier_res.getSupplierId()+"]: different values found for attribute 'Suppliers.homePage': " + firstNotNull_supplier_homePage + " and " + supplier_homePage2 + "." );
 						}
-						if (firstNotNull_supplier_HomePage == null && supplier_homePage2 != null) {
-							firstNotNull_supplier_HomePage = supplier_homePage2;
+						if (firstNotNull_supplier_homePage == null && supplier_homePage2 != null) {
+							firstNotNull_supplier_homePage = supplier_homePage2;
 						}
 					}
-					supplier_res.setHomePage(firstNotNull_supplier_HomePage);
+					supplier_res.setHomePage(firstNotNull_supplier_homePage);
 	
 					supply_res.setSuppliedProduct(suppliedProduct_res);
 					supply_res.setSupplier(supplier_res);

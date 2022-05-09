@@ -90,7 +90,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.OrderDate for field OrderDate			
+					// 	attribute Orders.orderDate for field OrderDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("OrderDate")) {
 						if(nestedRow.getAs("OrderDate") == null){
@@ -100,7 +100,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.RequiredDate for field RequiredDate			
+					// 	attribute Orders.requiredDate for field RequiredDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("RequiredDate")) {
 						if(nestedRow.getAs("RequiredDate") == null){
@@ -110,7 +110,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.Freight for field Freight			
+					// 	attribute Orders.freight for field Freight			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("Freight")) {
 						if(nestedRow.getAs("Freight") == null){
@@ -120,7 +120,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShippedDate for field ShippedDate			
+					// 	attribute Orders.shippedDate for field ShippedDate			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShippedDate")) {
@@ -131,7 +131,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipName for field ShipName			
+					// 	attribute Orders.shipName for field ShipName			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipName")) {
@@ -142,7 +142,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipAddress for field ShipAddress			
+					// 	attribute Orders.shipAddress for field ShipAddress			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipAddress")) {
@@ -153,7 +153,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCity for field ShipCity			
+					// 	attribute Orders.shipCity for field ShipCity			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCity")) {
@@ -164,7 +164,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipRegion for field ShipRegion			
+					// 	attribute Orders.shipRegion for field ShipRegion			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipRegion")) {
@@ -175,7 +175,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipPostalCode for field ShipPostalCode			
+					// 	attribute Orders.shipPostalCode for field ShipPostalCode			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipPostalCode")) {
@@ -186,7 +186,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCountry for field ShipCountry			
+					// 	attribute Orders.shipCountry for field ShipCountry			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCountry")) {
@@ -232,13 +232,13 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 			for(java.util.Map.Entry<ComposedOfAttribute, Object> e : clause.entrySet()) {
 				ComposedOfAttribute attr = e.getKey();
 				Object value = e.getValue();
-				if(attr == ComposedOfAttribute.UnitPrice ) {
+				if(attr == ComposedOfAttribute.unitPrice ) {
 					res.add("UnitPrice = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ComposedOfAttribute.Quantity ) {
+				if(attr == ComposedOfAttribute.quantity ) {
 					res.add("Quantity = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ComposedOfAttribute.Discount ) {
+				if(attr == ComposedOfAttribute.discount ) {
 					res.add("Discount = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
 			}
@@ -263,7 +263,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 				Object value = ((SimpleCondition<ComposedOfAttribute>) condition).getValue();
 				if(value != null) {
 					boolean isConditionAttrEncountered = false;
-					if(attr == ComposedOfAttribute.UnitPrice ) {
+					if(attr == ComposedOfAttribute.unitPrice ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -280,7 +280,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ComposedOfAttribute.Quantity ) {
+					if(attr == ComposedOfAttribute.quantity ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -297,7 +297,7 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ComposedOfAttribute.Discount ) {
+					if(attr == ComposedOfAttribute.discount ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -319,19 +319,19 @@ public class ComposedOfServiceImpl extends dao.services.ComposedOfService {
 						where = "1 = 1";
 					}
 				} else {
-					if(attr == ComposedOfAttribute.UnitPrice ) {
+					if(attr == ComposedOfAttribute.unitPrice ) {
 						if(op == Operator.EQUALS)
 							where =  "UnitPrice IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "UnitPrice IS NOT NULL";
 					}
-					if(attr == ComposedOfAttribute.Quantity ) {
+					if(attr == ComposedOfAttribute.quantity ) {
 						if(op == Operator.EQUALS)
 							where =  "Quantity IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Quantity IS NOT NULL";
 					}
-					if(attr == ComposedOfAttribute.Discount ) {
+					if(attr == ComposedOfAttribute.discount ) {
 						if(op == Operator.EQUALS)
 							where =  "Discount IS NULL";
 						if(op == Operator.NOT_EQUALS)

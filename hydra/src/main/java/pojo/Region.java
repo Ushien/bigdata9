@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Region extends LoggingPojo {
 
 	private Integer regionID;
-	private String RegionDescription;
+	private String regionDescription;
 
 	public enum locatedIn {
 		region
@@ -24,9 +24,9 @@ public class Region extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Region(Integer regionID,String RegionDescription) {
+	public Region(Integer regionID,String regionDescription) {
 		this.regionID = regionID;
-		this.RegionDescription = RegionDescription;
+		this.regionDescription = regionDescription;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -38,7 +38,7 @@ public class Region extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Region Region = (Region) o;
-		boolean eqSimpleAttr = Objects.equals(regionID,Region.regionID) && Objects.equals(RegionDescription,Region.RegionDescription);
+		boolean eqSimpleAttr = Objects.equals(regionID,Region.regionID) && Objects.equals(regionDescription,Region.regionDescription);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(territoriesList, Region.territoriesList) &&
@@ -49,7 +49,7 @@ public class Region extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Region { " + "regionID="+regionID +", "+
-					"RegionDescription="+RegionDescription +"}"; 
+					"regionDescription="+regionDescription +"}"; 
 	}
 	
 	public Integer getRegionID() {
@@ -60,11 +60,11 @@ public class Region extends LoggingPojo {
 		this.regionID = regionID;
 	}
 	public String getRegionDescription() {
-		return RegionDescription;
+		return regionDescription;
 	}
 
-	public void setRegionDescription(String RegionDescription) {
-		this.RegionDescription = RegionDescription;
+	public void setRegionDescription(String regionDescription) {
+		this.regionDescription = regionDescription;
 	}
 
 	

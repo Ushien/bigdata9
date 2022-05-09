@@ -374,46 +374,46 @@ public abstract class ComposedOfService {
 				ComposedOf composedOf_res = new ComposedOf();
 					
 					// attribute 'ComposedOf.unitPrice'
-					Double firstNotNull_UnitPrice = Util.getDoubleValue(r.getAs("unitPrice_0"));
+					Double firstNotNull_unitPrice = Util.getDoubleValue(r.getAs("unitPrice_0"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double unitPrice2 = Util.getDoubleValue(r.getAs("unitPrice_" + i));
-						if (firstNotNull_UnitPrice != null && unitPrice2 != null && !firstNotNull_UnitPrice.equals(unitPrice2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.unitPrice': " + firstNotNull_UnitPrice + " and " + unitPrice2 + "." );
-							logger.warn("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.unitPrice': " + firstNotNull_UnitPrice + " and " + unitPrice2 + "." );
+						if (firstNotNull_unitPrice != null && unitPrice2 != null && !firstNotNull_unitPrice.equals(unitPrice2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.unitPrice': " + firstNotNull_unitPrice + " and " + unitPrice2 + "." );
+							logger.warn("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.unitPrice': " + firstNotNull_unitPrice + " and " + unitPrice2 + "." );
 						}
-						if (firstNotNull_UnitPrice == null && unitPrice2 != null) {
-							firstNotNull_UnitPrice = unitPrice2;
+						if (firstNotNull_unitPrice == null && unitPrice2 != null) {
+							firstNotNull_unitPrice = unitPrice2;
 						}
 					}
-					composedOf_res.setUnitPrice(firstNotNull_UnitPrice);
+					composedOf_res.setUnitPrice(firstNotNull_unitPrice);
 					
 					// attribute 'ComposedOf.quantity'
-					Integer firstNotNull_Quantity = Util.getIntegerValue(r.getAs("quantity_0"));
+					Integer firstNotNull_quantity = Util.getIntegerValue(r.getAs("quantity_0"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Integer quantity2 = Util.getIntegerValue(r.getAs("quantity_" + i));
-						if (firstNotNull_Quantity != null && quantity2 != null && !firstNotNull_Quantity.equals(quantity2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.quantity': " + firstNotNull_Quantity + " and " + quantity2 + "." );
-							logger.warn("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.quantity': " + firstNotNull_Quantity + " and " + quantity2 + "." );
+						if (firstNotNull_quantity != null && quantity2 != null && !firstNotNull_quantity.equals(quantity2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.quantity': " + firstNotNull_quantity + " and " + quantity2 + "." );
+							logger.warn("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.quantity': " + firstNotNull_quantity + " and " + quantity2 + "." );
 						}
-						if (firstNotNull_Quantity == null && quantity2 != null) {
-							firstNotNull_Quantity = quantity2;
+						if (firstNotNull_quantity == null && quantity2 != null) {
+							firstNotNull_quantity = quantity2;
 						}
 					}
-					composedOf_res.setQuantity(firstNotNull_Quantity);
+					composedOf_res.setQuantity(firstNotNull_quantity);
 					
 					// attribute 'ComposedOf.discount'
-					Double firstNotNull_Discount = Util.getDoubleValue(r.getAs("discount_0"));
+					Double firstNotNull_discount = Util.getDoubleValue(r.getAs("discount_0"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double discount2 = Util.getDoubleValue(r.getAs("discount_" + i));
-						if (firstNotNull_Discount != null && discount2 != null && !firstNotNull_Discount.equals(discount2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.discount': " + firstNotNull_Discount + " and " + discount2 + "." );
-							logger.warn("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.discount': " + firstNotNull_Discount + " and " + discount2 + "." );
+						if (firstNotNull_discount != null && discount2 != null && !firstNotNull_discount.equals(discount2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.discount': " + firstNotNull_discount + " and " + discount2 + "." );
+							logger.warn("Data consistency problem for [ComposedOf - different values found for attribute 'ComposedOf.discount': " + firstNotNull_discount + " and " + discount2 + "." );
 						}
-						if (firstNotNull_Discount == null && discount2 != null) {
-							firstNotNull_Discount = discount2;
+						if (firstNotNull_discount == null && discount2 != null) {
+							firstNotNull_discount = discount2;
 						}
 					}
-					composedOf_res.setDiscount(firstNotNull_Discount);
+					composedOf_res.setDiscount(firstNotNull_discount);
 	
 					WrappedArray logEvents = r.getAs("logEvents_0");
 					if(logEvents != null)
@@ -436,229 +436,229 @@ public abstract class ComposedOfService {
 					Integer firstNotNull_order_id = Util.getIntegerValue(r.getAs("order_0.id"));
 					order_res.setId(firstNotNull_order_id);
 					// attribute 'Orders.orderDate'
-					LocalDate firstNotNull_order_OrderDate = Util.getLocalDateValue(r.getAs("order_0.orderDate"));
+					LocalDate firstNotNull_order_orderDate = Util.getLocalDateValue(r.getAs("order_0.orderDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate order_orderDate2 = Util.getLocalDateValue(r.getAs("order_" + i + ".orderDate"));
-						if (firstNotNull_order_OrderDate != null && order_orderDate2 != null && !firstNotNull_order_OrderDate.equals(order_orderDate2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_order_OrderDate + " and " + order_orderDate2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_order_OrderDate + " and " + order_orderDate2 + "." );
+						if (firstNotNull_order_orderDate != null && order_orderDate2 != null && !firstNotNull_order_orderDate.equals(order_orderDate2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_order_orderDate + " and " + order_orderDate2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_order_orderDate + " and " + order_orderDate2 + "." );
 						}
-						if (firstNotNull_order_OrderDate == null && order_orderDate2 != null) {
-							firstNotNull_order_OrderDate = order_orderDate2;
+						if (firstNotNull_order_orderDate == null && order_orderDate2 != null) {
+							firstNotNull_order_orderDate = order_orderDate2;
 						}
 					}
-					order_res.setOrderDate(firstNotNull_order_OrderDate);
+					order_res.setOrderDate(firstNotNull_order_orderDate);
 					// attribute 'Orders.requiredDate'
-					LocalDate firstNotNull_order_RequiredDate = Util.getLocalDateValue(r.getAs("order_0.requiredDate"));
+					LocalDate firstNotNull_order_requiredDate = Util.getLocalDateValue(r.getAs("order_0.requiredDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate order_requiredDate2 = Util.getLocalDateValue(r.getAs("order_" + i + ".requiredDate"));
-						if (firstNotNull_order_RequiredDate != null && order_requiredDate2 != null && !firstNotNull_order_RequiredDate.equals(order_requiredDate2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_order_RequiredDate + " and " + order_requiredDate2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_order_RequiredDate + " and " + order_requiredDate2 + "." );
+						if (firstNotNull_order_requiredDate != null && order_requiredDate2 != null && !firstNotNull_order_requiredDate.equals(order_requiredDate2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_order_requiredDate + " and " + order_requiredDate2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_order_requiredDate + " and " + order_requiredDate2 + "." );
 						}
-						if (firstNotNull_order_RequiredDate == null && order_requiredDate2 != null) {
-							firstNotNull_order_RequiredDate = order_requiredDate2;
+						if (firstNotNull_order_requiredDate == null && order_requiredDate2 != null) {
+							firstNotNull_order_requiredDate = order_requiredDate2;
 						}
 					}
-					order_res.setRequiredDate(firstNotNull_order_RequiredDate);
+					order_res.setRequiredDate(firstNotNull_order_requiredDate);
 					// attribute 'Orders.shippedDate'
-					LocalDate firstNotNull_order_ShippedDate = Util.getLocalDateValue(r.getAs("order_0.shippedDate"));
+					LocalDate firstNotNull_order_shippedDate = Util.getLocalDateValue(r.getAs("order_0.shippedDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate order_shippedDate2 = Util.getLocalDateValue(r.getAs("order_" + i + ".shippedDate"));
-						if (firstNotNull_order_ShippedDate != null && order_shippedDate2 != null && !firstNotNull_order_ShippedDate.equals(order_shippedDate2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_order_ShippedDate + " and " + order_shippedDate2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_order_ShippedDate + " and " + order_shippedDate2 + "." );
+						if (firstNotNull_order_shippedDate != null && order_shippedDate2 != null && !firstNotNull_order_shippedDate.equals(order_shippedDate2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_order_shippedDate + " and " + order_shippedDate2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_order_shippedDate + " and " + order_shippedDate2 + "." );
 						}
-						if (firstNotNull_order_ShippedDate == null && order_shippedDate2 != null) {
-							firstNotNull_order_ShippedDate = order_shippedDate2;
+						if (firstNotNull_order_shippedDate == null && order_shippedDate2 != null) {
+							firstNotNull_order_shippedDate = order_shippedDate2;
 						}
 					}
-					order_res.setShippedDate(firstNotNull_order_ShippedDate);
+					order_res.setShippedDate(firstNotNull_order_shippedDate);
 					// attribute 'Orders.freight'
-					Double firstNotNull_order_Freight = Util.getDoubleValue(r.getAs("order_0.freight"));
+					Double firstNotNull_order_freight = Util.getDoubleValue(r.getAs("order_0.freight"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double order_freight2 = Util.getDoubleValue(r.getAs("order_" + i + ".freight"));
-						if (firstNotNull_order_Freight != null && order_freight2 != null && !firstNotNull_order_Freight.equals(order_freight2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_order_Freight + " and " + order_freight2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_order_Freight + " and " + order_freight2 + "." );
+						if (firstNotNull_order_freight != null && order_freight2 != null && !firstNotNull_order_freight.equals(order_freight2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_order_freight + " and " + order_freight2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_order_freight + " and " + order_freight2 + "." );
 						}
-						if (firstNotNull_order_Freight == null && order_freight2 != null) {
-							firstNotNull_order_Freight = order_freight2;
+						if (firstNotNull_order_freight == null && order_freight2 != null) {
+							firstNotNull_order_freight = order_freight2;
 						}
 					}
-					order_res.setFreight(firstNotNull_order_Freight);
+					order_res.setFreight(firstNotNull_order_freight);
 					// attribute 'Orders.shipName'
-					String firstNotNull_order_ShipName = Util.getStringValue(r.getAs("order_0.shipName"));
+					String firstNotNull_order_shipName = Util.getStringValue(r.getAs("order_0.shipName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String order_shipName2 = Util.getStringValue(r.getAs("order_" + i + ".shipName"));
-						if (firstNotNull_order_ShipName != null && order_shipName2 != null && !firstNotNull_order_ShipName.equals(order_shipName2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_order_ShipName + " and " + order_shipName2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_order_ShipName + " and " + order_shipName2 + "." );
+						if (firstNotNull_order_shipName != null && order_shipName2 != null && !firstNotNull_order_shipName.equals(order_shipName2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_order_shipName + " and " + order_shipName2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_order_shipName + " and " + order_shipName2 + "." );
 						}
-						if (firstNotNull_order_ShipName == null && order_shipName2 != null) {
-							firstNotNull_order_ShipName = order_shipName2;
+						if (firstNotNull_order_shipName == null && order_shipName2 != null) {
+							firstNotNull_order_shipName = order_shipName2;
 						}
 					}
-					order_res.setShipName(firstNotNull_order_ShipName);
+					order_res.setShipName(firstNotNull_order_shipName);
 					// attribute 'Orders.shipAddress'
-					String firstNotNull_order_ShipAddress = Util.getStringValue(r.getAs("order_0.shipAddress"));
+					String firstNotNull_order_shipAddress = Util.getStringValue(r.getAs("order_0.shipAddress"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String order_shipAddress2 = Util.getStringValue(r.getAs("order_" + i + ".shipAddress"));
-						if (firstNotNull_order_ShipAddress != null && order_shipAddress2 != null && !firstNotNull_order_ShipAddress.equals(order_shipAddress2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_order_ShipAddress + " and " + order_shipAddress2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_order_ShipAddress + " and " + order_shipAddress2 + "." );
+						if (firstNotNull_order_shipAddress != null && order_shipAddress2 != null && !firstNotNull_order_shipAddress.equals(order_shipAddress2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_order_shipAddress + " and " + order_shipAddress2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_order_shipAddress + " and " + order_shipAddress2 + "." );
 						}
-						if (firstNotNull_order_ShipAddress == null && order_shipAddress2 != null) {
-							firstNotNull_order_ShipAddress = order_shipAddress2;
+						if (firstNotNull_order_shipAddress == null && order_shipAddress2 != null) {
+							firstNotNull_order_shipAddress = order_shipAddress2;
 						}
 					}
-					order_res.setShipAddress(firstNotNull_order_ShipAddress);
+					order_res.setShipAddress(firstNotNull_order_shipAddress);
 					// attribute 'Orders.shipCity'
-					String firstNotNull_order_ShipCity = Util.getStringValue(r.getAs("order_0.shipCity"));
+					String firstNotNull_order_shipCity = Util.getStringValue(r.getAs("order_0.shipCity"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String order_shipCity2 = Util.getStringValue(r.getAs("order_" + i + ".shipCity"));
-						if (firstNotNull_order_ShipCity != null && order_shipCity2 != null && !firstNotNull_order_ShipCity.equals(order_shipCity2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_order_ShipCity + " and " + order_shipCity2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_order_ShipCity + " and " + order_shipCity2 + "." );
+						if (firstNotNull_order_shipCity != null && order_shipCity2 != null && !firstNotNull_order_shipCity.equals(order_shipCity2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_order_shipCity + " and " + order_shipCity2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_order_shipCity + " and " + order_shipCity2 + "." );
 						}
-						if (firstNotNull_order_ShipCity == null && order_shipCity2 != null) {
-							firstNotNull_order_ShipCity = order_shipCity2;
+						if (firstNotNull_order_shipCity == null && order_shipCity2 != null) {
+							firstNotNull_order_shipCity = order_shipCity2;
 						}
 					}
-					order_res.setShipCity(firstNotNull_order_ShipCity);
+					order_res.setShipCity(firstNotNull_order_shipCity);
 					// attribute 'Orders.shipRegion'
-					String firstNotNull_order_ShipRegion = Util.getStringValue(r.getAs("order_0.shipRegion"));
+					String firstNotNull_order_shipRegion = Util.getStringValue(r.getAs("order_0.shipRegion"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String order_shipRegion2 = Util.getStringValue(r.getAs("order_" + i + ".shipRegion"));
-						if (firstNotNull_order_ShipRegion != null && order_shipRegion2 != null && !firstNotNull_order_ShipRegion.equals(order_shipRegion2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_order_ShipRegion + " and " + order_shipRegion2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_order_ShipRegion + " and " + order_shipRegion2 + "." );
+						if (firstNotNull_order_shipRegion != null && order_shipRegion2 != null && !firstNotNull_order_shipRegion.equals(order_shipRegion2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_order_shipRegion + " and " + order_shipRegion2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_order_shipRegion + " and " + order_shipRegion2 + "." );
 						}
-						if (firstNotNull_order_ShipRegion == null && order_shipRegion2 != null) {
-							firstNotNull_order_ShipRegion = order_shipRegion2;
+						if (firstNotNull_order_shipRegion == null && order_shipRegion2 != null) {
+							firstNotNull_order_shipRegion = order_shipRegion2;
 						}
 					}
-					order_res.setShipRegion(firstNotNull_order_ShipRegion);
+					order_res.setShipRegion(firstNotNull_order_shipRegion);
 					// attribute 'Orders.shipPostalCode'
-					String firstNotNull_order_ShipPostalCode = Util.getStringValue(r.getAs("order_0.shipPostalCode"));
+					String firstNotNull_order_shipPostalCode = Util.getStringValue(r.getAs("order_0.shipPostalCode"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String order_shipPostalCode2 = Util.getStringValue(r.getAs("order_" + i + ".shipPostalCode"));
-						if (firstNotNull_order_ShipPostalCode != null && order_shipPostalCode2 != null && !firstNotNull_order_ShipPostalCode.equals(order_shipPostalCode2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_order_ShipPostalCode + " and " + order_shipPostalCode2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_order_ShipPostalCode + " and " + order_shipPostalCode2 + "." );
+						if (firstNotNull_order_shipPostalCode != null && order_shipPostalCode2 != null && !firstNotNull_order_shipPostalCode.equals(order_shipPostalCode2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_order_shipPostalCode + " and " + order_shipPostalCode2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_order_shipPostalCode + " and " + order_shipPostalCode2 + "." );
 						}
-						if (firstNotNull_order_ShipPostalCode == null && order_shipPostalCode2 != null) {
-							firstNotNull_order_ShipPostalCode = order_shipPostalCode2;
+						if (firstNotNull_order_shipPostalCode == null && order_shipPostalCode2 != null) {
+							firstNotNull_order_shipPostalCode = order_shipPostalCode2;
 						}
 					}
-					order_res.setShipPostalCode(firstNotNull_order_ShipPostalCode);
+					order_res.setShipPostalCode(firstNotNull_order_shipPostalCode);
 					// attribute 'Orders.shipCountry'
-					String firstNotNull_order_ShipCountry = Util.getStringValue(r.getAs("order_0.shipCountry"));
+					String firstNotNull_order_shipCountry = Util.getStringValue(r.getAs("order_0.shipCountry"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String order_shipCountry2 = Util.getStringValue(r.getAs("order_" + i + ".shipCountry"));
-						if (firstNotNull_order_ShipCountry != null && order_shipCountry2 != null && !firstNotNull_order_ShipCountry.equals(order_shipCountry2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_order_ShipCountry + " and " + order_shipCountry2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_order_ShipCountry + " and " + order_shipCountry2 + "." );
+						if (firstNotNull_order_shipCountry != null && order_shipCountry2 != null && !firstNotNull_order_shipCountry.equals(order_shipCountry2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_order_shipCountry + " and " + order_shipCountry2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+order_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_order_shipCountry + " and " + order_shipCountry2 + "." );
 						}
-						if (firstNotNull_order_ShipCountry == null && order_shipCountry2 != null) {
-							firstNotNull_order_ShipCountry = order_shipCountry2;
+						if (firstNotNull_order_shipCountry == null && order_shipCountry2 != null) {
+							firstNotNull_order_shipCountry = order_shipCountry2;
 						}
 					}
-					order_res.setShipCountry(firstNotNull_order_ShipCountry);
+					order_res.setShipCountry(firstNotNull_order_shipCountry);
 					// attribute 'Products.productId'
 					Integer firstNotNull_orderedProducts_productId = Util.getIntegerValue(r.getAs("orderedProducts_0.productId"));
 					orderedProducts_res.setProductId(firstNotNull_orderedProducts_productId);
 					// attribute 'Products.productName'
-					String firstNotNull_orderedProducts_ProductName = Util.getStringValue(r.getAs("orderedProducts_0.productName"));
+					String firstNotNull_orderedProducts_productName = Util.getStringValue(r.getAs("orderedProducts_0.productName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String orderedProducts_productName2 = Util.getStringValue(r.getAs("orderedProducts_" + i + ".productName"));
-						if (firstNotNull_orderedProducts_ProductName != null && orderedProducts_productName2 != null && !firstNotNull_orderedProducts_ProductName.equals(orderedProducts_productName2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_orderedProducts_ProductName + " and " + orderedProducts_productName2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_orderedProducts_ProductName + " and " + orderedProducts_productName2 + "." );
+						if (firstNotNull_orderedProducts_productName != null && orderedProducts_productName2 != null && !firstNotNull_orderedProducts_productName.equals(orderedProducts_productName2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_orderedProducts_productName + " and " + orderedProducts_productName2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.productName': " + firstNotNull_orderedProducts_productName + " and " + orderedProducts_productName2 + "." );
 						}
-						if (firstNotNull_orderedProducts_ProductName == null && orderedProducts_productName2 != null) {
-							firstNotNull_orderedProducts_ProductName = orderedProducts_productName2;
+						if (firstNotNull_orderedProducts_productName == null && orderedProducts_productName2 != null) {
+							firstNotNull_orderedProducts_productName = orderedProducts_productName2;
 						}
 					}
-					orderedProducts_res.setProductName(firstNotNull_orderedProducts_ProductName);
+					orderedProducts_res.setProductName(firstNotNull_orderedProducts_productName);
 					// attribute 'Products.quantityPerUnit'
-					String firstNotNull_orderedProducts_QuantityPerUnit = Util.getStringValue(r.getAs("orderedProducts_0.quantityPerUnit"));
+					String firstNotNull_orderedProducts_quantityPerUnit = Util.getStringValue(r.getAs("orderedProducts_0.quantityPerUnit"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String orderedProducts_quantityPerUnit2 = Util.getStringValue(r.getAs("orderedProducts_" + i + ".quantityPerUnit"));
-						if (firstNotNull_orderedProducts_QuantityPerUnit != null && orderedProducts_quantityPerUnit2 != null && !firstNotNull_orderedProducts_QuantityPerUnit.equals(orderedProducts_quantityPerUnit2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_orderedProducts_QuantityPerUnit + " and " + orderedProducts_quantityPerUnit2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_orderedProducts_QuantityPerUnit + " and " + orderedProducts_quantityPerUnit2 + "." );
+						if (firstNotNull_orderedProducts_quantityPerUnit != null && orderedProducts_quantityPerUnit2 != null && !firstNotNull_orderedProducts_quantityPerUnit.equals(orderedProducts_quantityPerUnit2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_orderedProducts_quantityPerUnit + " and " + orderedProducts_quantityPerUnit2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.quantityPerUnit': " + firstNotNull_orderedProducts_quantityPerUnit + " and " + orderedProducts_quantityPerUnit2 + "." );
 						}
-						if (firstNotNull_orderedProducts_QuantityPerUnit == null && orderedProducts_quantityPerUnit2 != null) {
-							firstNotNull_orderedProducts_QuantityPerUnit = orderedProducts_quantityPerUnit2;
+						if (firstNotNull_orderedProducts_quantityPerUnit == null && orderedProducts_quantityPerUnit2 != null) {
+							firstNotNull_orderedProducts_quantityPerUnit = orderedProducts_quantityPerUnit2;
 						}
 					}
-					orderedProducts_res.setQuantityPerUnit(firstNotNull_orderedProducts_QuantityPerUnit);
+					orderedProducts_res.setQuantityPerUnit(firstNotNull_orderedProducts_quantityPerUnit);
 					// attribute 'Products.unitPrice'
-					Double firstNotNull_orderedProducts_UnitPrice = Util.getDoubleValue(r.getAs("orderedProducts_0.unitPrice"));
+					Double firstNotNull_orderedProducts_unitPrice = Util.getDoubleValue(r.getAs("orderedProducts_0.unitPrice"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double orderedProducts_unitPrice2 = Util.getDoubleValue(r.getAs("orderedProducts_" + i + ".unitPrice"));
-						if (firstNotNull_orderedProducts_UnitPrice != null && orderedProducts_unitPrice2 != null && !firstNotNull_orderedProducts_UnitPrice.equals(orderedProducts_unitPrice2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_orderedProducts_UnitPrice + " and " + orderedProducts_unitPrice2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_orderedProducts_UnitPrice + " and " + orderedProducts_unitPrice2 + "." );
+						if (firstNotNull_orderedProducts_unitPrice != null && orderedProducts_unitPrice2 != null && !firstNotNull_orderedProducts_unitPrice.equals(orderedProducts_unitPrice2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_orderedProducts_unitPrice + " and " + orderedProducts_unitPrice2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitPrice': " + firstNotNull_orderedProducts_unitPrice + " and " + orderedProducts_unitPrice2 + "." );
 						}
-						if (firstNotNull_orderedProducts_UnitPrice == null && orderedProducts_unitPrice2 != null) {
-							firstNotNull_orderedProducts_UnitPrice = orderedProducts_unitPrice2;
+						if (firstNotNull_orderedProducts_unitPrice == null && orderedProducts_unitPrice2 != null) {
+							firstNotNull_orderedProducts_unitPrice = orderedProducts_unitPrice2;
 						}
 					}
-					orderedProducts_res.setUnitPrice(firstNotNull_orderedProducts_UnitPrice);
+					orderedProducts_res.setUnitPrice(firstNotNull_orderedProducts_unitPrice);
 					// attribute 'Products.unitsInStock'
-					Integer firstNotNull_orderedProducts_UnitsInStock = Util.getIntegerValue(r.getAs("orderedProducts_0.unitsInStock"));
+					Integer firstNotNull_orderedProducts_unitsInStock = Util.getIntegerValue(r.getAs("orderedProducts_0.unitsInStock"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Integer orderedProducts_unitsInStock2 = Util.getIntegerValue(r.getAs("orderedProducts_" + i + ".unitsInStock"));
-						if (firstNotNull_orderedProducts_UnitsInStock != null && orderedProducts_unitsInStock2 != null && !firstNotNull_orderedProducts_UnitsInStock.equals(orderedProducts_unitsInStock2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_orderedProducts_UnitsInStock + " and " + orderedProducts_unitsInStock2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_orderedProducts_UnitsInStock + " and " + orderedProducts_unitsInStock2 + "." );
+						if (firstNotNull_orderedProducts_unitsInStock != null && orderedProducts_unitsInStock2 != null && !firstNotNull_orderedProducts_unitsInStock.equals(orderedProducts_unitsInStock2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_orderedProducts_unitsInStock + " and " + orderedProducts_unitsInStock2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsInStock': " + firstNotNull_orderedProducts_unitsInStock + " and " + orderedProducts_unitsInStock2 + "." );
 						}
-						if (firstNotNull_orderedProducts_UnitsInStock == null && orderedProducts_unitsInStock2 != null) {
-							firstNotNull_orderedProducts_UnitsInStock = orderedProducts_unitsInStock2;
+						if (firstNotNull_orderedProducts_unitsInStock == null && orderedProducts_unitsInStock2 != null) {
+							firstNotNull_orderedProducts_unitsInStock = orderedProducts_unitsInStock2;
 						}
 					}
-					orderedProducts_res.setUnitsInStock(firstNotNull_orderedProducts_UnitsInStock);
+					orderedProducts_res.setUnitsInStock(firstNotNull_orderedProducts_unitsInStock);
 					// attribute 'Products.unitsOnOrder'
-					Integer firstNotNull_orderedProducts_UnitsOnOrder = Util.getIntegerValue(r.getAs("orderedProducts_0.unitsOnOrder"));
+					Integer firstNotNull_orderedProducts_unitsOnOrder = Util.getIntegerValue(r.getAs("orderedProducts_0.unitsOnOrder"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Integer orderedProducts_unitsOnOrder2 = Util.getIntegerValue(r.getAs("orderedProducts_" + i + ".unitsOnOrder"));
-						if (firstNotNull_orderedProducts_UnitsOnOrder != null && orderedProducts_unitsOnOrder2 != null && !firstNotNull_orderedProducts_UnitsOnOrder.equals(orderedProducts_unitsOnOrder2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_orderedProducts_UnitsOnOrder + " and " + orderedProducts_unitsOnOrder2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_orderedProducts_UnitsOnOrder + " and " + orderedProducts_unitsOnOrder2 + "." );
+						if (firstNotNull_orderedProducts_unitsOnOrder != null && orderedProducts_unitsOnOrder2 != null && !firstNotNull_orderedProducts_unitsOnOrder.equals(orderedProducts_unitsOnOrder2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_orderedProducts_unitsOnOrder + " and " + orderedProducts_unitsOnOrder2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.unitsOnOrder': " + firstNotNull_orderedProducts_unitsOnOrder + " and " + orderedProducts_unitsOnOrder2 + "." );
 						}
-						if (firstNotNull_orderedProducts_UnitsOnOrder == null && orderedProducts_unitsOnOrder2 != null) {
-							firstNotNull_orderedProducts_UnitsOnOrder = orderedProducts_unitsOnOrder2;
+						if (firstNotNull_orderedProducts_unitsOnOrder == null && orderedProducts_unitsOnOrder2 != null) {
+							firstNotNull_orderedProducts_unitsOnOrder = orderedProducts_unitsOnOrder2;
 						}
 					}
-					orderedProducts_res.setUnitsOnOrder(firstNotNull_orderedProducts_UnitsOnOrder);
+					orderedProducts_res.setUnitsOnOrder(firstNotNull_orderedProducts_unitsOnOrder);
 					// attribute 'Products.reorderLevel'
-					Integer firstNotNull_orderedProducts_ReorderLevel = Util.getIntegerValue(r.getAs("orderedProducts_0.reorderLevel"));
+					Integer firstNotNull_orderedProducts_reorderLevel = Util.getIntegerValue(r.getAs("orderedProducts_0.reorderLevel"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Integer orderedProducts_reorderLevel2 = Util.getIntegerValue(r.getAs("orderedProducts_" + i + ".reorderLevel"));
-						if (firstNotNull_orderedProducts_ReorderLevel != null && orderedProducts_reorderLevel2 != null && !firstNotNull_orderedProducts_ReorderLevel.equals(orderedProducts_reorderLevel2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_orderedProducts_ReorderLevel + " and " + orderedProducts_reorderLevel2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_orderedProducts_ReorderLevel + " and " + orderedProducts_reorderLevel2 + "." );
+						if (firstNotNull_orderedProducts_reorderLevel != null && orderedProducts_reorderLevel2 != null && !firstNotNull_orderedProducts_reorderLevel.equals(orderedProducts_reorderLevel2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_orderedProducts_reorderLevel + " and " + orderedProducts_reorderLevel2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.reorderLevel': " + firstNotNull_orderedProducts_reorderLevel + " and " + orderedProducts_reorderLevel2 + "." );
 						}
-						if (firstNotNull_orderedProducts_ReorderLevel == null && orderedProducts_reorderLevel2 != null) {
-							firstNotNull_orderedProducts_ReorderLevel = orderedProducts_reorderLevel2;
+						if (firstNotNull_orderedProducts_reorderLevel == null && orderedProducts_reorderLevel2 != null) {
+							firstNotNull_orderedProducts_reorderLevel = orderedProducts_reorderLevel2;
 						}
 					}
-					orderedProducts_res.setReorderLevel(firstNotNull_orderedProducts_ReorderLevel);
+					orderedProducts_res.setReorderLevel(firstNotNull_orderedProducts_reorderLevel);
 					// attribute 'Products.discontinued'
-					Boolean firstNotNull_orderedProducts_Discontinued = Util.getBooleanValue(r.getAs("orderedProducts_0.discontinued"));
+					Boolean firstNotNull_orderedProducts_discontinued = Util.getBooleanValue(r.getAs("orderedProducts_0.discontinued"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Boolean orderedProducts_discontinued2 = Util.getBooleanValue(r.getAs("orderedProducts_" + i + ".discontinued"));
-						if (firstNotNull_orderedProducts_Discontinued != null && orderedProducts_discontinued2 != null && !firstNotNull_orderedProducts_Discontinued.equals(orderedProducts_discontinued2)) {
-							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_orderedProducts_Discontinued + " and " + orderedProducts_discontinued2 + "." );
-							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_orderedProducts_Discontinued + " and " + orderedProducts_discontinued2 + "." );
+						if (firstNotNull_orderedProducts_discontinued != null && orderedProducts_discontinued2 != null && !firstNotNull_orderedProducts_discontinued.equals(orderedProducts_discontinued2)) {
+							composedOf_res.addLogEvent("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_orderedProducts_discontinued + " and " + orderedProducts_discontinued2 + "." );
+							logger.warn("Data consistency problem for [Products - id :"+orderedProducts_res.getProductId()+"]: different values found for attribute 'Products.discontinued': " + firstNotNull_orderedProducts_discontinued + " and " + orderedProducts_discontinued2 + "." );
 						}
-						if (firstNotNull_orderedProducts_Discontinued == null && orderedProducts_discontinued2 != null) {
-							firstNotNull_orderedProducts_Discontinued = orderedProducts_discontinued2;
+						if (firstNotNull_orderedProducts_discontinued == null && orderedProducts_discontinued2 != null) {
+							firstNotNull_orderedProducts_discontinued = orderedProducts_discontinued2;
 						}
 					}
-					orderedProducts_res.setDiscontinued(firstNotNull_orderedProducts_Discontinued);
+					orderedProducts_res.setDiscontinued(firstNotNull_orderedProducts_discontinued);
 	
 					composedOf_res.setOrder(order_res);
 					composedOf_res.setOrderedProducts(orderedProducts_res);

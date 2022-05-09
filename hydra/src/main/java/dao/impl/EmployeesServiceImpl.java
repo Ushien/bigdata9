@@ -67,55 +67,55 @@ public class EmployeesServiceImpl extends EmployeesService {
 				if(attr == EmployeesAttribute.employeeID ) {
 					res.add("EmployeeID = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.LastName ) {
+				if(attr == EmployeesAttribute.lastName ) {
 					res.add("LastName = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.FirstName ) {
+				if(attr == EmployeesAttribute.firstName ) {
 					res.add("FirstName = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Title ) {
+				if(attr == EmployeesAttribute.title ) {
 					res.add("Title = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.TitleOfCourtesy ) {
+				if(attr == EmployeesAttribute.titleOfCourtesy ) {
 					res.add("TitleOfCourtesy = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.BirthDate ) {
+				if(attr == EmployeesAttribute.birthDate ) {
 					res.add("BirthDate = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.HireDate ) {
+				if(attr == EmployeesAttribute.hireDate ) {
 					res.add("HireDate = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Address ) {
+				if(attr == EmployeesAttribute.address ) {
 					res.add("Address = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.City ) {
+				if(attr == EmployeesAttribute.city ) {
 					res.add("City = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Region ) {
+				if(attr == EmployeesAttribute.region ) {
 					res.add("Region = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.PostalCode ) {
+				if(attr == EmployeesAttribute.postalCode ) {
 					res.add("PostalCode = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Country ) {
+				if(attr == EmployeesAttribute.country ) {
 					res.add("Country = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.HomePhone ) {
+				if(attr == EmployeesAttribute.homePhone ) {
 					res.add("HomePhone = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Extension ) {
+				if(attr == EmployeesAttribute.extension ) {
 					res.add("Extension = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Photo ) {
+				if(attr == EmployeesAttribute.photo ) {
 					res.add("Photo = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Notes ) {
+				if(attr == EmployeesAttribute.notes ) {
 					res.add("Notes = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.PhotoPath ) {
+				if(attr == EmployeesAttribute.photoPath ) {
 					res.add("PhotoPath = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == EmployeesAttribute.Salary ) {
+				if(attr == EmployeesAttribute.salary ) {
 					res.add("Salary = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
 			}
@@ -157,7 +157,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.LastName ) {
+					if(attr == EmployeesAttribute.lastName ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -174,7 +174,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.FirstName ) {
+					if(attr == EmployeesAttribute.firstName ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -191,7 +191,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Title ) {
+					if(attr == EmployeesAttribute.title ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -208,7 +208,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.TitleOfCourtesy ) {
+					if(attr == EmployeesAttribute.titleOfCourtesy ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -225,7 +225,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.BirthDate ) {
+					if(attr == EmployeesAttribute.birthDate ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -242,7 +242,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.HireDate ) {
+					if(attr == EmployeesAttribute.hireDate ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -259,7 +259,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Address ) {
+					if(attr == EmployeesAttribute.address ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -276,7 +276,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.City ) {
+					if(attr == EmployeesAttribute.city ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -293,7 +293,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Region ) {
+					if(attr == EmployeesAttribute.region ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -310,7 +310,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.PostalCode ) {
+					if(attr == EmployeesAttribute.postalCode ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -327,7 +327,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Country ) {
+					if(attr == EmployeesAttribute.country ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -344,7 +344,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.HomePhone ) {
+					if(attr == EmployeesAttribute.homePhone ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -361,7 +361,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Extension ) {
+					if(attr == EmployeesAttribute.extension ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -378,7 +378,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Photo ) {
+					if(attr == EmployeesAttribute.photo ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -395,7 +395,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Notes ) {
+					if(attr == EmployeesAttribute.notes ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -412,7 +412,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.PhotoPath ) {
+					if(attr == EmployeesAttribute.photoPath ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -429,7 +429,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == EmployeesAttribute.Salary ) {
+					if(attr == EmployeesAttribute.salary ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -457,103 +457,103 @@ public class EmployeesServiceImpl extends EmployeesService {
 						if(op == Operator.NOT_EQUALS)
 							where =  "EmployeeID IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.LastName ) {
+					if(attr == EmployeesAttribute.lastName ) {
 						if(op == Operator.EQUALS)
 							where =  "LastName IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "LastName IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.FirstName ) {
+					if(attr == EmployeesAttribute.firstName ) {
 						if(op == Operator.EQUALS)
 							where =  "FirstName IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "FirstName IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Title ) {
+					if(attr == EmployeesAttribute.title ) {
 						if(op == Operator.EQUALS)
 							where =  "Title IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Title IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.TitleOfCourtesy ) {
+					if(attr == EmployeesAttribute.titleOfCourtesy ) {
 						if(op == Operator.EQUALS)
 							where =  "TitleOfCourtesy IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "TitleOfCourtesy IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.BirthDate ) {
+					if(attr == EmployeesAttribute.birthDate ) {
 						if(op == Operator.EQUALS)
 							where =  "BirthDate IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "BirthDate IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.HireDate ) {
+					if(attr == EmployeesAttribute.hireDate ) {
 						if(op == Operator.EQUALS)
 							where =  "HireDate IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "HireDate IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Address ) {
+					if(attr == EmployeesAttribute.address ) {
 						if(op == Operator.EQUALS)
 							where =  "Address IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Address IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.City ) {
+					if(attr == EmployeesAttribute.city ) {
 						if(op == Operator.EQUALS)
 							where =  "City IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "City IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Region ) {
+					if(attr == EmployeesAttribute.region ) {
 						if(op == Operator.EQUALS)
 							where =  "Region IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Region IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.PostalCode ) {
+					if(attr == EmployeesAttribute.postalCode ) {
 						if(op == Operator.EQUALS)
 							where =  "PostalCode IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "PostalCode IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Country ) {
+					if(attr == EmployeesAttribute.country ) {
 						if(op == Operator.EQUALS)
 							where =  "Country IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Country IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.HomePhone ) {
+					if(attr == EmployeesAttribute.homePhone ) {
 						if(op == Operator.EQUALS)
 							where =  "HomePhone IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "HomePhone IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Extension ) {
+					if(attr == EmployeesAttribute.extension ) {
 						if(op == Operator.EQUALS)
 							where =  "Extension IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Extension IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Photo ) {
+					if(attr == EmployeesAttribute.photo ) {
 						if(op == Operator.EQUALS)
 							where =  "Photo IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Photo IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Notes ) {
+					if(attr == EmployeesAttribute.notes ) {
 						if(op == Operator.EQUALS)
 							where =  "Notes IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Notes IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.PhotoPath ) {
+					if(attr == EmployeesAttribute.photoPath ) {
 						if(op == Operator.EQUALS)
 							where =  "PhotoPath IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "PhotoPath IS NOT NULL";
 					}
-					if(attr == EmployeesAttribute.Salary ) {
+					if(attr == EmployeesAttribute.salary ) {
 						if(op == Operator.EQUALS)
 							where =  "Salary IS NULL";
 						if(op == Operator.NOT_EQUALS)
@@ -883,7 +883,7 @@ public class EmployeesServiceImpl extends EmployeesService {
 				.withColumnRenamed("shipCountry", "Orders_shipCountry")
 				.withColumnRenamed("logEvents", "Orders_logEvents"),
 				employeesTDOencodedemployeeInCharge.col("mongoDB_Orders_encoded_EmployeeID").equalTo(ordersTDOencodedprocessedOrder.col("mongoDB_Orders_encoded_EmployeeRef")));
-		Dataset<Employees> res_Employees_encoded = res_encoded.select( "employeeID", "LastName", "FirstName", "Title", "TitleOfCourtesy", "BirthDate", "HireDate", "Address", "City", "Region", "PostalCode", "Country", "HomePhone", "Extension", "Photo", "Notes", "PhotoPath", "Salary", "logEvents").as(Encoders.bean(Employees.class));
+		Dataset<Employees> res_Employees_encoded = res_encoded.select( "employeeID", "lastName", "firstName", "title", "titleOfCourtesy", "birthDate", "hireDate", "address", "city", "region", "postalCode", "country", "homePhone", "extension", "photo", "notes", "photoPath", "salary", "logEvents").as(Encoders.bean(Employees.class));
 		res_Employees_encoded = res_Employees_encoded.dropDuplicates(new String[] {"employeeID"});
 		datasetsPOJO.add(res_Employees_encoded);
 		

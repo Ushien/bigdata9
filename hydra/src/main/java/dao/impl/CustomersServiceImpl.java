@@ -318,7 +318,7 @@ public class CustomersServiceImpl extends CustomersService {
 				.withColumnRenamed("logEvents", "Orders_logEvents"),
 				// Multi valued reference
 				functions.array_contains(customersTDOpurchasescustomer.col("kvDB_CustomersPurchased_purchases_orderref"),ordersTDOpurchasesboughtOrder.col("kvDB_CustomersPurchased_purchases_OrderID")));
-		Dataset<Customers> res_Customers_purchases = res_purchases.select( "customerID", "CompanyName", "ContactName", "ContactTitle", "Address", "City", "Region", "PostalCode", "Country", "Phone", "Fax", "logEvents").as(Encoders.bean(Customers.class));
+		Dataset<Customers> res_Customers_purchases = res_purchases.select( "customerID", "companyName", "contactName", "contactTitle", "address", "city", "region", "postalCode", "country", "phone", "fax", "logEvents").as(Encoders.bean(Customers.class));
 		
 		res_Customers_purchases = res_Customers_purchases.dropDuplicates(new String[] {"customerID"});
 		datasetsPOJO.add(res_Customers_purchases);
@@ -352,7 +352,7 @@ public class CustomersServiceImpl extends CustomersService {
 				.withColumnRenamed("shipCountry", "Orders_shipCountry")
 				.withColumnRenamed("logEvents", "Orders_logEvents"),
 				customersTDOboughtcustomer.col("mongoDB_Orders_bought_custid").equalTo(ordersTDOboughtboughtOrder.col("mongoDB_Orders_bought_CustomerRef")));
-		Dataset<Customers> res_Customers_bought = res_bought.select( "customerID", "CompanyName", "ContactName", "ContactTitle", "Address", "City", "Region", "PostalCode", "Country", "Phone", "Fax", "logEvents").as(Encoders.bean(Customers.class));
+		Dataset<Customers> res_Customers_bought = res_bought.select( "customerID", "companyName", "contactName", "contactTitle", "address", "city", "region", "postalCode", "country", "phone", "fax", "logEvents").as(Encoders.bean(Customers.class));
 		res_Customers_bought = res_Customers_bought.dropDuplicates(new String[] {"customerID"});
 		datasetsPOJO.add(res_Customers_bought);
 		

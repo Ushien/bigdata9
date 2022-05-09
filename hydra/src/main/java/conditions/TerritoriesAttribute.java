@@ -1,5 +1,5 @@
 package conditions;
 
 public enum TerritoriesAttribute implements Attributes{
-	territoryID, TerritoryDescription
+	territoryID, territoryDescription
 }

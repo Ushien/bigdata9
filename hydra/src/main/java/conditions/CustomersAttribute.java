@@ -1,5 +1,5 @@
 package conditions;
 
 public enum CustomersAttribute implements Attributes{
-	customerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax
+	customerID, companyName, contactName, contactTitle, address, city, region, postalCode, country, phone, fax
 }

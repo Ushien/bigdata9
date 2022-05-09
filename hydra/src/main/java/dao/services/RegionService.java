@@ -121,8 +121,8 @@ public abstract class RegionService {
 		return getRegionList(conditions.Condition.simple(conditions.RegionAttribute.regionID, conditions.Operator.EQUALS, regionID));
 	}
 	
-	public Dataset<Region> getRegionListByRegionDescription(String RegionDescription) {
-		return getRegionList(conditions.Condition.simple(conditions.RegionAttribute.RegionDescription, conditions.Operator.EQUALS, RegionDescription));
+	public Dataset<Region> getRegionListByRegionDescription(String regionDescription) {
+		return getRegionList(conditions.Condition.simple(conditions.RegionAttribute.regionDescription, conditions.Operator.EQUALS, regionDescription));
 	}
 	
 	
@@ -165,18 +165,18 @@ public abstract class RegionService {
 					region_res.setRegionID(firstNotNull_regionID);
 					
 					// attribute 'Region.regionDescription'
-					String firstNotNull_RegionDescription = Util.getStringValue(r.getAs("regionDescription"));
+					String firstNotNull_regionDescription = Util.getStringValue(r.getAs("regionDescription"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String regionDescription2 = Util.getStringValue(r.getAs("regionDescription_" + i));
-						if (firstNotNull_RegionDescription != null && regionDescription2 != null && !firstNotNull_RegionDescription.equals(regionDescription2)) {
-							region_res.addLogEvent("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_RegionDescription + " and " + regionDescription2 + "." );
-							logger.warn("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_RegionDescription + " and " + regionDescription2 + "." );
+						if (firstNotNull_regionDescription != null && regionDescription2 != null && !firstNotNull_regionDescription.equals(regionDescription2)) {
+							region_res.addLogEvent("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_regionDescription + " and " + regionDescription2 + "." );
+							logger.warn("Data consistency problem for [Region - id :"+region_res.getRegionID()+"]: different values found for attribute 'Region.regionDescription': " + firstNotNull_regionDescription + " and " + regionDescription2 + "." );
 						}
-						if (firstNotNull_RegionDescription == null && regionDescription2 != null) {
-							firstNotNull_RegionDescription = regionDescription2;
+						if (firstNotNull_regionDescription == null && regionDescription2 != null) {
+							firstNotNull_regionDescription = regionDescription2;
 						}
 					}
-					region_res.setRegionDescription(firstNotNull_RegionDescription);
+					region_res.setRegionDescription(firstNotNull_regionDescription);
 	
 					WrappedArray logEvents = r.getAs("logEvents");
 					if(logEvents != null)

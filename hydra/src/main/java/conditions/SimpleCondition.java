@@ -90,25 +90,25 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == OrdersAttribute.id)
 			objectValue = obj.getId();
-		if(attr == OrdersAttribute.OrderDate)
+		if(attr == OrdersAttribute.orderDate)
 			objectValue = obj.getOrderDate();
-		if(attr == OrdersAttribute.RequiredDate)
+		if(attr == OrdersAttribute.requiredDate)
 			objectValue = obj.getRequiredDate();
-		if(attr == OrdersAttribute.ShippedDate)
+		if(attr == OrdersAttribute.shippedDate)
 			objectValue = obj.getShippedDate();
-		if(attr == OrdersAttribute.Freight)
+		if(attr == OrdersAttribute.freight)
 			objectValue = obj.getFreight();
-		if(attr == OrdersAttribute.ShipName)
+		if(attr == OrdersAttribute.shipName)
 			objectValue = obj.getShipName();
-		if(attr == OrdersAttribute.ShipAddress)
+		if(attr == OrdersAttribute.shipAddress)
 			objectValue = obj.getShipAddress();
-		if(attr == OrdersAttribute.ShipCity)
+		if(attr == OrdersAttribute.shipCity)
 			objectValue = obj.getShipCity();
-		if(attr == OrdersAttribute.ShipRegion)
+		if(attr == OrdersAttribute.shipRegion)
 			objectValue = obj.getShipRegion();
-		if(attr == OrdersAttribute.ShipPostalCode)
+		if(attr == OrdersAttribute.shipPostalCode)
 			objectValue = obj.getShipPostalCode();
-		if(attr == OrdersAttribute.ShipCountry)
+		if(attr == OrdersAttribute.shipCountry)
 			objectValue = obj.getShipCountry();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -124,19 +124,19 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == ProductsAttribute.productId)
 			objectValue = obj.getProductId();
-		if(attr == ProductsAttribute.ProductName)
+		if(attr == ProductsAttribute.productName)
 			objectValue = obj.getProductName();
-		if(attr == ProductsAttribute.QuantityPerUnit)
+		if(attr == ProductsAttribute.quantityPerUnit)
 			objectValue = obj.getQuantityPerUnit();
-		if(attr == ProductsAttribute.UnitPrice)
+		if(attr == ProductsAttribute.unitPrice)
 			objectValue = obj.getUnitPrice();
-		if(attr == ProductsAttribute.UnitsInStock)
+		if(attr == ProductsAttribute.unitsInStock)
 			objectValue = obj.getUnitsInStock();
-		if(attr == ProductsAttribute.UnitsOnOrder)
+		if(attr == ProductsAttribute.unitsOnOrder)
 			objectValue = obj.getUnitsOnOrder();
-		if(attr == ProductsAttribute.ReorderLevel)
+		if(attr == ProductsAttribute.reorderLevel)
 			objectValue = obj.getReorderLevel();
-		if(attr == ProductsAttribute.Discontinued)
+		if(attr == ProductsAttribute.discontinued)
 			objectValue = obj.getDiscontinued();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -152,27 +152,27 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == SuppliersAttribute.supplierId)
 			objectValue = obj.getSupplierId();
-		if(attr == SuppliersAttribute.CompanyName)
+		if(attr == SuppliersAttribute.companyName)
 			objectValue = obj.getCompanyName();
-		if(attr == SuppliersAttribute.ContactName)
+		if(attr == SuppliersAttribute.contactName)
 			objectValue = obj.getContactName();
-		if(attr == SuppliersAttribute.ContactTitle)
+		if(attr == SuppliersAttribute.contactTitle)
 			objectValue = obj.getContactTitle();
-		if(attr == SuppliersAttribute.Address)
+		if(attr == SuppliersAttribute.address)
 			objectValue = obj.getAddress();
-		if(attr == SuppliersAttribute.City)
+		if(attr == SuppliersAttribute.city)
 			objectValue = obj.getCity();
-		if(attr == SuppliersAttribute.Region)
+		if(attr == SuppliersAttribute.region)
 			objectValue = obj.getRegion();
-		if(attr == SuppliersAttribute.PostalCode)
+		if(attr == SuppliersAttribute.postalCode)
 			objectValue = obj.getPostalCode();
-		if(attr == SuppliersAttribute.Country)
+		if(attr == SuppliersAttribute.country)
 			objectValue = obj.getCountry();
-		if(attr == SuppliersAttribute.Phone)
+		if(attr == SuppliersAttribute.phone)
 			objectValue = obj.getPhone();
-		if(attr == SuppliersAttribute.Fax)
+		if(attr == SuppliersAttribute.fax)
 			objectValue = obj.getFax();
-		if(attr == SuppliersAttribute.HomePage)
+		if(attr == SuppliersAttribute.homePage)
 			objectValue = obj.getHomePage();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -188,25 +188,25 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == CustomersAttribute.customerID)
 			objectValue = obj.getCustomerID();
-		if(attr == CustomersAttribute.CompanyName)
+		if(attr == CustomersAttribute.companyName)
 			objectValue = obj.getCompanyName();
-		if(attr == CustomersAttribute.ContactName)
+		if(attr == CustomersAttribute.contactName)
 			objectValue = obj.getContactName();
-		if(attr == CustomersAttribute.ContactTitle)
+		if(attr == CustomersAttribute.contactTitle)
 			objectValue = obj.getContactTitle();
-		if(attr == CustomersAttribute.Address)
+		if(attr == CustomersAttribute.address)
 			objectValue = obj.getAddress();
-		if(attr == CustomersAttribute.City)
+		if(attr == CustomersAttribute.city)
 			objectValue = obj.getCity();
-		if(attr == CustomersAttribute.Region)
+		if(attr == CustomersAttribute.region)
 			objectValue = obj.getRegion();
-		if(attr == CustomersAttribute.PostalCode)
+		if(attr == CustomersAttribute.postalCode)
 			objectValue = obj.getPostalCode();
-		if(attr == CustomersAttribute.Country)
+		if(attr == CustomersAttribute.country)
 			objectValue = obj.getCountry();
-		if(attr == CustomersAttribute.Phone)
+		if(attr == CustomersAttribute.phone)
 			objectValue = obj.getPhone();
-		if(attr == CustomersAttribute.Fax)
+		if(attr == CustomersAttribute.fax)
 			objectValue = obj.getFax();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -222,11 +222,11 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == CategoriesAttribute.categoryID)
 			objectValue = obj.getCategoryID();
-		if(attr == CategoriesAttribute.CategoryName)
+		if(attr == CategoriesAttribute.categoryName)
 			objectValue = obj.getCategoryName();
-		if(attr == CategoriesAttribute.Description)
+		if(attr == CategoriesAttribute.description)
 			objectValue = obj.getDescription();
-		if(attr == CategoriesAttribute.Picture)
+		if(attr == CategoriesAttribute.picture)
 			objectValue = obj.getPicture();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -242,9 +242,9 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == ShippersAttribute.shipperID)
 			objectValue = obj.getShipperID();
-		if(attr == ShippersAttribute.CompanyName)
+		if(attr == ShippersAttribute.companyName)
 			objectValue = obj.getCompanyName();
-		if(attr == ShippersAttribute.Phone)
+		if(attr == ShippersAttribute.phone)
 			objectValue = obj.getPhone();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -260,39 +260,39 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == EmployeesAttribute.employeeID)
 			objectValue = obj.getEmployeeID();
-		if(attr == EmployeesAttribute.LastName)
+		if(attr == EmployeesAttribute.lastName)
 			objectValue = obj.getLastName();
-		if(attr == EmployeesAttribute.FirstName)
+		if(attr == EmployeesAttribute.firstName)
 			objectValue = obj.getFirstName();
-		if(attr == EmployeesAttribute.Title)
+		if(attr == EmployeesAttribute.title)
 			objectValue = obj.getTitle();
-		if(attr == EmployeesAttribute.TitleOfCourtesy)
+		if(attr == EmployeesAttribute.titleOfCourtesy)
 			objectValue = obj.getTitleOfCourtesy();
-		if(attr == EmployeesAttribute.BirthDate)
+		if(attr == EmployeesAttribute.birthDate)
 			objectValue = obj.getBirthDate();
-		if(attr == EmployeesAttribute.HireDate)
+		if(attr == EmployeesAttribute.hireDate)
 			objectValue = obj.getHireDate();
-		if(attr == EmployeesAttribute.Address)
+		if(attr == EmployeesAttribute.address)
 			objectValue = obj.getAddress();
-		if(attr == EmployeesAttribute.City)
+		if(attr == EmployeesAttribute.city)
 			objectValue = obj.getCity();
-		if(attr == EmployeesAttribute.Region)
+		if(attr == EmployeesAttribute.region)
 			objectValue = obj.getRegion();
-		if(attr == EmployeesAttribute.PostalCode)
+		if(attr == EmployeesAttribute.postalCode)
 			objectValue = obj.getPostalCode();
-		if(attr == EmployeesAttribute.Country)
+		if(attr == EmployeesAttribute.country)
 			objectValue = obj.getCountry();
-		if(attr == EmployeesAttribute.HomePhone)
+		if(attr == EmployeesAttribute.homePhone)
 			objectValue = obj.getHomePhone();
-		if(attr == EmployeesAttribute.Extension)
+		if(attr == EmployeesAttribute.extension)
 			objectValue = obj.getExtension();
-		if(attr == EmployeesAttribute.Photo)
+		if(attr == EmployeesAttribute.photo)
 			objectValue = obj.getPhoto();
-		if(attr == EmployeesAttribute.Notes)
+		if(attr == EmployeesAttribute.notes)
 			objectValue = obj.getNotes();
-		if(attr == EmployeesAttribute.PhotoPath)
+		if(attr == EmployeesAttribute.photoPath)
 			objectValue = obj.getPhotoPath();
-		if(attr == EmployeesAttribute.Salary)
+		if(attr == EmployeesAttribute.salary)
 			objectValue = obj.getSalary();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -308,7 +308,7 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == RegionAttribute.regionID)
 			objectValue = obj.getRegionID();
-		if(attr == RegionAttribute.RegionDescription)
+		if(attr == RegionAttribute.regionDescription)
 			objectValue = obj.getRegionDescription();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -324,7 +324,7 @@ public class SimpleCondition<E> extends Condition<E> {
 
 		if(attr == TerritoriesAttribute.territoryID)
 			objectValue = obj.getTerritoryID();
-		if(attr == TerritoriesAttribute.TerritoryDescription)
+		if(attr == TerritoriesAttribute.territoryDescription)
 			objectValue = obj.getTerritoryDescription();
 
 		return operator.evaluate(objectValue, this.getValue());
@@ -338,11 +338,11 @@ public class SimpleCondition<E> extends Condition<E> {
 		ComposedOfAttribute attr = (ComposedOfAttribute) this.attribute;
 		Object objectValue = null;
 
-		if(attr == ComposedOfAttribute.UnitPrice)
+		if(attr == ComposedOfAttribute.unitPrice)
 			objectValue = obj.getUnitPrice();
-		if(attr == ComposedOfAttribute.Quantity)
+		if(attr == ComposedOfAttribute.quantity)
 			objectValue = obj.getQuantity();
-		if(attr == ComposedOfAttribute.Discount)
+		if(attr == ComposedOfAttribute.discount)
 			objectValue = obj.getDiscount();
 
 		return operator.evaluate(objectValue, this.getValue());

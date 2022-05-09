@@ -541,450 +541,450 @@ public abstract class ReportsToService {
 					Integer firstNotNull_subordonee_employeeID = Util.getIntegerValue(r.getAs("subordonee_0.employeeID"));
 					subordonee_res.setEmployeeID(firstNotNull_subordonee_employeeID);
 					// attribute 'Employees.lastName'
-					String firstNotNull_subordonee_LastName = Util.getStringValue(r.getAs("subordonee_0.lastName"));
+					String firstNotNull_subordonee_lastName = Util.getStringValue(r.getAs("subordonee_0.lastName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_lastName2 = Util.getStringValue(r.getAs("subordonee_" + i + ".lastName"));
-						if (firstNotNull_subordonee_LastName != null && subordonee_lastName2 != null && !firstNotNull_subordonee_LastName.equals(subordonee_lastName2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_subordonee_LastName + " and " + subordonee_lastName2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_subordonee_LastName + " and " + subordonee_lastName2 + "." );
+						if (firstNotNull_subordonee_lastName != null && subordonee_lastName2 != null && !firstNotNull_subordonee_lastName.equals(subordonee_lastName2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_subordonee_lastName + " and " + subordonee_lastName2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_subordonee_lastName + " and " + subordonee_lastName2 + "." );
 						}
-						if (firstNotNull_subordonee_LastName == null && subordonee_lastName2 != null) {
-							firstNotNull_subordonee_LastName = subordonee_lastName2;
+						if (firstNotNull_subordonee_lastName == null && subordonee_lastName2 != null) {
+							firstNotNull_subordonee_lastName = subordonee_lastName2;
 						}
 					}
-					subordonee_res.setLastName(firstNotNull_subordonee_LastName);
+					subordonee_res.setLastName(firstNotNull_subordonee_lastName);
 					// attribute 'Employees.firstName'
-					String firstNotNull_subordonee_FirstName = Util.getStringValue(r.getAs("subordonee_0.firstName"));
+					String firstNotNull_subordonee_firstName = Util.getStringValue(r.getAs("subordonee_0.firstName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_firstName2 = Util.getStringValue(r.getAs("subordonee_" + i + ".firstName"));
-						if (firstNotNull_subordonee_FirstName != null && subordonee_firstName2 != null && !firstNotNull_subordonee_FirstName.equals(subordonee_firstName2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_subordonee_FirstName + " and " + subordonee_firstName2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_subordonee_FirstName + " and " + subordonee_firstName2 + "." );
+						if (firstNotNull_subordonee_firstName != null && subordonee_firstName2 != null && !firstNotNull_subordonee_firstName.equals(subordonee_firstName2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_subordonee_firstName + " and " + subordonee_firstName2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_subordonee_firstName + " and " + subordonee_firstName2 + "." );
 						}
-						if (firstNotNull_subordonee_FirstName == null && subordonee_firstName2 != null) {
-							firstNotNull_subordonee_FirstName = subordonee_firstName2;
+						if (firstNotNull_subordonee_firstName == null && subordonee_firstName2 != null) {
+							firstNotNull_subordonee_firstName = subordonee_firstName2;
 						}
 					}
-					subordonee_res.setFirstName(firstNotNull_subordonee_FirstName);
+					subordonee_res.setFirstName(firstNotNull_subordonee_firstName);
 					// attribute 'Employees.title'
-					String firstNotNull_subordonee_Title = Util.getStringValue(r.getAs("subordonee_0.title"));
+					String firstNotNull_subordonee_title = Util.getStringValue(r.getAs("subordonee_0.title"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_title2 = Util.getStringValue(r.getAs("subordonee_" + i + ".title"));
-						if (firstNotNull_subordonee_Title != null && subordonee_title2 != null && !firstNotNull_subordonee_Title.equals(subordonee_title2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_subordonee_Title + " and " + subordonee_title2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_subordonee_Title + " and " + subordonee_title2 + "." );
+						if (firstNotNull_subordonee_title != null && subordonee_title2 != null && !firstNotNull_subordonee_title.equals(subordonee_title2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_subordonee_title + " and " + subordonee_title2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_subordonee_title + " and " + subordonee_title2 + "." );
 						}
-						if (firstNotNull_subordonee_Title == null && subordonee_title2 != null) {
-							firstNotNull_subordonee_Title = subordonee_title2;
+						if (firstNotNull_subordonee_title == null && subordonee_title2 != null) {
+							firstNotNull_subordonee_title = subordonee_title2;
 						}
 					}
-					subordonee_res.setTitle(firstNotNull_subordonee_Title);
+					subordonee_res.setTitle(firstNotNull_subordonee_title);
 					// attribute 'Employees.titleOfCourtesy'
-					String firstNotNull_subordonee_TitleOfCourtesy = Util.getStringValue(r.getAs("subordonee_0.titleOfCourtesy"));
+					String firstNotNull_subordonee_titleOfCourtesy = Util.getStringValue(r.getAs("subordonee_0.titleOfCourtesy"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_titleOfCourtesy2 = Util.getStringValue(r.getAs("subordonee_" + i + ".titleOfCourtesy"));
-						if (firstNotNull_subordonee_TitleOfCourtesy != null && subordonee_titleOfCourtesy2 != null && !firstNotNull_subordonee_TitleOfCourtesy.equals(subordonee_titleOfCourtesy2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_subordonee_TitleOfCourtesy + " and " + subordonee_titleOfCourtesy2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_subordonee_TitleOfCourtesy + " and " + subordonee_titleOfCourtesy2 + "." );
+						if (firstNotNull_subordonee_titleOfCourtesy != null && subordonee_titleOfCourtesy2 != null && !firstNotNull_subordonee_titleOfCourtesy.equals(subordonee_titleOfCourtesy2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_subordonee_titleOfCourtesy + " and " + subordonee_titleOfCourtesy2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_subordonee_titleOfCourtesy + " and " + subordonee_titleOfCourtesy2 + "." );
 						}
-						if (firstNotNull_subordonee_TitleOfCourtesy == null && subordonee_titleOfCourtesy2 != null) {
-							firstNotNull_subordonee_TitleOfCourtesy = subordonee_titleOfCourtesy2;
+						if (firstNotNull_subordonee_titleOfCourtesy == null && subordonee_titleOfCourtesy2 != null) {
+							firstNotNull_subordonee_titleOfCourtesy = subordonee_titleOfCourtesy2;
 						}
 					}
-					subordonee_res.setTitleOfCourtesy(firstNotNull_subordonee_TitleOfCourtesy);
+					subordonee_res.setTitleOfCourtesy(firstNotNull_subordonee_titleOfCourtesy);
 					// attribute 'Employees.birthDate'
-					LocalDate firstNotNull_subordonee_BirthDate = Util.getLocalDateValue(r.getAs("subordonee_0.birthDate"));
+					LocalDate firstNotNull_subordonee_birthDate = Util.getLocalDateValue(r.getAs("subordonee_0.birthDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate subordonee_birthDate2 = Util.getLocalDateValue(r.getAs("subordonee_" + i + ".birthDate"));
-						if (firstNotNull_subordonee_BirthDate != null && subordonee_birthDate2 != null && !firstNotNull_subordonee_BirthDate.equals(subordonee_birthDate2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_subordonee_BirthDate + " and " + subordonee_birthDate2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_subordonee_BirthDate + " and " + subordonee_birthDate2 + "." );
+						if (firstNotNull_subordonee_birthDate != null && subordonee_birthDate2 != null && !firstNotNull_subordonee_birthDate.equals(subordonee_birthDate2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_subordonee_birthDate + " and " + subordonee_birthDate2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_subordonee_birthDate + " and " + subordonee_birthDate2 + "." );
 						}
-						if (firstNotNull_subordonee_BirthDate == null && subordonee_birthDate2 != null) {
-							firstNotNull_subordonee_BirthDate = subordonee_birthDate2;
+						if (firstNotNull_subordonee_birthDate == null && subordonee_birthDate2 != null) {
+							firstNotNull_subordonee_birthDate = subordonee_birthDate2;
 						}
 					}
-					subordonee_res.setBirthDate(firstNotNull_subordonee_BirthDate);
+					subordonee_res.setBirthDate(firstNotNull_subordonee_birthDate);
 					// attribute 'Employees.hireDate'
-					LocalDate firstNotNull_subordonee_HireDate = Util.getLocalDateValue(r.getAs("subordonee_0.hireDate"));
+					LocalDate firstNotNull_subordonee_hireDate = Util.getLocalDateValue(r.getAs("subordonee_0.hireDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate subordonee_hireDate2 = Util.getLocalDateValue(r.getAs("subordonee_" + i + ".hireDate"));
-						if (firstNotNull_subordonee_HireDate != null && subordonee_hireDate2 != null && !firstNotNull_subordonee_HireDate.equals(subordonee_hireDate2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_subordonee_HireDate + " and " + subordonee_hireDate2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_subordonee_HireDate + " and " + subordonee_hireDate2 + "." );
+						if (firstNotNull_subordonee_hireDate != null && subordonee_hireDate2 != null && !firstNotNull_subordonee_hireDate.equals(subordonee_hireDate2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_subordonee_hireDate + " and " + subordonee_hireDate2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_subordonee_hireDate + " and " + subordonee_hireDate2 + "." );
 						}
-						if (firstNotNull_subordonee_HireDate == null && subordonee_hireDate2 != null) {
-							firstNotNull_subordonee_HireDate = subordonee_hireDate2;
+						if (firstNotNull_subordonee_hireDate == null && subordonee_hireDate2 != null) {
+							firstNotNull_subordonee_hireDate = subordonee_hireDate2;
 						}
 					}
-					subordonee_res.setHireDate(firstNotNull_subordonee_HireDate);
+					subordonee_res.setHireDate(firstNotNull_subordonee_hireDate);
 					// attribute 'Employees.address'
-					String firstNotNull_subordonee_Address = Util.getStringValue(r.getAs("subordonee_0.address"));
+					String firstNotNull_subordonee_address = Util.getStringValue(r.getAs("subordonee_0.address"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_address2 = Util.getStringValue(r.getAs("subordonee_" + i + ".address"));
-						if (firstNotNull_subordonee_Address != null && subordonee_address2 != null && !firstNotNull_subordonee_Address.equals(subordonee_address2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_subordonee_Address + " and " + subordonee_address2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_subordonee_Address + " and " + subordonee_address2 + "." );
+						if (firstNotNull_subordonee_address != null && subordonee_address2 != null && !firstNotNull_subordonee_address.equals(subordonee_address2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_subordonee_address + " and " + subordonee_address2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_subordonee_address + " and " + subordonee_address2 + "." );
 						}
-						if (firstNotNull_subordonee_Address == null && subordonee_address2 != null) {
-							firstNotNull_subordonee_Address = subordonee_address2;
+						if (firstNotNull_subordonee_address == null && subordonee_address2 != null) {
+							firstNotNull_subordonee_address = subordonee_address2;
 						}
 					}
-					subordonee_res.setAddress(firstNotNull_subordonee_Address);
+					subordonee_res.setAddress(firstNotNull_subordonee_address);
 					// attribute 'Employees.city'
-					String firstNotNull_subordonee_City = Util.getStringValue(r.getAs("subordonee_0.city"));
+					String firstNotNull_subordonee_city = Util.getStringValue(r.getAs("subordonee_0.city"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_city2 = Util.getStringValue(r.getAs("subordonee_" + i + ".city"));
-						if (firstNotNull_subordonee_City != null && subordonee_city2 != null && !firstNotNull_subordonee_City.equals(subordonee_city2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_subordonee_City + " and " + subordonee_city2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_subordonee_City + " and " + subordonee_city2 + "." );
+						if (firstNotNull_subordonee_city != null && subordonee_city2 != null && !firstNotNull_subordonee_city.equals(subordonee_city2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_subordonee_city + " and " + subordonee_city2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_subordonee_city + " and " + subordonee_city2 + "." );
 						}
-						if (firstNotNull_subordonee_City == null && subordonee_city2 != null) {
-							firstNotNull_subordonee_City = subordonee_city2;
+						if (firstNotNull_subordonee_city == null && subordonee_city2 != null) {
+							firstNotNull_subordonee_city = subordonee_city2;
 						}
 					}
-					subordonee_res.setCity(firstNotNull_subordonee_City);
+					subordonee_res.setCity(firstNotNull_subordonee_city);
 					// attribute 'Employees.region'
-					String firstNotNull_subordonee_Region = Util.getStringValue(r.getAs("subordonee_0.region"));
+					String firstNotNull_subordonee_region = Util.getStringValue(r.getAs("subordonee_0.region"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_region2 = Util.getStringValue(r.getAs("subordonee_" + i + ".region"));
-						if (firstNotNull_subordonee_Region != null && subordonee_region2 != null && !firstNotNull_subordonee_Region.equals(subordonee_region2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_subordonee_Region + " and " + subordonee_region2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_subordonee_Region + " and " + subordonee_region2 + "." );
+						if (firstNotNull_subordonee_region != null && subordonee_region2 != null && !firstNotNull_subordonee_region.equals(subordonee_region2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_subordonee_region + " and " + subordonee_region2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_subordonee_region + " and " + subordonee_region2 + "." );
 						}
-						if (firstNotNull_subordonee_Region == null && subordonee_region2 != null) {
-							firstNotNull_subordonee_Region = subordonee_region2;
+						if (firstNotNull_subordonee_region == null && subordonee_region2 != null) {
+							firstNotNull_subordonee_region = subordonee_region2;
 						}
 					}
-					subordonee_res.setRegion(firstNotNull_subordonee_Region);
+					subordonee_res.setRegion(firstNotNull_subordonee_region);
 					// attribute 'Employees.postalCode'
-					String firstNotNull_subordonee_PostalCode = Util.getStringValue(r.getAs("subordonee_0.postalCode"));
+					String firstNotNull_subordonee_postalCode = Util.getStringValue(r.getAs("subordonee_0.postalCode"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_postalCode2 = Util.getStringValue(r.getAs("subordonee_" + i + ".postalCode"));
-						if (firstNotNull_subordonee_PostalCode != null && subordonee_postalCode2 != null && !firstNotNull_subordonee_PostalCode.equals(subordonee_postalCode2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_subordonee_PostalCode + " and " + subordonee_postalCode2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_subordonee_PostalCode + " and " + subordonee_postalCode2 + "." );
+						if (firstNotNull_subordonee_postalCode != null && subordonee_postalCode2 != null && !firstNotNull_subordonee_postalCode.equals(subordonee_postalCode2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_subordonee_postalCode + " and " + subordonee_postalCode2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_subordonee_postalCode + " and " + subordonee_postalCode2 + "." );
 						}
-						if (firstNotNull_subordonee_PostalCode == null && subordonee_postalCode2 != null) {
-							firstNotNull_subordonee_PostalCode = subordonee_postalCode2;
+						if (firstNotNull_subordonee_postalCode == null && subordonee_postalCode2 != null) {
+							firstNotNull_subordonee_postalCode = subordonee_postalCode2;
 						}
 					}
-					subordonee_res.setPostalCode(firstNotNull_subordonee_PostalCode);
+					subordonee_res.setPostalCode(firstNotNull_subordonee_postalCode);
 					// attribute 'Employees.country'
-					String firstNotNull_subordonee_Country = Util.getStringValue(r.getAs("subordonee_0.country"));
+					String firstNotNull_subordonee_country = Util.getStringValue(r.getAs("subordonee_0.country"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_country2 = Util.getStringValue(r.getAs("subordonee_" + i + ".country"));
-						if (firstNotNull_subordonee_Country != null && subordonee_country2 != null && !firstNotNull_subordonee_Country.equals(subordonee_country2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_subordonee_Country + " and " + subordonee_country2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_subordonee_Country + " and " + subordonee_country2 + "." );
+						if (firstNotNull_subordonee_country != null && subordonee_country2 != null && !firstNotNull_subordonee_country.equals(subordonee_country2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_subordonee_country + " and " + subordonee_country2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_subordonee_country + " and " + subordonee_country2 + "." );
 						}
-						if (firstNotNull_subordonee_Country == null && subordonee_country2 != null) {
-							firstNotNull_subordonee_Country = subordonee_country2;
+						if (firstNotNull_subordonee_country == null && subordonee_country2 != null) {
+							firstNotNull_subordonee_country = subordonee_country2;
 						}
 					}
-					subordonee_res.setCountry(firstNotNull_subordonee_Country);
+					subordonee_res.setCountry(firstNotNull_subordonee_country);
 					// attribute 'Employees.homePhone'
-					String firstNotNull_subordonee_HomePhone = Util.getStringValue(r.getAs("subordonee_0.homePhone"));
+					String firstNotNull_subordonee_homePhone = Util.getStringValue(r.getAs("subordonee_0.homePhone"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_homePhone2 = Util.getStringValue(r.getAs("subordonee_" + i + ".homePhone"));
-						if (firstNotNull_subordonee_HomePhone != null && subordonee_homePhone2 != null && !firstNotNull_subordonee_HomePhone.equals(subordonee_homePhone2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_subordonee_HomePhone + " and " + subordonee_homePhone2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_subordonee_HomePhone + " and " + subordonee_homePhone2 + "." );
+						if (firstNotNull_subordonee_homePhone != null && subordonee_homePhone2 != null && !firstNotNull_subordonee_homePhone.equals(subordonee_homePhone2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_subordonee_homePhone + " and " + subordonee_homePhone2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_subordonee_homePhone + " and " + subordonee_homePhone2 + "." );
 						}
-						if (firstNotNull_subordonee_HomePhone == null && subordonee_homePhone2 != null) {
-							firstNotNull_subordonee_HomePhone = subordonee_homePhone2;
+						if (firstNotNull_subordonee_homePhone == null && subordonee_homePhone2 != null) {
+							firstNotNull_subordonee_homePhone = subordonee_homePhone2;
 						}
 					}
-					subordonee_res.setHomePhone(firstNotNull_subordonee_HomePhone);
+					subordonee_res.setHomePhone(firstNotNull_subordonee_homePhone);
 					// attribute 'Employees.extension'
-					String firstNotNull_subordonee_Extension = Util.getStringValue(r.getAs("subordonee_0.extension"));
+					String firstNotNull_subordonee_extension = Util.getStringValue(r.getAs("subordonee_0.extension"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_extension2 = Util.getStringValue(r.getAs("subordonee_" + i + ".extension"));
-						if (firstNotNull_subordonee_Extension != null && subordonee_extension2 != null && !firstNotNull_subordonee_Extension.equals(subordonee_extension2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_subordonee_Extension + " and " + subordonee_extension2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_subordonee_Extension + " and " + subordonee_extension2 + "." );
+						if (firstNotNull_subordonee_extension != null && subordonee_extension2 != null && !firstNotNull_subordonee_extension.equals(subordonee_extension2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_subordonee_extension + " and " + subordonee_extension2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_subordonee_extension + " and " + subordonee_extension2 + "." );
 						}
-						if (firstNotNull_subordonee_Extension == null && subordonee_extension2 != null) {
-							firstNotNull_subordonee_Extension = subordonee_extension2;
+						if (firstNotNull_subordonee_extension == null && subordonee_extension2 != null) {
+							firstNotNull_subordonee_extension = subordonee_extension2;
 						}
 					}
-					subordonee_res.setExtension(firstNotNull_subordonee_Extension);
+					subordonee_res.setExtension(firstNotNull_subordonee_extension);
 					// attribute 'Employees.photo'
-					byte[] firstNotNull_subordonee_Photo = Util.getByteArrayValue(r.getAs("subordonee_0.photo"));
+					byte[] firstNotNull_subordonee_photo = Util.getByteArrayValue(r.getAs("subordonee_0.photo"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						byte[] subordonee_photo2 = Util.getByteArrayValue(r.getAs("subordonee_" + i + ".photo"));
-						if (firstNotNull_subordonee_Photo != null && subordonee_photo2 != null && !firstNotNull_subordonee_Photo.equals(subordonee_photo2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_subordonee_Photo + " and " + subordonee_photo2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_subordonee_Photo + " and " + subordonee_photo2 + "." );
+						if (firstNotNull_subordonee_photo != null && subordonee_photo2 != null && !firstNotNull_subordonee_photo.equals(subordonee_photo2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_subordonee_photo + " and " + subordonee_photo2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_subordonee_photo + " and " + subordonee_photo2 + "." );
 						}
-						if (firstNotNull_subordonee_Photo == null && subordonee_photo2 != null) {
-							firstNotNull_subordonee_Photo = subordonee_photo2;
+						if (firstNotNull_subordonee_photo == null && subordonee_photo2 != null) {
+							firstNotNull_subordonee_photo = subordonee_photo2;
 						}
 					}
-					subordonee_res.setPhoto(firstNotNull_subordonee_Photo);
+					subordonee_res.setPhoto(firstNotNull_subordonee_photo);
 					// attribute 'Employees.notes'
-					String firstNotNull_subordonee_Notes = Util.getStringValue(r.getAs("subordonee_0.notes"));
+					String firstNotNull_subordonee_notes = Util.getStringValue(r.getAs("subordonee_0.notes"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_notes2 = Util.getStringValue(r.getAs("subordonee_" + i + ".notes"));
-						if (firstNotNull_subordonee_Notes != null && subordonee_notes2 != null && !firstNotNull_subordonee_Notes.equals(subordonee_notes2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_subordonee_Notes + " and " + subordonee_notes2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_subordonee_Notes + " and " + subordonee_notes2 + "." );
+						if (firstNotNull_subordonee_notes != null && subordonee_notes2 != null && !firstNotNull_subordonee_notes.equals(subordonee_notes2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_subordonee_notes + " and " + subordonee_notes2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_subordonee_notes + " and " + subordonee_notes2 + "." );
 						}
-						if (firstNotNull_subordonee_Notes == null && subordonee_notes2 != null) {
-							firstNotNull_subordonee_Notes = subordonee_notes2;
+						if (firstNotNull_subordonee_notes == null && subordonee_notes2 != null) {
+							firstNotNull_subordonee_notes = subordonee_notes2;
 						}
 					}
-					subordonee_res.setNotes(firstNotNull_subordonee_Notes);
+					subordonee_res.setNotes(firstNotNull_subordonee_notes);
 					// attribute 'Employees.photoPath'
-					String firstNotNull_subordonee_PhotoPath = Util.getStringValue(r.getAs("subordonee_0.photoPath"));
+					String firstNotNull_subordonee_photoPath = Util.getStringValue(r.getAs("subordonee_0.photoPath"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String subordonee_photoPath2 = Util.getStringValue(r.getAs("subordonee_" + i + ".photoPath"));
-						if (firstNotNull_subordonee_PhotoPath != null && subordonee_photoPath2 != null && !firstNotNull_subordonee_PhotoPath.equals(subordonee_photoPath2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_subordonee_PhotoPath + " and " + subordonee_photoPath2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_subordonee_PhotoPath + " and " + subordonee_photoPath2 + "." );
+						if (firstNotNull_subordonee_photoPath != null && subordonee_photoPath2 != null && !firstNotNull_subordonee_photoPath.equals(subordonee_photoPath2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_subordonee_photoPath + " and " + subordonee_photoPath2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_subordonee_photoPath + " and " + subordonee_photoPath2 + "." );
 						}
-						if (firstNotNull_subordonee_PhotoPath == null && subordonee_photoPath2 != null) {
-							firstNotNull_subordonee_PhotoPath = subordonee_photoPath2;
+						if (firstNotNull_subordonee_photoPath == null && subordonee_photoPath2 != null) {
+							firstNotNull_subordonee_photoPath = subordonee_photoPath2;
 						}
 					}
-					subordonee_res.setPhotoPath(firstNotNull_subordonee_PhotoPath);
+					subordonee_res.setPhotoPath(firstNotNull_subordonee_photoPath);
 					// attribute 'Employees.salary'
-					Double firstNotNull_subordonee_Salary = Util.getDoubleValue(r.getAs("subordonee_0.salary"));
+					Double firstNotNull_subordonee_salary = Util.getDoubleValue(r.getAs("subordonee_0.salary"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double subordonee_salary2 = Util.getDoubleValue(r.getAs("subordonee_" + i + ".salary"));
-						if (firstNotNull_subordonee_Salary != null && subordonee_salary2 != null && !firstNotNull_subordonee_Salary.equals(subordonee_salary2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_subordonee_Salary + " and " + subordonee_salary2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_subordonee_Salary + " and " + subordonee_salary2 + "." );
+						if (firstNotNull_subordonee_salary != null && subordonee_salary2 != null && !firstNotNull_subordonee_salary.equals(subordonee_salary2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_subordonee_salary + " and " + subordonee_salary2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+subordonee_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_subordonee_salary + " and " + subordonee_salary2 + "." );
 						}
-						if (firstNotNull_subordonee_Salary == null && subordonee_salary2 != null) {
-							firstNotNull_subordonee_Salary = subordonee_salary2;
+						if (firstNotNull_subordonee_salary == null && subordonee_salary2 != null) {
+							firstNotNull_subordonee_salary = subordonee_salary2;
 						}
 					}
-					subordonee_res.setSalary(firstNotNull_subordonee_Salary);
+					subordonee_res.setSalary(firstNotNull_subordonee_salary);
 					// attribute 'Employees.employeeID'
 					Integer firstNotNull_boss_employeeID = Util.getIntegerValue(r.getAs("boss_0.employeeID"));
 					boss_res.setEmployeeID(firstNotNull_boss_employeeID);
 					// attribute 'Employees.lastName'
-					String firstNotNull_boss_LastName = Util.getStringValue(r.getAs("boss_0.lastName"));
+					String firstNotNull_boss_lastName = Util.getStringValue(r.getAs("boss_0.lastName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_lastName2 = Util.getStringValue(r.getAs("boss_" + i + ".lastName"));
-						if (firstNotNull_boss_LastName != null && boss_lastName2 != null && !firstNotNull_boss_LastName.equals(boss_lastName2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_boss_LastName + " and " + boss_lastName2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_boss_LastName + " and " + boss_lastName2 + "." );
+						if (firstNotNull_boss_lastName != null && boss_lastName2 != null && !firstNotNull_boss_lastName.equals(boss_lastName2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_boss_lastName + " and " + boss_lastName2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_boss_lastName + " and " + boss_lastName2 + "." );
 						}
-						if (firstNotNull_boss_LastName == null && boss_lastName2 != null) {
-							firstNotNull_boss_LastName = boss_lastName2;
+						if (firstNotNull_boss_lastName == null && boss_lastName2 != null) {
+							firstNotNull_boss_lastName = boss_lastName2;
 						}
 					}
-					boss_res.setLastName(firstNotNull_boss_LastName);
+					boss_res.setLastName(firstNotNull_boss_lastName);
 					// attribute 'Employees.firstName'
-					String firstNotNull_boss_FirstName = Util.getStringValue(r.getAs("boss_0.firstName"));
+					String firstNotNull_boss_firstName = Util.getStringValue(r.getAs("boss_0.firstName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_firstName2 = Util.getStringValue(r.getAs("boss_" + i + ".firstName"));
-						if (firstNotNull_boss_FirstName != null && boss_firstName2 != null && !firstNotNull_boss_FirstName.equals(boss_firstName2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_boss_FirstName + " and " + boss_firstName2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_boss_FirstName + " and " + boss_firstName2 + "." );
+						if (firstNotNull_boss_firstName != null && boss_firstName2 != null && !firstNotNull_boss_firstName.equals(boss_firstName2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_boss_firstName + " and " + boss_firstName2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_boss_firstName + " and " + boss_firstName2 + "." );
 						}
-						if (firstNotNull_boss_FirstName == null && boss_firstName2 != null) {
-							firstNotNull_boss_FirstName = boss_firstName2;
+						if (firstNotNull_boss_firstName == null && boss_firstName2 != null) {
+							firstNotNull_boss_firstName = boss_firstName2;
 						}
 					}
-					boss_res.setFirstName(firstNotNull_boss_FirstName);
+					boss_res.setFirstName(firstNotNull_boss_firstName);
 					// attribute 'Employees.title'
-					String firstNotNull_boss_Title = Util.getStringValue(r.getAs("boss_0.title"));
+					String firstNotNull_boss_title = Util.getStringValue(r.getAs("boss_0.title"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_title2 = Util.getStringValue(r.getAs("boss_" + i + ".title"));
-						if (firstNotNull_boss_Title != null && boss_title2 != null && !firstNotNull_boss_Title.equals(boss_title2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_boss_Title + " and " + boss_title2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_boss_Title + " and " + boss_title2 + "." );
+						if (firstNotNull_boss_title != null && boss_title2 != null && !firstNotNull_boss_title.equals(boss_title2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_boss_title + " and " + boss_title2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_boss_title + " and " + boss_title2 + "." );
 						}
-						if (firstNotNull_boss_Title == null && boss_title2 != null) {
-							firstNotNull_boss_Title = boss_title2;
+						if (firstNotNull_boss_title == null && boss_title2 != null) {
+							firstNotNull_boss_title = boss_title2;
 						}
 					}
-					boss_res.setTitle(firstNotNull_boss_Title);
+					boss_res.setTitle(firstNotNull_boss_title);
 					// attribute 'Employees.titleOfCourtesy'
-					String firstNotNull_boss_TitleOfCourtesy = Util.getStringValue(r.getAs("boss_0.titleOfCourtesy"));
+					String firstNotNull_boss_titleOfCourtesy = Util.getStringValue(r.getAs("boss_0.titleOfCourtesy"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_titleOfCourtesy2 = Util.getStringValue(r.getAs("boss_" + i + ".titleOfCourtesy"));
-						if (firstNotNull_boss_TitleOfCourtesy != null && boss_titleOfCourtesy2 != null && !firstNotNull_boss_TitleOfCourtesy.equals(boss_titleOfCourtesy2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_boss_TitleOfCourtesy + " and " + boss_titleOfCourtesy2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_boss_TitleOfCourtesy + " and " + boss_titleOfCourtesy2 + "." );
+						if (firstNotNull_boss_titleOfCourtesy != null && boss_titleOfCourtesy2 != null && !firstNotNull_boss_titleOfCourtesy.equals(boss_titleOfCourtesy2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_boss_titleOfCourtesy + " and " + boss_titleOfCourtesy2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_boss_titleOfCourtesy + " and " + boss_titleOfCourtesy2 + "." );
 						}
-						if (firstNotNull_boss_TitleOfCourtesy == null && boss_titleOfCourtesy2 != null) {
-							firstNotNull_boss_TitleOfCourtesy = boss_titleOfCourtesy2;
+						if (firstNotNull_boss_titleOfCourtesy == null && boss_titleOfCourtesy2 != null) {
+							firstNotNull_boss_titleOfCourtesy = boss_titleOfCourtesy2;
 						}
 					}
-					boss_res.setTitleOfCourtesy(firstNotNull_boss_TitleOfCourtesy);
+					boss_res.setTitleOfCourtesy(firstNotNull_boss_titleOfCourtesy);
 					// attribute 'Employees.birthDate'
-					LocalDate firstNotNull_boss_BirthDate = Util.getLocalDateValue(r.getAs("boss_0.birthDate"));
+					LocalDate firstNotNull_boss_birthDate = Util.getLocalDateValue(r.getAs("boss_0.birthDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate boss_birthDate2 = Util.getLocalDateValue(r.getAs("boss_" + i + ".birthDate"));
-						if (firstNotNull_boss_BirthDate != null && boss_birthDate2 != null && !firstNotNull_boss_BirthDate.equals(boss_birthDate2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_boss_BirthDate + " and " + boss_birthDate2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_boss_BirthDate + " and " + boss_birthDate2 + "." );
+						if (firstNotNull_boss_birthDate != null && boss_birthDate2 != null && !firstNotNull_boss_birthDate.equals(boss_birthDate2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_boss_birthDate + " and " + boss_birthDate2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_boss_birthDate + " and " + boss_birthDate2 + "." );
 						}
-						if (firstNotNull_boss_BirthDate == null && boss_birthDate2 != null) {
-							firstNotNull_boss_BirthDate = boss_birthDate2;
+						if (firstNotNull_boss_birthDate == null && boss_birthDate2 != null) {
+							firstNotNull_boss_birthDate = boss_birthDate2;
 						}
 					}
-					boss_res.setBirthDate(firstNotNull_boss_BirthDate);
+					boss_res.setBirthDate(firstNotNull_boss_birthDate);
 					// attribute 'Employees.hireDate'
-					LocalDate firstNotNull_boss_HireDate = Util.getLocalDateValue(r.getAs("boss_0.hireDate"));
+					LocalDate firstNotNull_boss_hireDate = Util.getLocalDateValue(r.getAs("boss_0.hireDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate boss_hireDate2 = Util.getLocalDateValue(r.getAs("boss_" + i + ".hireDate"));
-						if (firstNotNull_boss_HireDate != null && boss_hireDate2 != null && !firstNotNull_boss_HireDate.equals(boss_hireDate2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_boss_HireDate + " and " + boss_hireDate2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_boss_HireDate + " and " + boss_hireDate2 + "." );
+						if (firstNotNull_boss_hireDate != null && boss_hireDate2 != null && !firstNotNull_boss_hireDate.equals(boss_hireDate2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_boss_hireDate + " and " + boss_hireDate2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_boss_hireDate + " and " + boss_hireDate2 + "." );
 						}
-						if (firstNotNull_boss_HireDate == null && boss_hireDate2 != null) {
-							firstNotNull_boss_HireDate = boss_hireDate2;
+						if (firstNotNull_boss_hireDate == null && boss_hireDate2 != null) {
+							firstNotNull_boss_hireDate = boss_hireDate2;
 						}
 					}
-					boss_res.setHireDate(firstNotNull_boss_HireDate);
+					boss_res.setHireDate(firstNotNull_boss_hireDate);
 					// attribute 'Employees.address'
-					String firstNotNull_boss_Address = Util.getStringValue(r.getAs("boss_0.address"));
+					String firstNotNull_boss_address = Util.getStringValue(r.getAs("boss_0.address"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_address2 = Util.getStringValue(r.getAs("boss_" + i + ".address"));
-						if (firstNotNull_boss_Address != null && boss_address2 != null && !firstNotNull_boss_Address.equals(boss_address2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_boss_Address + " and " + boss_address2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_boss_Address + " and " + boss_address2 + "." );
+						if (firstNotNull_boss_address != null && boss_address2 != null && !firstNotNull_boss_address.equals(boss_address2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_boss_address + " and " + boss_address2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_boss_address + " and " + boss_address2 + "." );
 						}
-						if (firstNotNull_boss_Address == null && boss_address2 != null) {
-							firstNotNull_boss_Address = boss_address2;
+						if (firstNotNull_boss_address == null && boss_address2 != null) {
+							firstNotNull_boss_address = boss_address2;
 						}
 					}
-					boss_res.setAddress(firstNotNull_boss_Address);
+					boss_res.setAddress(firstNotNull_boss_address);
 					// attribute 'Employees.city'
-					String firstNotNull_boss_City = Util.getStringValue(r.getAs("boss_0.city"));
+					String firstNotNull_boss_city = Util.getStringValue(r.getAs("boss_0.city"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_city2 = Util.getStringValue(r.getAs("boss_" + i + ".city"));
-						if (firstNotNull_boss_City != null && boss_city2 != null && !firstNotNull_boss_City.equals(boss_city2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_boss_City + " and " + boss_city2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_boss_City + " and " + boss_city2 + "." );
+						if (firstNotNull_boss_city != null && boss_city2 != null && !firstNotNull_boss_city.equals(boss_city2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_boss_city + " and " + boss_city2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_boss_city + " and " + boss_city2 + "." );
 						}
-						if (firstNotNull_boss_City == null && boss_city2 != null) {
-							firstNotNull_boss_City = boss_city2;
+						if (firstNotNull_boss_city == null && boss_city2 != null) {
+							firstNotNull_boss_city = boss_city2;
 						}
 					}
-					boss_res.setCity(firstNotNull_boss_City);
+					boss_res.setCity(firstNotNull_boss_city);
 					// attribute 'Employees.region'
-					String firstNotNull_boss_Region = Util.getStringValue(r.getAs("boss_0.region"));
+					String firstNotNull_boss_region = Util.getStringValue(r.getAs("boss_0.region"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_region2 = Util.getStringValue(r.getAs("boss_" + i + ".region"));
-						if (firstNotNull_boss_Region != null && boss_region2 != null && !firstNotNull_boss_Region.equals(boss_region2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_boss_Region + " and " + boss_region2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_boss_Region + " and " + boss_region2 + "." );
+						if (firstNotNull_boss_region != null && boss_region2 != null && !firstNotNull_boss_region.equals(boss_region2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_boss_region + " and " + boss_region2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_boss_region + " and " + boss_region2 + "." );
 						}
-						if (firstNotNull_boss_Region == null && boss_region2 != null) {
-							firstNotNull_boss_Region = boss_region2;
+						if (firstNotNull_boss_region == null && boss_region2 != null) {
+							firstNotNull_boss_region = boss_region2;
 						}
 					}
-					boss_res.setRegion(firstNotNull_boss_Region);
+					boss_res.setRegion(firstNotNull_boss_region);
 					// attribute 'Employees.postalCode'
-					String firstNotNull_boss_PostalCode = Util.getStringValue(r.getAs("boss_0.postalCode"));
+					String firstNotNull_boss_postalCode = Util.getStringValue(r.getAs("boss_0.postalCode"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_postalCode2 = Util.getStringValue(r.getAs("boss_" + i + ".postalCode"));
-						if (firstNotNull_boss_PostalCode != null && boss_postalCode2 != null && !firstNotNull_boss_PostalCode.equals(boss_postalCode2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_boss_PostalCode + " and " + boss_postalCode2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_boss_PostalCode + " and " + boss_postalCode2 + "." );
+						if (firstNotNull_boss_postalCode != null && boss_postalCode2 != null && !firstNotNull_boss_postalCode.equals(boss_postalCode2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_boss_postalCode + " and " + boss_postalCode2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_boss_postalCode + " and " + boss_postalCode2 + "." );
 						}
-						if (firstNotNull_boss_PostalCode == null && boss_postalCode2 != null) {
-							firstNotNull_boss_PostalCode = boss_postalCode2;
+						if (firstNotNull_boss_postalCode == null && boss_postalCode2 != null) {
+							firstNotNull_boss_postalCode = boss_postalCode2;
 						}
 					}
-					boss_res.setPostalCode(firstNotNull_boss_PostalCode);
+					boss_res.setPostalCode(firstNotNull_boss_postalCode);
 					// attribute 'Employees.country'
-					String firstNotNull_boss_Country = Util.getStringValue(r.getAs("boss_0.country"));
+					String firstNotNull_boss_country = Util.getStringValue(r.getAs("boss_0.country"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_country2 = Util.getStringValue(r.getAs("boss_" + i + ".country"));
-						if (firstNotNull_boss_Country != null && boss_country2 != null && !firstNotNull_boss_Country.equals(boss_country2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_boss_Country + " and " + boss_country2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_boss_Country + " and " + boss_country2 + "." );
+						if (firstNotNull_boss_country != null && boss_country2 != null && !firstNotNull_boss_country.equals(boss_country2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_boss_country + " and " + boss_country2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_boss_country + " and " + boss_country2 + "." );
 						}
-						if (firstNotNull_boss_Country == null && boss_country2 != null) {
-							firstNotNull_boss_Country = boss_country2;
+						if (firstNotNull_boss_country == null && boss_country2 != null) {
+							firstNotNull_boss_country = boss_country2;
 						}
 					}
-					boss_res.setCountry(firstNotNull_boss_Country);
+					boss_res.setCountry(firstNotNull_boss_country);
 					// attribute 'Employees.homePhone'
-					String firstNotNull_boss_HomePhone = Util.getStringValue(r.getAs("boss_0.homePhone"));
+					String firstNotNull_boss_homePhone = Util.getStringValue(r.getAs("boss_0.homePhone"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_homePhone2 = Util.getStringValue(r.getAs("boss_" + i + ".homePhone"));
-						if (firstNotNull_boss_HomePhone != null && boss_homePhone2 != null && !firstNotNull_boss_HomePhone.equals(boss_homePhone2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_boss_HomePhone + " and " + boss_homePhone2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_boss_HomePhone + " and " + boss_homePhone2 + "." );
+						if (firstNotNull_boss_homePhone != null && boss_homePhone2 != null && !firstNotNull_boss_homePhone.equals(boss_homePhone2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_boss_homePhone + " and " + boss_homePhone2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_boss_homePhone + " and " + boss_homePhone2 + "." );
 						}
-						if (firstNotNull_boss_HomePhone == null && boss_homePhone2 != null) {
-							firstNotNull_boss_HomePhone = boss_homePhone2;
+						if (firstNotNull_boss_homePhone == null && boss_homePhone2 != null) {
+							firstNotNull_boss_homePhone = boss_homePhone2;
 						}
 					}
-					boss_res.setHomePhone(firstNotNull_boss_HomePhone);
+					boss_res.setHomePhone(firstNotNull_boss_homePhone);
 					// attribute 'Employees.extension'
-					String firstNotNull_boss_Extension = Util.getStringValue(r.getAs("boss_0.extension"));
+					String firstNotNull_boss_extension = Util.getStringValue(r.getAs("boss_0.extension"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_extension2 = Util.getStringValue(r.getAs("boss_" + i + ".extension"));
-						if (firstNotNull_boss_Extension != null && boss_extension2 != null && !firstNotNull_boss_Extension.equals(boss_extension2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_boss_Extension + " and " + boss_extension2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_boss_Extension + " and " + boss_extension2 + "." );
+						if (firstNotNull_boss_extension != null && boss_extension2 != null && !firstNotNull_boss_extension.equals(boss_extension2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_boss_extension + " and " + boss_extension2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_boss_extension + " and " + boss_extension2 + "." );
 						}
-						if (firstNotNull_boss_Extension == null && boss_extension2 != null) {
-							firstNotNull_boss_Extension = boss_extension2;
+						if (firstNotNull_boss_extension == null && boss_extension2 != null) {
+							firstNotNull_boss_extension = boss_extension2;
 						}
 					}
-					boss_res.setExtension(firstNotNull_boss_Extension);
+					boss_res.setExtension(firstNotNull_boss_extension);
 					// attribute 'Employees.photo'
-					byte[] firstNotNull_boss_Photo = Util.getByteArrayValue(r.getAs("boss_0.photo"));
+					byte[] firstNotNull_boss_photo = Util.getByteArrayValue(r.getAs("boss_0.photo"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						byte[] boss_photo2 = Util.getByteArrayValue(r.getAs("boss_" + i + ".photo"));
-						if (firstNotNull_boss_Photo != null && boss_photo2 != null && !firstNotNull_boss_Photo.equals(boss_photo2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_boss_Photo + " and " + boss_photo2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_boss_Photo + " and " + boss_photo2 + "." );
+						if (firstNotNull_boss_photo != null && boss_photo2 != null && !firstNotNull_boss_photo.equals(boss_photo2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_boss_photo + " and " + boss_photo2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_boss_photo + " and " + boss_photo2 + "." );
 						}
-						if (firstNotNull_boss_Photo == null && boss_photo2 != null) {
-							firstNotNull_boss_Photo = boss_photo2;
+						if (firstNotNull_boss_photo == null && boss_photo2 != null) {
+							firstNotNull_boss_photo = boss_photo2;
 						}
 					}
-					boss_res.setPhoto(firstNotNull_boss_Photo);
+					boss_res.setPhoto(firstNotNull_boss_photo);
 					// attribute 'Employees.notes'
-					String firstNotNull_boss_Notes = Util.getStringValue(r.getAs("boss_0.notes"));
+					String firstNotNull_boss_notes = Util.getStringValue(r.getAs("boss_0.notes"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_notes2 = Util.getStringValue(r.getAs("boss_" + i + ".notes"));
-						if (firstNotNull_boss_Notes != null && boss_notes2 != null && !firstNotNull_boss_Notes.equals(boss_notes2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_boss_Notes + " and " + boss_notes2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_boss_Notes + " and " + boss_notes2 + "." );
+						if (firstNotNull_boss_notes != null && boss_notes2 != null && !firstNotNull_boss_notes.equals(boss_notes2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_boss_notes + " and " + boss_notes2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_boss_notes + " and " + boss_notes2 + "." );
 						}
-						if (firstNotNull_boss_Notes == null && boss_notes2 != null) {
-							firstNotNull_boss_Notes = boss_notes2;
+						if (firstNotNull_boss_notes == null && boss_notes2 != null) {
+							firstNotNull_boss_notes = boss_notes2;
 						}
 					}
-					boss_res.setNotes(firstNotNull_boss_Notes);
+					boss_res.setNotes(firstNotNull_boss_notes);
 					// attribute 'Employees.photoPath'
-					String firstNotNull_boss_PhotoPath = Util.getStringValue(r.getAs("boss_0.photoPath"));
+					String firstNotNull_boss_photoPath = Util.getStringValue(r.getAs("boss_0.photoPath"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String boss_photoPath2 = Util.getStringValue(r.getAs("boss_" + i + ".photoPath"));
-						if (firstNotNull_boss_PhotoPath != null && boss_photoPath2 != null && !firstNotNull_boss_PhotoPath.equals(boss_photoPath2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_boss_PhotoPath + " and " + boss_photoPath2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_boss_PhotoPath + " and " + boss_photoPath2 + "." );
+						if (firstNotNull_boss_photoPath != null && boss_photoPath2 != null && !firstNotNull_boss_photoPath.equals(boss_photoPath2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_boss_photoPath + " and " + boss_photoPath2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_boss_photoPath + " and " + boss_photoPath2 + "." );
 						}
-						if (firstNotNull_boss_PhotoPath == null && boss_photoPath2 != null) {
-							firstNotNull_boss_PhotoPath = boss_photoPath2;
+						if (firstNotNull_boss_photoPath == null && boss_photoPath2 != null) {
+							firstNotNull_boss_photoPath = boss_photoPath2;
 						}
 					}
-					boss_res.setPhotoPath(firstNotNull_boss_PhotoPath);
+					boss_res.setPhotoPath(firstNotNull_boss_photoPath);
 					// attribute 'Employees.salary'
-					Double firstNotNull_boss_Salary = Util.getDoubleValue(r.getAs("boss_0.salary"));
+					Double firstNotNull_boss_salary = Util.getDoubleValue(r.getAs("boss_0.salary"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double boss_salary2 = Util.getDoubleValue(r.getAs("boss_" + i + ".salary"));
-						if (firstNotNull_boss_Salary != null && boss_salary2 != null && !firstNotNull_boss_Salary.equals(boss_salary2)) {
-							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_boss_Salary + " and " + boss_salary2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_boss_Salary + " and " + boss_salary2 + "." );
+						if (firstNotNull_boss_salary != null && boss_salary2 != null && !firstNotNull_boss_salary.equals(boss_salary2)) {
+							reportsTo_res.addLogEvent("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_boss_salary + " and " + boss_salary2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+boss_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_boss_salary + " and " + boss_salary2 + "." );
 						}
-						if (firstNotNull_boss_Salary == null && boss_salary2 != null) {
-							firstNotNull_boss_Salary = boss_salary2;
+						if (firstNotNull_boss_salary == null && boss_salary2 != null) {
+							firstNotNull_boss_salary = boss_salary2;
 						}
 					}
-					boss_res.setSalary(firstNotNull_boss_Salary);
+					boss_res.setSalary(firstNotNull_boss_salary);
 	
 					reportsTo_res.setSubordonee(subordonee_res);
 					reportsTo_res.setBoss(boss_res);

@@ -7,9 +7,9 @@ import java.util.Objects;
 public class Categories extends LoggingPojo {
 
 	private Integer categoryID;
-	private String CategoryName;
-	private String Description;
-	private byte[] Picture;
+	private String categoryName;
+	private String description;
+	private byte[] picture;
 
 	public enum typeOf {
 		category
@@ -26,11 +26,11 @@ public class Categories extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Categories(Integer categoryID,String CategoryName,String Description,byte[] Picture) {
+	public Categories(Integer categoryID,String categoryName,String description,byte[] picture) {
 		this.categoryID = categoryID;
-		this.CategoryName = CategoryName;
-		this.Description = Description;
-		this.Picture = Picture;
+		this.categoryName = categoryName;
+		this.description = description;
+		this.picture = picture;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -42,7 +42,7 @@ public class Categories extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Categories Categories = (Categories) o;
-		boolean eqSimpleAttr = Objects.equals(categoryID,Categories.categoryID) && Objects.equals(CategoryName,Categories.CategoryName) && Objects.equals(Description,Categories.Description) && Objects.equals(Picture,Categories.Picture);
+		boolean eqSimpleAttr = Objects.equals(categoryID,Categories.categoryID) && Objects.equals(categoryName,Categories.categoryName) && Objects.equals(description,Categories.description) && Objects.equals(picture,Categories.picture);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(productList, Categories.productList) &&
@@ -53,9 +53,9 @@ public class Categories extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Categories { " + "categoryID="+categoryID +", "+
-					"CategoryName="+CategoryName +", "+
-					"Description="+Description +", "+
-					"Picture="+Picture +"}"; 
+					"categoryName="+categoryName +", "+
+					"description="+description +", "+
+					"picture="+picture +"}"; 
 	}
 	
 	public Integer getCategoryID() {
@@ -66,25 +66,25 @@ public class Categories extends LoggingPojo {
 		this.categoryID = categoryID;
 	}
 	public String getCategoryName() {
-		return CategoryName;
+		return categoryName;
 	}
 
-	public void setCategoryName(String CategoryName) {
-		this.CategoryName = CategoryName;
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 
-	public void setDescription(String Description) {
-		this.Description = Description;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public byte[] getPicture() {
-		return Picture;
+		return picture;
 	}
 
-	public void setPicture(byte[] Picture) {
-		this.Picture = Picture;
+	public void setPicture(byte[] picture) {
+		this.picture = picture;
 	}
 
 	

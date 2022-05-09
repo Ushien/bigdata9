@@ -7,9 +7,9 @@ public class ComposedOf extends LoggingPojo {
 
 	private Orders order;	
 	private Products orderedProducts;	
-	private Double UnitPrice;	
-	private Integer Quantity;	
-	private Double Discount;	
+	private Double unitPrice;	
+	private Integer quantity;	
+	private Double discount;	
 
 	//Empty constructor
 	public ComposedOf() {}
@@ -35,9 +35,9 @@ public class ComposedOf extends LoggingPojo {
 				"roles : {" +  "order:Orders={"+order+"},"+ 
 					 "orderedProducts:Products={"+orderedProducts+"}"+
 				 "}"+
-			" attributes : { " + "UnitPrice="+UnitPrice +", "+
-					"Quantity="+Quantity +", "+
-					"Discount="+Discount +"}"; 
+			" attributes : { " + "unitPrice="+unitPrice +", "+
+					"quantity="+quantity +", "+
+					"discount="+discount +"}"; 
 	}
 	public Orders getOrder() {
 		return order;
@@ -56,27 +56,27 @@ public class ComposedOf extends LoggingPojo {
 	}
 	
 	public Double getUnitPrice() {
-		return UnitPrice;
+		return unitPrice;
 	}
 
-	public void setUnitPrice(Double UnitPrice) {
-		this.UnitPrice = UnitPrice;
+	public void setUnitPrice(Double unitPrice) {
+		this.unitPrice = unitPrice;
 	}
 	
 	public Integer getQuantity() {
-		return Quantity;
+		return quantity;
 	}
 
-	public void setQuantity(Integer Quantity) {
-		this.Quantity = Quantity;
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 	
 	public Double getDiscount() {
-		return Discount;
+		return discount;
 	}
 
-	public void setDiscount(Double Discount) {
-		this.Discount = Discount;
+	public void setDiscount(Double discount) {
+		this.discount = discount;
 	}
 	
 

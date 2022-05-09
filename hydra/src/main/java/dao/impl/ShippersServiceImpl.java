@@ -69,13 +69,13 @@ public class ShippersServiceImpl extends ShippersService {
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ShippersAttribute.CompanyName ) {
+				if(attr == ShippersAttribute.companyName ) {
 					String fieldName = "CompanyName";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ShippersAttribute.Phone ) {
+				if(attr == ShippersAttribute.phone ) {
 					String fieldName = "Phone";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
@@ -118,7 +118,7 @@ public class ShippersServiceImpl extends ShippersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == ShippersAttribute.CompanyName ) {
+					if(attr == ShippersAttribute.companyName ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -133,7 +133,7 @@ public class ShippersServiceImpl extends ShippersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == ShippersAttribute.Phone ) {
+					if(attr == ShippersAttribute.phone ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -223,7 +223,7 @@ public class ShippersServiceImpl extends ShippersService {
 						else
 							query = bson;
 					}
-					if(attr == ShippersAttribute.CompanyName ) {
+					if(attr == ShippersAttribute.companyName ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -245,7 +245,7 @@ public class ShippersServiceImpl extends ShippersService {
 						else
 							query = bson;
 					}
-					if(attr == ShippersAttribute.Phone ) {
+					if(attr == ShippersAttribute.phone ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -355,7 +355,7 @@ public class ShippersServiceImpl extends ShippersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Shippers.CompanyName for field CompanyName			
+					// 	attribute Shippers.companyName for field CompanyName			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("CompanyName")) {
@@ -366,7 +366,7 @@ public class ShippersServiceImpl extends ShippersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Shippers.Phone for field Phone			
+					// 	attribute Shippers.phone for field Phone			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("Phone")) {

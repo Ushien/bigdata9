@@ -121,12 +121,12 @@ public abstract class ShippersService {
 		return getShippersList(conditions.Condition.simple(conditions.ShippersAttribute.shipperID, conditions.Operator.EQUALS, shipperID));
 	}
 	
-	public Dataset<Shippers> getShippersListByCompanyName(String CompanyName) {
-		return getShippersList(conditions.Condition.simple(conditions.ShippersAttribute.CompanyName, conditions.Operator.EQUALS, CompanyName));
+	public Dataset<Shippers> getShippersListByCompanyName(String companyName) {
+		return getShippersList(conditions.Condition.simple(conditions.ShippersAttribute.companyName, conditions.Operator.EQUALS, companyName));
 	}
 	
-	public Dataset<Shippers> getShippersListByPhone(String Phone) {
-		return getShippersList(conditions.Condition.simple(conditions.ShippersAttribute.Phone, conditions.Operator.EQUALS, Phone));
+	public Dataset<Shippers> getShippersListByPhone(String phone) {
+		return getShippersList(conditions.Condition.simple(conditions.ShippersAttribute.phone, conditions.Operator.EQUALS, phone));
 	}
 	
 	
@@ -171,32 +171,32 @@ public abstract class ShippersService {
 					shippers_res.setShipperID(firstNotNull_shipperID);
 					
 					// attribute 'Shippers.companyName'
-					String firstNotNull_CompanyName = Util.getStringValue(r.getAs("companyName"));
+					String firstNotNull_companyName = Util.getStringValue(r.getAs("companyName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String companyName2 = Util.getStringValue(r.getAs("companyName_" + i));
-						if (firstNotNull_CompanyName != null && companyName2 != null && !firstNotNull_CompanyName.equals(companyName2)) {
-							shippers_res.addLogEvent("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_CompanyName + " and " + companyName2 + "." );
-							logger.warn("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_CompanyName + " and " + companyName2 + "." );
+						if (firstNotNull_companyName != null && companyName2 != null && !firstNotNull_companyName.equals(companyName2)) {
+							shippers_res.addLogEvent("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_companyName + " and " + companyName2 + "." );
+							logger.warn("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_companyName + " and " + companyName2 + "." );
 						}
-						if (firstNotNull_CompanyName == null && companyName2 != null) {
-							firstNotNull_CompanyName = companyName2;
+						if (firstNotNull_companyName == null && companyName2 != null) {
+							firstNotNull_companyName = companyName2;
 						}
 					}
-					shippers_res.setCompanyName(firstNotNull_CompanyName);
+					shippers_res.setCompanyName(firstNotNull_companyName);
 					
 					// attribute 'Shippers.phone'
-					String firstNotNull_Phone = Util.getStringValue(r.getAs("phone"));
+					String firstNotNull_phone = Util.getStringValue(r.getAs("phone"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String phone2 = Util.getStringValue(r.getAs("phone_" + i));
-						if (firstNotNull_Phone != null && phone2 != null && !firstNotNull_Phone.equals(phone2)) {
-							shippers_res.addLogEvent("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_Phone + " and " + phone2 + "." );
-							logger.warn("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_Phone + " and " + phone2 + "." );
+						if (firstNotNull_phone != null && phone2 != null && !firstNotNull_phone.equals(phone2)) {
+							shippers_res.addLogEvent("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_phone + " and " + phone2 + "." );
+							logger.warn("Data consistency problem for [Shippers - id :"+shippers_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_phone + " and " + phone2 + "." );
 						}
-						if (firstNotNull_Phone == null && phone2 != null) {
-							firstNotNull_Phone = phone2;
+						if (firstNotNull_phone == null && phone2 != null) {
+							firstNotNull_phone = phone2;
 						}
 					}
-					shippers_res.setPhone(firstNotNull_Phone);
+					shippers_res.setPhone(firstNotNull_phone);
 	
 					WrappedArray logEvents = r.getAs("logEvents");
 					if(logEvents != null)

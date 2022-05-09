@@ -12,6 +12,25 @@ import dao.impl.*;
 import dao.services.*;
 import pojo.*;
 import scala.Console;
+import dao.impl.ProductsServiceImpl;
+import dao.services.ProductsService;
+import pojo.Products;
+
+import dao.impl.SuppliersServiceImpl;
+import dao.services.SuppliersService;
+import pojo.Suppliers;
+
+import pojo.Customers;
+import pojo.Orders;
+import pojo.Buy;
+
+import dao.impl.CustomersServiceImpl;
+import dao.impl.BuyServiceImpl;
+import dao.impl.OrdersServiceImpl;
+
+import dao.services.BuyService;
+import dao.services.CustomersService;
+import dao.services.OrdersService;
 
 public class test {
 	
@@ -27,6 +46,13 @@ public class test {
 	OrdersService ordersService = new OrdersServiceImpl();
 	util.Dataset<Orders> ordersDataset;
 	
+	SuppliersService suppliersService = new SuppliersServiceImpl();
+	util.Dataset<Suppliers> supplierDataset;
+	
+	BuyService buyService = new BuyServiceImpl();
+	util.Dataset<Buy> buyDataset;
+	
+	@Test
 	public void testGetAllProducts() {
 		productsDataset = productsService.getProductsList(null);
 		productsDataset.show();
@@ -34,7 +60,7 @@ public class test {
 	
 	@Test
 	public void testGetCustomers() {
-		SimpleCondition<EmployeesAttribute> margaretCondition = new SimpleCondition<>(EmployeesAttribute.FirstName, Operator.EQUALS, "Margaret");
+		SimpleCondition<EmployeesAttribute> margaretCondition = new SimpleCondition<>(EmployeesAttribute.firstName, Operator.EQUALS, "Margaret");
 		util.Dataset<Employees> employees = employeesService.getEmployeesList(margaretCondition);
 		employees.show();
 		
@@ -53,5 +79,19 @@ public class test {
 		
 		}
 	
+	public void testGetAllSuppliers() {
+		supplierDataset = suppliersService.getSuppliersList(null);
+		supplierDataset.show();
+	}
+	
+	@Test
+	public void testGetOrdersbyCustomer() {
+		SimpleCondition<CustomersAttribute> customerCondition = Condition.simple(CustomersAttribute.address, Operator.EQUALS, "Av. dos Lusadas, 23");
+		util.Dataset<Customers> customer = customersService.getCustomersList(customerCondition);
+		//customer.show();
+		Customers lusadas = customer.collectAsList().get(0);
+		util.Dataset<Orders> order = ordersService.getOrdersList(Orders.buy.boughtOrder, lusadas);
+		order.show();
+	}
 }
 

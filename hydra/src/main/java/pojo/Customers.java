@@ -7,16 +7,16 @@ import java.util.Objects;
 public class Customers extends LoggingPojo {
 
 	private String customerID;
-	private String CompanyName;
-	private String ContactName;
-	private String ContactTitle;
-	private String Address;
-	private String City;
-	private String Region;
-	private String PostalCode;
-	private String Country;
-	private String Phone;
-	private String Fax;
+	private String companyName;
+	private String contactName;
+	private String contactTitle;
+	private String address;
+	private String city;
+	private String region;
+	private String postalCode;
+	private String country;
+	private String phone;
+	private String fax;
 
 	public enum buy {
 		customer
@@ -33,18 +33,18 @@ public class Customers extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Customers(String customerID,String CompanyName,String ContactName,String ContactTitle,String Address,String City,String Region,String PostalCode,String Country,String Phone,String Fax) {
+	public Customers(String customerID,String companyName,String contactName,String contactTitle,String address,String city,String region,String postalCode,String country,String phone,String fax) {
 		this.customerID = customerID;
-		this.CompanyName = CompanyName;
-		this.ContactName = ContactName;
-		this.ContactTitle = ContactTitle;
-		this.Address = Address;
-		this.City = City;
-		this.Region = Region;
-		this.PostalCode = PostalCode;
-		this.Country = Country;
-		this.Phone = Phone;
-		this.Fax = Fax;
+		this.companyName = companyName;
+		this.contactName = contactName;
+		this.contactTitle = contactTitle;
+		this.address = address;
+		this.city = city;
+		this.region = region;
+		this.postalCode = postalCode;
+		this.country = country;
+		this.phone = phone;
+		this.fax = fax;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -56,7 +56,7 @@ public class Customers extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Customers Customers = (Customers) o;
-		boolean eqSimpleAttr = Objects.equals(customerID,Customers.customerID) && Objects.equals(CompanyName,Customers.CompanyName) && Objects.equals(ContactName,Customers.ContactName) && Objects.equals(ContactTitle,Customers.ContactTitle) && Objects.equals(Address,Customers.Address) && Objects.equals(City,Customers.City) && Objects.equals(Region,Customers.Region) && Objects.equals(PostalCode,Customers.PostalCode) && Objects.equals(Country,Customers.Country) && Objects.equals(Phone,Customers.Phone) && Objects.equals(Fax,Customers.Fax);
+		boolean eqSimpleAttr = Objects.equals(customerID,Customers.customerID) && Objects.equals(companyName,Customers.companyName) && Objects.equals(contactName,Customers.contactName) && Objects.equals(contactTitle,Customers.contactTitle) && Objects.equals(address,Customers.address) && Objects.equals(city,Customers.city) && Objects.equals(region,Customers.region) && Objects.equals(postalCode,Customers.postalCode) && Objects.equals(country,Customers.country) && Objects.equals(phone,Customers.phone) && Objects.equals(fax,Customers.fax);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(boughtOrderList, Customers.boughtOrderList) &&
@@ -67,16 +67,16 @@ public class Customers extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Customers { " + "customerID="+customerID +", "+
-					"CompanyName="+CompanyName +", "+
-					"ContactName="+ContactName +", "+
-					"ContactTitle="+ContactTitle +", "+
-					"Address="+Address +", "+
-					"City="+City +", "+
-					"Region="+Region +", "+
-					"PostalCode="+PostalCode +", "+
-					"Country="+Country +", "+
-					"Phone="+Phone +", "+
-					"Fax="+Fax +"}"; 
+					"companyName="+companyName +", "+
+					"contactName="+contactName +", "+
+					"contactTitle="+contactTitle +", "+
+					"address="+address +", "+
+					"city="+city +", "+
+					"region="+region +", "+
+					"postalCode="+postalCode +", "+
+					"country="+country +", "+
+					"phone="+phone +", "+
+					"fax="+fax +"}"; 
 	}
 	
 	public String getCustomerID() {
@@ -87,74 +87,74 @@ public class Customers extends LoggingPojo {
 		this.customerID = customerID;
 	}
 	public String getCompanyName() {
-		return CompanyName;
+		return companyName;
 	}
 
-	public void setCompanyName(String CompanyName) {
-		this.CompanyName = CompanyName;
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 	public String getContactName() {
-		return ContactName;
+		return contactName;
 	}
 
-	public void setContactName(String ContactName) {
-		this.ContactName = ContactName;
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
 	}
 	public String getContactTitle() {
-		return ContactTitle;
+		return contactTitle;
 	}
 
-	public void setContactTitle(String ContactTitle) {
-		this.ContactTitle = ContactTitle;
+	public void setContactTitle(String contactTitle) {
+		this.contactTitle = contactTitle;
 	}
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
-	public void setAddress(String Address) {
-		this.Address = Address;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getCity() {
-		return City;
+		return city;
 	}
 
-	public void setCity(String City) {
-		this.City = City;
+	public void setCity(String city) {
+		this.city = city;
 	}
 	public String getRegion() {
-		return Region;
+		return region;
 	}
 
-	public void setRegion(String Region) {
-		this.Region = Region;
+	public void setRegion(String region) {
+		this.region = region;
 	}
 	public String getPostalCode() {
-		return PostalCode;
+		return postalCode;
 	}
 
-	public void setPostalCode(String PostalCode) {
-		this.PostalCode = PostalCode;
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 	public String getCountry() {
-		return Country;
+		return country;
 	}
 
-	public void setCountry(String Country) {
-		this.Country = Country;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 	public String getPhone() {
-		return Phone;
+		return phone;
 	}
 
-	public void setPhone(String Phone) {
-		this.Phone = Phone;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getFax() {
-		return Fax;
+		return fax;
 	}
 
-	public void setFax(String Fax) {
-		this.Fax = Fax;
+	public void setFax(String fax) {
+		this.fax = fax;
 	}
 
 	

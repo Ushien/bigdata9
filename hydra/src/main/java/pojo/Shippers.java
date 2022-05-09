@@ -7,8 +7,8 @@ import java.util.Objects;
 public class Shippers extends LoggingPojo {
 
 	private Integer shipperID;
-	private String CompanyName;
-	private String Phone;
+	private String companyName;
+	private String phone;
 
 	public enum ships {
 		shipper
@@ -25,10 +25,10 @@ public class Shippers extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Shippers(Integer shipperID,String CompanyName,String Phone) {
+	public Shippers(Integer shipperID,String companyName,String phone) {
 		this.shipperID = shipperID;
-		this.CompanyName = CompanyName;
-		this.Phone = Phone;
+		this.companyName = companyName;
+		this.phone = phone;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -40,7 +40,7 @@ public class Shippers extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Shippers Shippers = (Shippers) o;
-		boolean eqSimpleAttr = Objects.equals(shipperID,Shippers.shipperID) && Objects.equals(CompanyName,Shippers.CompanyName) && Objects.equals(Phone,Shippers.Phone);
+		boolean eqSimpleAttr = Objects.equals(shipperID,Shippers.shipperID) && Objects.equals(companyName,Shippers.companyName) && Objects.equals(phone,Shippers.phone);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(shippedOrderList, Shippers.shippedOrderList) &&
@@ -51,8 +51,8 @@ public class Shippers extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Shippers { " + "shipperID="+shipperID +", "+
-					"CompanyName="+CompanyName +", "+
-					"Phone="+Phone +"}"; 
+					"companyName="+companyName +", "+
+					"phone="+phone +"}"; 
 	}
 	
 	public Integer getShipperID() {
@@ -63,18 +63,18 @@ public class Shippers extends LoggingPojo {
 		this.shipperID = shipperID;
 	}
 	public String getCompanyName() {
-		return CompanyName;
+		return companyName;
 	}
 
-	public void setCompanyName(String CompanyName) {
-		this.CompanyName = CompanyName;
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 	public String getPhone() {
-		return Phone;
+		return phone;
 	}
 
-	public void setPhone(String Phone) {
-		this.Phone = Phone;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	

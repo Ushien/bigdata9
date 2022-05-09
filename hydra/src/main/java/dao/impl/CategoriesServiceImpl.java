@@ -67,13 +67,13 @@ public class CategoriesServiceImpl extends CategoriesService {
 				if(attr == CategoriesAttribute.categoryID ) {
 					res.add("CategoryID = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == CategoriesAttribute.CategoryName ) {
+				if(attr == CategoriesAttribute.categoryName ) {
 					res.add("CategoryName = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == CategoriesAttribute.Description ) {
+				if(attr == CategoriesAttribute.description ) {
 					res.add("Description = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == CategoriesAttribute.Picture ) {
+				if(attr == CategoriesAttribute.picture ) {
 					res.add("Picture = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
 			}
@@ -115,7 +115,7 @@ public class CategoriesServiceImpl extends CategoriesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == CategoriesAttribute.CategoryName ) {
+					if(attr == CategoriesAttribute.categoryName ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -132,7 +132,7 @@ public class CategoriesServiceImpl extends CategoriesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == CategoriesAttribute.Description ) {
+					if(attr == CategoriesAttribute.description ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -149,7 +149,7 @@ public class CategoriesServiceImpl extends CategoriesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == CategoriesAttribute.Picture ) {
+					if(attr == CategoriesAttribute.picture ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -177,19 +177,19 @@ public class CategoriesServiceImpl extends CategoriesService {
 						if(op == Operator.NOT_EQUALS)
 							where =  "CategoryID IS NOT NULL";
 					}
-					if(attr == CategoriesAttribute.CategoryName ) {
+					if(attr == CategoriesAttribute.categoryName ) {
 						if(op == Operator.EQUALS)
 							where =  "CategoryName IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "CategoryName IS NOT NULL";
 					}
-					if(attr == CategoriesAttribute.Description ) {
+					if(attr == CategoriesAttribute.description ) {
 						if(op == Operator.EQUALS)
 							where =  "Description IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "Description IS NOT NULL";
 					}
-					if(attr == CategoriesAttribute.Picture ) {
+					if(attr == CategoriesAttribute.picture ) {
 						if(op == Operator.EQUALS)
 							where =  "Picture IS NULL";
 						if(op == Operator.NOT_EQUALS)

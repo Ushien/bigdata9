@@ -387,242 +387,242 @@ public abstract class WorksService {
 					Integer firstNotNull_employed_employeeID = Util.getIntegerValue(r.getAs("employed_0.employeeID"));
 					employed_res.setEmployeeID(firstNotNull_employed_employeeID);
 					// attribute 'Employees.lastName'
-					String firstNotNull_employed_LastName = Util.getStringValue(r.getAs("employed_0.lastName"));
+					String firstNotNull_employed_lastName = Util.getStringValue(r.getAs("employed_0.lastName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_lastName2 = Util.getStringValue(r.getAs("employed_" + i + ".lastName"));
-						if (firstNotNull_employed_LastName != null && employed_lastName2 != null && !firstNotNull_employed_LastName.equals(employed_lastName2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_employed_LastName + " and " + employed_lastName2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_employed_LastName + " and " + employed_lastName2 + "." );
+						if (firstNotNull_employed_lastName != null && employed_lastName2 != null && !firstNotNull_employed_lastName.equals(employed_lastName2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_employed_lastName + " and " + employed_lastName2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.lastName': " + firstNotNull_employed_lastName + " and " + employed_lastName2 + "." );
 						}
-						if (firstNotNull_employed_LastName == null && employed_lastName2 != null) {
-							firstNotNull_employed_LastName = employed_lastName2;
+						if (firstNotNull_employed_lastName == null && employed_lastName2 != null) {
+							firstNotNull_employed_lastName = employed_lastName2;
 						}
 					}
-					employed_res.setLastName(firstNotNull_employed_LastName);
+					employed_res.setLastName(firstNotNull_employed_lastName);
 					// attribute 'Employees.firstName'
-					String firstNotNull_employed_FirstName = Util.getStringValue(r.getAs("employed_0.firstName"));
+					String firstNotNull_employed_firstName = Util.getStringValue(r.getAs("employed_0.firstName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_firstName2 = Util.getStringValue(r.getAs("employed_" + i + ".firstName"));
-						if (firstNotNull_employed_FirstName != null && employed_firstName2 != null && !firstNotNull_employed_FirstName.equals(employed_firstName2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_employed_FirstName + " and " + employed_firstName2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_employed_FirstName + " and " + employed_firstName2 + "." );
+						if (firstNotNull_employed_firstName != null && employed_firstName2 != null && !firstNotNull_employed_firstName.equals(employed_firstName2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_employed_firstName + " and " + employed_firstName2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.firstName': " + firstNotNull_employed_firstName + " and " + employed_firstName2 + "." );
 						}
-						if (firstNotNull_employed_FirstName == null && employed_firstName2 != null) {
-							firstNotNull_employed_FirstName = employed_firstName2;
+						if (firstNotNull_employed_firstName == null && employed_firstName2 != null) {
+							firstNotNull_employed_firstName = employed_firstName2;
 						}
 					}
-					employed_res.setFirstName(firstNotNull_employed_FirstName);
+					employed_res.setFirstName(firstNotNull_employed_firstName);
 					// attribute 'Employees.title'
-					String firstNotNull_employed_Title = Util.getStringValue(r.getAs("employed_0.title"));
+					String firstNotNull_employed_title = Util.getStringValue(r.getAs("employed_0.title"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_title2 = Util.getStringValue(r.getAs("employed_" + i + ".title"));
-						if (firstNotNull_employed_Title != null && employed_title2 != null && !firstNotNull_employed_Title.equals(employed_title2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_employed_Title + " and " + employed_title2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_employed_Title + " and " + employed_title2 + "." );
+						if (firstNotNull_employed_title != null && employed_title2 != null && !firstNotNull_employed_title.equals(employed_title2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_employed_title + " and " + employed_title2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.title': " + firstNotNull_employed_title + " and " + employed_title2 + "." );
 						}
-						if (firstNotNull_employed_Title == null && employed_title2 != null) {
-							firstNotNull_employed_Title = employed_title2;
+						if (firstNotNull_employed_title == null && employed_title2 != null) {
+							firstNotNull_employed_title = employed_title2;
 						}
 					}
-					employed_res.setTitle(firstNotNull_employed_Title);
+					employed_res.setTitle(firstNotNull_employed_title);
 					// attribute 'Employees.titleOfCourtesy'
-					String firstNotNull_employed_TitleOfCourtesy = Util.getStringValue(r.getAs("employed_0.titleOfCourtesy"));
+					String firstNotNull_employed_titleOfCourtesy = Util.getStringValue(r.getAs("employed_0.titleOfCourtesy"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_titleOfCourtesy2 = Util.getStringValue(r.getAs("employed_" + i + ".titleOfCourtesy"));
-						if (firstNotNull_employed_TitleOfCourtesy != null && employed_titleOfCourtesy2 != null && !firstNotNull_employed_TitleOfCourtesy.equals(employed_titleOfCourtesy2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_employed_TitleOfCourtesy + " and " + employed_titleOfCourtesy2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_employed_TitleOfCourtesy + " and " + employed_titleOfCourtesy2 + "." );
+						if (firstNotNull_employed_titleOfCourtesy != null && employed_titleOfCourtesy2 != null && !firstNotNull_employed_titleOfCourtesy.equals(employed_titleOfCourtesy2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_employed_titleOfCourtesy + " and " + employed_titleOfCourtesy2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.titleOfCourtesy': " + firstNotNull_employed_titleOfCourtesy + " and " + employed_titleOfCourtesy2 + "." );
 						}
-						if (firstNotNull_employed_TitleOfCourtesy == null && employed_titleOfCourtesy2 != null) {
-							firstNotNull_employed_TitleOfCourtesy = employed_titleOfCourtesy2;
+						if (firstNotNull_employed_titleOfCourtesy == null && employed_titleOfCourtesy2 != null) {
+							firstNotNull_employed_titleOfCourtesy = employed_titleOfCourtesy2;
 						}
 					}
-					employed_res.setTitleOfCourtesy(firstNotNull_employed_TitleOfCourtesy);
+					employed_res.setTitleOfCourtesy(firstNotNull_employed_titleOfCourtesy);
 					// attribute 'Employees.birthDate'
-					LocalDate firstNotNull_employed_BirthDate = Util.getLocalDateValue(r.getAs("employed_0.birthDate"));
+					LocalDate firstNotNull_employed_birthDate = Util.getLocalDateValue(r.getAs("employed_0.birthDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate employed_birthDate2 = Util.getLocalDateValue(r.getAs("employed_" + i + ".birthDate"));
-						if (firstNotNull_employed_BirthDate != null && employed_birthDate2 != null && !firstNotNull_employed_BirthDate.equals(employed_birthDate2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_employed_BirthDate + " and " + employed_birthDate2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_employed_BirthDate + " and " + employed_birthDate2 + "." );
+						if (firstNotNull_employed_birthDate != null && employed_birthDate2 != null && !firstNotNull_employed_birthDate.equals(employed_birthDate2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_employed_birthDate + " and " + employed_birthDate2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.birthDate': " + firstNotNull_employed_birthDate + " and " + employed_birthDate2 + "." );
 						}
-						if (firstNotNull_employed_BirthDate == null && employed_birthDate2 != null) {
-							firstNotNull_employed_BirthDate = employed_birthDate2;
+						if (firstNotNull_employed_birthDate == null && employed_birthDate2 != null) {
+							firstNotNull_employed_birthDate = employed_birthDate2;
 						}
 					}
-					employed_res.setBirthDate(firstNotNull_employed_BirthDate);
+					employed_res.setBirthDate(firstNotNull_employed_birthDate);
 					// attribute 'Employees.hireDate'
-					LocalDate firstNotNull_employed_HireDate = Util.getLocalDateValue(r.getAs("employed_0.hireDate"));
+					LocalDate firstNotNull_employed_hireDate = Util.getLocalDateValue(r.getAs("employed_0.hireDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate employed_hireDate2 = Util.getLocalDateValue(r.getAs("employed_" + i + ".hireDate"));
-						if (firstNotNull_employed_HireDate != null && employed_hireDate2 != null && !firstNotNull_employed_HireDate.equals(employed_hireDate2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_employed_HireDate + " and " + employed_hireDate2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_employed_HireDate + " and " + employed_hireDate2 + "." );
+						if (firstNotNull_employed_hireDate != null && employed_hireDate2 != null && !firstNotNull_employed_hireDate.equals(employed_hireDate2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_employed_hireDate + " and " + employed_hireDate2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.hireDate': " + firstNotNull_employed_hireDate + " and " + employed_hireDate2 + "." );
 						}
-						if (firstNotNull_employed_HireDate == null && employed_hireDate2 != null) {
-							firstNotNull_employed_HireDate = employed_hireDate2;
+						if (firstNotNull_employed_hireDate == null && employed_hireDate2 != null) {
+							firstNotNull_employed_hireDate = employed_hireDate2;
 						}
 					}
-					employed_res.setHireDate(firstNotNull_employed_HireDate);
+					employed_res.setHireDate(firstNotNull_employed_hireDate);
 					// attribute 'Employees.address'
-					String firstNotNull_employed_Address = Util.getStringValue(r.getAs("employed_0.address"));
+					String firstNotNull_employed_address = Util.getStringValue(r.getAs("employed_0.address"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_address2 = Util.getStringValue(r.getAs("employed_" + i + ".address"));
-						if (firstNotNull_employed_Address != null && employed_address2 != null && !firstNotNull_employed_Address.equals(employed_address2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_employed_Address + " and " + employed_address2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_employed_Address + " and " + employed_address2 + "." );
+						if (firstNotNull_employed_address != null && employed_address2 != null && !firstNotNull_employed_address.equals(employed_address2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_employed_address + " and " + employed_address2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.address': " + firstNotNull_employed_address + " and " + employed_address2 + "." );
 						}
-						if (firstNotNull_employed_Address == null && employed_address2 != null) {
-							firstNotNull_employed_Address = employed_address2;
+						if (firstNotNull_employed_address == null && employed_address2 != null) {
+							firstNotNull_employed_address = employed_address2;
 						}
 					}
-					employed_res.setAddress(firstNotNull_employed_Address);
+					employed_res.setAddress(firstNotNull_employed_address);
 					// attribute 'Employees.city'
-					String firstNotNull_employed_City = Util.getStringValue(r.getAs("employed_0.city"));
+					String firstNotNull_employed_city = Util.getStringValue(r.getAs("employed_0.city"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_city2 = Util.getStringValue(r.getAs("employed_" + i + ".city"));
-						if (firstNotNull_employed_City != null && employed_city2 != null && !firstNotNull_employed_City.equals(employed_city2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_employed_City + " and " + employed_city2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_employed_City + " and " + employed_city2 + "." );
+						if (firstNotNull_employed_city != null && employed_city2 != null && !firstNotNull_employed_city.equals(employed_city2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_employed_city + " and " + employed_city2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.city': " + firstNotNull_employed_city + " and " + employed_city2 + "." );
 						}
-						if (firstNotNull_employed_City == null && employed_city2 != null) {
-							firstNotNull_employed_City = employed_city2;
+						if (firstNotNull_employed_city == null && employed_city2 != null) {
+							firstNotNull_employed_city = employed_city2;
 						}
 					}
-					employed_res.setCity(firstNotNull_employed_City);
+					employed_res.setCity(firstNotNull_employed_city);
 					// attribute 'Employees.region'
-					String firstNotNull_employed_Region = Util.getStringValue(r.getAs("employed_0.region"));
+					String firstNotNull_employed_region = Util.getStringValue(r.getAs("employed_0.region"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_region2 = Util.getStringValue(r.getAs("employed_" + i + ".region"));
-						if (firstNotNull_employed_Region != null && employed_region2 != null && !firstNotNull_employed_Region.equals(employed_region2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_employed_Region + " and " + employed_region2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_employed_Region + " and " + employed_region2 + "." );
+						if (firstNotNull_employed_region != null && employed_region2 != null && !firstNotNull_employed_region.equals(employed_region2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_employed_region + " and " + employed_region2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.region': " + firstNotNull_employed_region + " and " + employed_region2 + "." );
 						}
-						if (firstNotNull_employed_Region == null && employed_region2 != null) {
-							firstNotNull_employed_Region = employed_region2;
+						if (firstNotNull_employed_region == null && employed_region2 != null) {
+							firstNotNull_employed_region = employed_region2;
 						}
 					}
-					employed_res.setRegion(firstNotNull_employed_Region);
+					employed_res.setRegion(firstNotNull_employed_region);
 					// attribute 'Employees.postalCode'
-					String firstNotNull_employed_PostalCode = Util.getStringValue(r.getAs("employed_0.postalCode"));
+					String firstNotNull_employed_postalCode = Util.getStringValue(r.getAs("employed_0.postalCode"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_postalCode2 = Util.getStringValue(r.getAs("employed_" + i + ".postalCode"));
-						if (firstNotNull_employed_PostalCode != null && employed_postalCode2 != null && !firstNotNull_employed_PostalCode.equals(employed_postalCode2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_employed_PostalCode + " and " + employed_postalCode2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_employed_PostalCode + " and " + employed_postalCode2 + "." );
+						if (firstNotNull_employed_postalCode != null && employed_postalCode2 != null && !firstNotNull_employed_postalCode.equals(employed_postalCode2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_employed_postalCode + " and " + employed_postalCode2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.postalCode': " + firstNotNull_employed_postalCode + " and " + employed_postalCode2 + "." );
 						}
-						if (firstNotNull_employed_PostalCode == null && employed_postalCode2 != null) {
-							firstNotNull_employed_PostalCode = employed_postalCode2;
+						if (firstNotNull_employed_postalCode == null && employed_postalCode2 != null) {
+							firstNotNull_employed_postalCode = employed_postalCode2;
 						}
 					}
-					employed_res.setPostalCode(firstNotNull_employed_PostalCode);
+					employed_res.setPostalCode(firstNotNull_employed_postalCode);
 					// attribute 'Employees.country'
-					String firstNotNull_employed_Country = Util.getStringValue(r.getAs("employed_0.country"));
+					String firstNotNull_employed_country = Util.getStringValue(r.getAs("employed_0.country"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_country2 = Util.getStringValue(r.getAs("employed_" + i + ".country"));
-						if (firstNotNull_employed_Country != null && employed_country2 != null && !firstNotNull_employed_Country.equals(employed_country2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_employed_Country + " and " + employed_country2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_employed_Country + " and " + employed_country2 + "." );
+						if (firstNotNull_employed_country != null && employed_country2 != null && !firstNotNull_employed_country.equals(employed_country2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_employed_country + " and " + employed_country2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.country': " + firstNotNull_employed_country + " and " + employed_country2 + "." );
 						}
-						if (firstNotNull_employed_Country == null && employed_country2 != null) {
-							firstNotNull_employed_Country = employed_country2;
+						if (firstNotNull_employed_country == null && employed_country2 != null) {
+							firstNotNull_employed_country = employed_country2;
 						}
 					}
-					employed_res.setCountry(firstNotNull_employed_Country);
+					employed_res.setCountry(firstNotNull_employed_country);
 					// attribute 'Employees.homePhone'
-					String firstNotNull_employed_HomePhone = Util.getStringValue(r.getAs("employed_0.homePhone"));
+					String firstNotNull_employed_homePhone = Util.getStringValue(r.getAs("employed_0.homePhone"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_homePhone2 = Util.getStringValue(r.getAs("employed_" + i + ".homePhone"));
-						if (firstNotNull_employed_HomePhone != null && employed_homePhone2 != null && !firstNotNull_employed_HomePhone.equals(employed_homePhone2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_employed_HomePhone + " and " + employed_homePhone2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_employed_HomePhone + " and " + employed_homePhone2 + "." );
+						if (firstNotNull_employed_homePhone != null && employed_homePhone2 != null && !firstNotNull_employed_homePhone.equals(employed_homePhone2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_employed_homePhone + " and " + employed_homePhone2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.homePhone': " + firstNotNull_employed_homePhone + " and " + employed_homePhone2 + "." );
 						}
-						if (firstNotNull_employed_HomePhone == null && employed_homePhone2 != null) {
-							firstNotNull_employed_HomePhone = employed_homePhone2;
+						if (firstNotNull_employed_homePhone == null && employed_homePhone2 != null) {
+							firstNotNull_employed_homePhone = employed_homePhone2;
 						}
 					}
-					employed_res.setHomePhone(firstNotNull_employed_HomePhone);
+					employed_res.setHomePhone(firstNotNull_employed_homePhone);
 					// attribute 'Employees.extension'
-					String firstNotNull_employed_Extension = Util.getStringValue(r.getAs("employed_0.extension"));
+					String firstNotNull_employed_extension = Util.getStringValue(r.getAs("employed_0.extension"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_extension2 = Util.getStringValue(r.getAs("employed_" + i + ".extension"));
-						if (firstNotNull_employed_Extension != null && employed_extension2 != null && !firstNotNull_employed_Extension.equals(employed_extension2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_employed_Extension + " and " + employed_extension2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_employed_Extension + " and " + employed_extension2 + "." );
+						if (firstNotNull_employed_extension != null && employed_extension2 != null && !firstNotNull_employed_extension.equals(employed_extension2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_employed_extension + " and " + employed_extension2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.extension': " + firstNotNull_employed_extension + " and " + employed_extension2 + "." );
 						}
-						if (firstNotNull_employed_Extension == null && employed_extension2 != null) {
-							firstNotNull_employed_Extension = employed_extension2;
+						if (firstNotNull_employed_extension == null && employed_extension2 != null) {
+							firstNotNull_employed_extension = employed_extension2;
 						}
 					}
-					employed_res.setExtension(firstNotNull_employed_Extension);
+					employed_res.setExtension(firstNotNull_employed_extension);
 					// attribute 'Employees.photo'
-					byte[] firstNotNull_employed_Photo = Util.getByteArrayValue(r.getAs("employed_0.photo"));
+					byte[] firstNotNull_employed_photo = Util.getByteArrayValue(r.getAs("employed_0.photo"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						byte[] employed_photo2 = Util.getByteArrayValue(r.getAs("employed_" + i + ".photo"));
-						if (firstNotNull_employed_Photo != null && employed_photo2 != null && !firstNotNull_employed_Photo.equals(employed_photo2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_employed_Photo + " and " + employed_photo2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_employed_Photo + " and " + employed_photo2 + "." );
+						if (firstNotNull_employed_photo != null && employed_photo2 != null && !firstNotNull_employed_photo.equals(employed_photo2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_employed_photo + " and " + employed_photo2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photo': " + firstNotNull_employed_photo + " and " + employed_photo2 + "." );
 						}
-						if (firstNotNull_employed_Photo == null && employed_photo2 != null) {
-							firstNotNull_employed_Photo = employed_photo2;
+						if (firstNotNull_employed_photo == null && employed_photo2 != null) {
+							firstNotNull_employed_photo = employed_photo2;
 						}
 					}
-					employed_res.setPhoto(firstNotNull_employed_Photo);
+					employed_res.setPhoto(firstNotNull_employed_photo);
 					// attribute 'Employees.notes'
-					String firstNotNull_employed_Notes = Util.getStringValue(r.getAs("employed_0.notes"));
+					String firstNotNull_employed_notes = Util.getStringValue(r.getAs("employed_0.notes"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_notes2 = Util.getStringValue(r.getAs("employed_" + i + ".notes"));
-						if (firstNotNull_employed_Notes != null && employed_notes2 != null && !firstNotNull_employed_Notes.equals(employed_notes2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_employed_Notes + " and " + employed_notes2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_employed_Notes + " and " + employed_notes2 + "." );
+						if (firstNotNull_employed_notes != null && employed_notes2 != null && !firstNotNull_employed_notes.equals(employed_notes2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_employed_notes + " and " + employed_notes2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.notes': " + firstNotNull_employed_notes + " and " + employed_notes2 + "." );
 						}
-						if (firstNotNull_employed_Notes == null && employed_notes2 != null) {
-							firstNotNull_employed_Notes = employed_notes2;
+						if (firstNotNull_employed_notes == null && employed_notes2 != null) {
+							firstNotNull_employed_notes = employed_notes2;
 						}
 					}
-					employed_res.setNotes(firstNotNull_employed_Notes);
+					employed_res.setNotes(firstNotNull_employed_notes);
 					// attribute 'Employees.photoPath'
-					String firstNotNull_employed_PhotoPath = Util.getStringValue(r.getAs("employed_0.photoPath"));
+					String firstNotNull_employed_photoPath = Util.getStringValue(r.getAs("employed_0.photoPath"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String employed_photoPath2 = Util.getStringValue(r.getAs("employed_" + i + ".photoPath"));
-						if (firstNotNull_employed_PhotoPath != null && employed_photoPath2 != null && !firstNotNull_employed_PhotoPath.equals(employed_photoPath2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_employed_PhotoPath + " and " + employed_photoPath2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_employed_PhotoPath + " and " + employed_photoPath2 + "." );
+						if (firstNotNull_employed_photoPath != null && employed_photoPath2 != null && !firstNotNull_employed_photoPath.equals(employed_photoPath2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_employed_photoPath + " and " + employed_photoPath2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.photoPath': " + firstNotNull_employed_photoPath + " and " + employed_photoPath2 + "." );
 						}
-						if (firstNotNull_employed_PhotoPath == null && employed_photoPath2 != null) {
-							firstNotNull_employed_PhotoPath = employed_photoPath2;
+						if (firstNotNull_employed_photoPath == null && employed_photoPath2 != null) {
+							firstNotNull_employed_photoPath = employed_photoPath2;
 						}
 					}
-					employed_res.setPhotoPath(firstNotNull_employed_PhotoPath);
+					employed_res.setPhotoPath(firstNotNull_employed_photoPath);
 					// attribute 'Employees.salary'
-					Double firstNotNull_employed_Salary = Util.getDoubleValue(r.getAs("employed_0.salary"));
+					Double firstNotNull_employed_salary = Util.getDoubleValue(r.getAs("employed_0.salary"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double employed_salary2 = Util.getDoubleValue(r.getAs("employed_" + i + ".salary"));
-						if (firstNotNull_employed_Salary != null && employed_salary2 != null && !firstNotNull_employed_Salary.equals(employed_salary2)) {
-							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_employed_Salary + " and " + employed_salary2 + "." );
-							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_employed_Salary + " and " + employed_salary2 + "." );
+						if (firstNotNull_employed_salary != null && employed_salary2 != null && !firstNotNull_employed_salary.equals(employed_salary2)) {
+							works_res.addLogEvent("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_employed_salary + " and " + employed_salary2 + "." );
+							logger.warn("Data consistency problem for [Employees - id :"+employed_res.getEmployeeID()+"]: different values found for attribute 'Employees.salary': " + firstNotNull_employed_salary + " and " + employed_salary2 + "." );
 						}
-						if (firstNotNull_employed_Salary == null && employed_salary2 != null) {
-							firstNotNull_employed_Salary = employed_salary2;
+						if (firstNotNull_employed_salary == null && employed_salary2 != null) {
+							firstNotNull_employed_salary = employed_salary2;
 						}
 					}
-					employed_res.setSalary(firstNotNull_employed_Salary);
+					employed_res.setSalary(firstNotNull_employed_salary);
 					// attribute 'Territories.territoryID'
 					String firstNotNull_territories_territoryID = Util.getStringValue(r.getAs("territories_0.territoryID"));
 					territories_res.setTerritoryID(firstNotNull_territories_territoryID);
 					// attribute 'Territories.territoryDescription'
-					String firstNotNull_territories_TerritoryDescription = Util.getStringValue(r.getAs("territories_0.territoryDescription"));
+					String firstNotNull_territories_territoryDescription = Util.getStringValue(r.getAs("territories_0.territoryDescription"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String territories_territoryDescription2 = Util.getStringValue(r.getAs("territories_" + i + ".territoryDescription"));
-						if (firstNotNull_territories_TerritoryDescription != null && territories_territoryDescription2 != null && !firstNotNull_territories_TerritoryDescription.equals(territories_territoryDescription2)) {
-							works_res.addLogEvent("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_TerritoryDescription + " and " + territories_territoryDescription2 + "." );
-							logger.warn("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_TerritoryDescription + " and " + territories_territoryDescription2 + "." );
+						if (firstNotNull_territories_territoryDescription != null && territories_territoryDescription2 != null && !firstNotNull_territories_territoryDescription.equals(territories_territoryDescription2)) {
+							works_res.addLogEvent("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_territoryDescription + " and " + territories_territoryDescription2 + "." );
+							logger.warn("Data consistency problem for [Territories - id :"+territories_res.getTerritoryID()+"]: different values found for attribute 'Territories.territoryDescription': " + firstNotNull_territories_territoryDescription + " and " + territories_territoryDescription2 + "." );
 						}
-						if (firstNotNull_territories_TerritoryDescription == null && territories_territoryDescription2 != null) {
-							firstNotNull_territories_TerritoryDescription = territories_territoryDescription2;
+						if (firstNotNull_territories_territoryDescription == null && territories_territoryDescription2 != null) {
+							firstNotNull_territories_territoryDescription = territories_territoryDescription2;
 						}
 					}
-					territories_res.setTerritoryDescription(firstNotNull_territories_TerritoryDescription);
+					territories_res.setTerritoryDescription(firstNotNull_territories_territoryDescription);
 	
 					works_res.setEmployed(employed_res);
 					works_res.setTerritories(territories_res);

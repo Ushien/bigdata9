@@ -225,7 +225,7 @@ public class SuppliersServiceImpl extends SuppliersService {
 				.withColumnRenamed("discontinued", "Products_discontinued")
 				.withColumnRenamed("logEvents", "Products_logEvents"),
 				suppliersTDOsupplysupplier.col("relDB_Products_supply_SupplierID").equalTo(productsTDOsupplysuppliedProduct.col("relDB_Products_supply_SupplierRef")));
-		Dataset<Suppliers> res_Suppliers_supply = res_supply.select( "supplierId", "CompanyName", "ContactName", "ContactTitle", "Address", "City", "Region", "PostalCode", "Country", "Phone", "Fax", "HomePage", "logEvents").as(Encoders.bean(Suppliers.class));
+		Dataset<Suppliers> res_Suppliers_supply = res_supply.select( "supplierId", "companyName", "contactName", "contactTitle", "address", "city", "region", "postalCode", "country", "phone", "fax", "homePage", "logEvents").as(Encoders.bean(Suppliers.class));
 		res_Suppliers_supply = res_Suppliers_supply.dropDuplicates(new String[] {"supplierId"});
 		datasetsPOJO.add(res_Suppliers_supply);
 		

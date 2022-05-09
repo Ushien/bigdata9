@@ -7,23 +7,23 @@ import java.util.Objects;
 public class Employees extends LoggingPojo {
 
 	private Integer employeeID;
-	private String LastName;
-	private String FirstName;
-	private String Title;
-	private String TitleOfCourtesy;
-	private LocalDate BirthDate;
-	private LocalDate HireDate;
-	private String Address;
-	private String City;
-	private String Region;
-	private String PostalCode;
-	private String Country;
-	private String HomePhone;
-	private String Extension;
-	private byte[] Photo;
-	private String Notes;
-	private String PhotoPath;
-	private Double Salary;
+	private String lastName;
+	private String firstName;
+	private String title;
+	private String titleOfCourtesy;
+	private LocalDate birthDate;
+	private LocalDate hireDate;
+	private String address;
+	private String city;
+	private String region;
+	private String postalCode;
+	private String country;
+	private String homePhone;
+	private String extension;
+	private byte[] photo;
+	private String notes;
+	private String photoPath;
+	private Double salary;
 
 	public enum works {
 		employed
@@ -49,25 +49,25 @@ public class Employees extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Employees(Integer employeeID,String LastName,String FirstName,String Title,String TitleOfCourtesy,LocalDate BirthDate,LocalDate HireDate,String Address,String City,String Region,String PostalCode,String Country,String HomePhone,String Extension,byte[] Photo,String Notes,String PhotoPath,Double Salary) {
+	public Employees(Integer employeeID,String lastName,String firstName,String title,String titleOfCourtesy,LocalDate birthDate,LocalDate hireDate,String address,String city,String region,String postalCode,String country,String homePhone,String extension,byte[] photo,String notes,String photoPath,Double salary) {
 		this.employeeID = employeeID;
-		this.LastName = LastName;
-		this.FirstName = FirstName;
-		this.Title = Title;
-		this.TitleOfCourtesy = TitleOfCourtesy;
-		this.BirthDate = BirthDate;
-		this.HireDate = HireDate;
-		this.Address = Address;
-		this.City = City;
-		this.Region = Region;
-		this.PostalCode = PostalCode;
-		this.Country = Country;
-		this.HomePhone = HomePhone;
-		this.Extension = Extension;
-		this.Photo = Photo;
-		this.Notes = Notes;
-		this.PhotoPath = PhotoPath;
-		this.Salary = Salary;
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.title = title;
+		this.titleOfCourtesy = titleOfCourtesy;
+		this.birthDate = birthDate;
+		this.hireDate = hireDate;
+		this.address = address;
+		this.city = city;
+		this.region = region;
+		this.postalCode = postalCode;
+		this.country = country;
+		this.homePhone = homePhone;
+		this.extension = extension;
+		this.photo = photo;
+		this.notes = notes;
+		this.photoPath = photoPath;
+		this.salary = salary;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -79,7 +79,7 @@ public class Employees extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Employees Employees = (Employees) o;
-		boolean eqSimpleAttr = Objects.equals(employeeID,Employees.employeeID) && Objects.equals(LastName,Employees.LastName) && Objects.equals(FirstName,Employees.FirstName) && Objects.equals(Title,Employees.Title) && Objects.equals(TitleOfCourtesy,Employees.TitleOfCourtesy) && Objects.equals(BirthDate,Employees.BirthDate) && Objects.equals(HireDate,Employees.HireDate) && Objects.equals(Address,Employees.Address) && Objects.equals(City,Employees.City) && Objects.equals(Region,Employees.Region) && Objects.equals(PostalCode,Employees.PostalCode) && Objects.equals(Country,Employees.Country) && Objects.equals(HomePhone,Employees.HomePhone) && Objects.equals(Extension,Employees.Extension) && Objects.equals(Photo,Employees.Photo) && Objects.equals(Notes,Employees.Notes) && Objects.equals(PhotoPath,Employees.PhotoPath) && Objects.equals(Salary,Employees.Salary);
+		boolean eqSimpleAttr = Objects.equals(employeeID,Employees.employeeID) && Objects.equals(lastName,Employees.lastName) && Objects.equals(firstName,Employees.firstName) && Objects.equals(title,Employees.title) && Objects.equals(titleOfCourtesy,Employees.titleOfCourtesy) && Objects.equals(birthDate,Employees.birthDate) && Objects.equals(hireDate,Employees.hireDate) && Objects.equals(address,Employees.address) && Objects.equals(city,Employees.city) && Objects.equals(region,Employees.region) && Objects.equals(postalCode,Employees.postalCode) && Objects.equals(country,Employees.country) && Objects.equals(homePhone,Employees.homePhone) && Objects.equals(extension,Employees.extension) && Objects.equals(photo,Employees.photo) && Objects.equals(notes,Employees.notes) && Objects.equals(photoPath,Employees.photoPath) && Objects.equals(salary,Employees.salary);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(territoriesList, Employees.territoriesList) &&
@@ -93,23 +93,23 @@ public class Employees extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Employees { " + "employeeID="+employeeID +", "+
-					"LastName="+LastName +", "+
-					"FirstName="+FirstName +", "+
-					"Title="+Title +", "+
-					"TitleOfCourtesy="+TitleOfCourtesy +", "+
-					"BirthDate="+BirthDate +", "+
-					"HireDate="+HireDate +", "+
-					"Address="+Address +", "+
-					"City="+City +", "+
-					"Region="+Region +", "+
-					"PostalCode="+PostalCode +", "+
-					"Country="+Country +", "+
-					"HomePhone="+HomePhone +", "+
-					"Extension="+Extension +", "+
-					"Photo="+Photo +", "+
-					"Notes="+Notes +", "+
-					"PhotoPath="+PhotoPath +", "+
-					"Salary="+Salary +"}"; 
+					"lastName="+lastName +", "+
+					"firstName="+firstName +", "+
+					"title="+title +", "+
+					"titleOfCourtesy="+titleOfCourtesy +", "+
+					"birthDate="+birthDate +", "+
+					"hireDate="+hireDate +", "+
+					"address="+address +", "+
+					"city="+city +", "+
+					"region="+region +", "+
+					"postalCode="+postalCode +", "+
+					"country="+country +", "+
+					"homePhone="+homePhone +", "+
+					"extension="+extension +", "+
+					"photo="+photo +", "+
+					"notes="+notes +", "+
+					"photoPath="+photoPath +", "+
+					"salary="+salary +"}"; 
 	}
 	
 	public Integer getEmployeeID() {
@@ -120,123 +120,123 @@ public class Employees extends LoggingPojo {
 		this.employeeID = employeeID;
 	}
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 
-	public void setLastName(String LastName) {
-		this.LastName = LastName;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
 
-	public void setFirstName(String FirstName) {
-		this.FirstName = FirstName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 
-	public void setTitle(String Title) {
-		this.Title = Title;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getTitleOfCourtesy() {
-		return TitleOfCourtesy;
+		return titleOfCourtesy;
 	}
 
-	public void setTitleOfCourtesy(String TitleOfCourtesy) {
-		this.TitleOfCourtesy = TitleOfCourtesy;
+	public void setTitleOfCourtesy(String titleOfCourtesy) {
+		this.titleOfCourtesy = titleOfCourtesy;
 	}
 	public LocalDate getBirthDate() {
-		return BirthDate;
+		return birthDate;
 	}
 
-	public void setBirthDate(LocalDate BirthDate) {
-		this.BirthDate = BirthDate;
+	public void setBirthDate(LocalDate birthDate) {
+		this.birthDate = birthDate;
 	}
 	public LocalDate getHireDate() {
-		return HireDate;
+		return hireDate;
 	}
 
-	public void setHireDate(LocalDate HireDate) {
-		this.HireDate = HireDate;
+	public void setHireDate(LocalDate hireDate) {
+		this.hireDate = hireDate;
 	}
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
-	public void setAddress(String Address) {
-		this.Address = Address;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getCity() {
-		return City;
+		return city;
 	}
 
-	public void setCity(String City) {
-		this.City = City;
+	public void setCity(String city) {
+		this.city = city;
 	}
 	public String getRegion() {
-		return Region;
+		return region;
 	}
 
-	public void setRegion(String Region) {
-		this.Region = Region;
+	public void setRegion(String region) {
+		this.region = region;
 	}
 	public String getPostalCode() {
-		return PostalCode;
+		return postalCode;
 	}
 
-	public void setPostalCode(String PostalCode) {
-		this.PostalCode = PostalCode;
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 	public String getCountry() {
-		return Country;
+		return country;
 	}
 
-	public void setCountry(String Country) {
-		this.Country = Country;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 	public String getHomePhone() {
-		return HomePhone;
+		return homePhone;
 	}
 
-	public void setHomePhone(String HomePhone) {
-		this.HomePhone = HomePhone;
+	public void setHomePhone(String homePhone) {
+		this.homePhone = homePhone;
 	}
 	public String getExtension() {
-		return Extension;
+		return extension;
 	}
 
-	public void setExtension(String Extension) {
-		this.Extension = Extension;
+	public void setExtension(String extension) {
+		this.extension = extension;
 	}
 	public byte[] getPhoto() {
-		return Photo;
+		return photo;
 	}
 
-	public void setPhoto(byte[] Photo) {
-		this.Photo = Photo;
+	public void setPhoto(byte[] photo) {
+		this.photo = photo;
 	}
 	public String getNotes() {
-		return Notes;
+		return notes;
 	}
 
-	public void setNotes(String Notes) {
-		this.Notes = Notes;
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
 	public String getPhotoPath() {
-		return PhotoPath;
+		return photoPath;
 	}
 
-	public void setPhotoPath(String PhotoPath) {
-		this.PhotoPath = PhotoPath;
+	public void setPhotoPath(String photoPath) {
+		this.photoPath = photoPath;
 	}
 	public Double getSalary() {
-		return Salary;
+		return salary;
 	}
 
-	public void setSalary(Double Salary) {
-		this.Salary = Salary;
+	public void setSalary(Double salary) {
+		this.salary = salary;
 	}
 
 	

@@ -121,16 +121,16 @@ public abstract class CategoriesService {
 		return getCategoriesList(conditions.Condition.simple(conditions.CategoriesAttribute.categoryID, conditions.Operator.EQUALS, categoryID));
 	}
 	
-	public Dataset<Categories> getCategoriesListByCategoryName(String CategoryName) {
-		return getCategoriesList(conditions.Condition.simple(conditions.CategoriesAttribute.CategoryName, conditions.Operator.EQUALS, CategoryName));
+	public Dataset<Categories> getCategoriesListByCategoryName(String categoryName) {
+		return getCategoriesList(conditions.Condition.simple(conditions.CategoriesAttribute.categoryName, conditions.Operator.EQUALS, categoryName));
 	}
 	
-	public Dataset<Categories> getCategoriesListByDescription(String Description) {
-		return getCategoriesList(conditions.Condition.simple(conditions.CategoriesAttribute.Description, conditions.Operator.EQUALS, Description));
+	public Dataset<Categories> getCategoriesListByDescription(String description) {
+		return getCategoriesList(conditions.Condition.simple(conditions.CategoriesAttribute.description, conditions.Operator.EQUALS, description));
 	}
 	
-	public Dataset<Categories> getCategoriesListByPicture(byte[] Picture) {
-		return getCategoriesList(conditions.Condition.simple(conditions.CategoriesAttribute.Picture, conditions.Operator.EQUALS, Picture));
+	public Dataset<Categories> getCategoriesListByPicture(byte[] picture) {
+		return getCategoriesList(conditions.Condition.simple(conditions.CategoriesAttribute.picture, conditions.Operator.EQUALS, picture));
 	}
 	
 	
@@ -177,46 +177,46 @@ public abstract class CategoriesService {
 					categories_res.setCategoryID(firstNotNull_categoryID);
 					
 					// attribute 'Categories.categoryName'
-					String firstNotNull_CategoryName = Util.getStringValue(r.getAs("categoryName"));
+					String firstNotNull_categoryName = Util.getStringValue(r.getAs("categoryName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String categoryName2 = Util.getStringValue(r.getAs("categoryName_" + i));
-						if (firstNotNull_CategoryName != null && categoryName2 != null && !firstNotNull_CategoryName.equals(categoryName2)) {
-							categories_res.addLogEvent("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.categoryName': " + firstNotNull_CategoryName + " and " + categoryName2 + "." );
-							logger.warn("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.categoryName': " + firstNotNull_CategoryName + " and " + categoryName2 + "." );
+						if (firstNotNull_categoryName != null && categoryName2 != null && !firstNotNull_categoryName.equals(categoryName2)) {
+							categories_res.addLogEvent("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.categoryName': " + firstNotNull_categoryName + " and " + categoryName2 + "." );
+							logger.warn("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.categoryName': " + firstNotNull_categoryName + " and " + categoryName2 + "." );
 						}
-						if (firstNotNull_CategoryName == null && categoryName2 != null) {
-							firstNotNull_CategoryName = categoryName2;
+						if (firstNotNull_categoryName == null && categoryName2 != null) {
+							firstNotNull_categoryName = categoryName2;
 						}
 					}
-					categories_res.setCategoryName(firstNotNull_CategoryName);
+					categories_res.setCategoryName(firstNotNull_categoryName);
 					
 					// attribute 'Categories.description'
-					String firstNotNull_Description = Util.getStringValue(r.getAs("description"));
+					String firstNotNull_description = Util.getStringValue(r.getAs("description"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String description2 = Util.getStringValue(r.getAs("description_" + i));
-						if (firstNotNull_Description != null && description2 != null && !firstNotNull_Description.equals(description2)) {
-							categories_res.addLogEvent("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.description': " + firstNotNull_Description + " and " + description2 + "." );
-							logger.warn("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.description': " + firstNotNull_Description + " and " + description2 + "." );
+						if (firstNotNull_description != null && description2 != null && !firstNotNull_description.equals(description2)) {
+							categories_res.addLogEvent("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.description': " + firstNotNull_description + " and " + description2 + "." );
+							logger.warn("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.description': " + firstNotNull_description + " and " + description2 + "." );
 						}
-						if (firstNotNull_Description == null && description2 != null) {
-							firstNotNull_Description = description2;
+						if (firstNotNull_description == null && description2 != null) {
+							firstNotNull_description = description2;
 						}
 					}
-					categories_res.setDescription(firstNotNull_Description);
+					categories_res.setDescription(firstNotNull_description);
 					
 					// attribute 'Categories.picture'
-					byte[] firstNotNull_Picture = Util.getByteArrayValue(r.getAs("picture"));
+					byte[] firstNotNull_picture = Util.getByteArrayValue(r.getAs("picture"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						byte[] picture2 = Util.getByteArrayValue(r.getAs("picture_" + i));
-						if (firstNotNull_Picture != null && picture2 != null && !firstNotNull_Picture.equals(picture2)) {
-							categories_res.addLogEvent("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.picture': " + firstNotNull_Picture + " and " + picture2 + "." );
-							logger.warn("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.picture': " + firstNotNull_Picture + " and " + picture2 + "." );
+						if (firstNotNull_picture != null && picture2 != null && !firstNotNull_picture.equals(picture2)) {
+							categories_res.addLogEvent("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.picture': " + firstNotNull_picture + " and " + picture2 + "." );
+							logger.warn("Data consistency problem for [Categories - id :"+categories_res.getCategoryID()+"]: different values found for attribute 'Categories.picture': " + firstNotNull_picture + " and " + picture2 + "." );
 						}
-						if (firstNotNull_Picture == null && picture2 != null) {
-							firstNotNull_Picture = picture2;
+						if (firstNotNull_picture == null && picture2 != null) {
+							firstNotNull_picture = picture2;
 						}
 					}
-					categories_res.setPicture(firstNotNull_Picture);
+					categories_res.setPicture(firstNotNull_picture);
 	
 					WrappedArray logEvents = r.getAs("logEvents");
 					if(logEvents != null)

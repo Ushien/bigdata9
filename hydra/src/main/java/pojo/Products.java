@@ -7,13 +7,13 @@ import java.util.Objects;
 public class Products extends LoggingPojo {
 
 	private Integer productId;
-	private String ProductName;
-	private String QuantityPerUnit;
-	private Double UnitPrice;
-	private Integer UnitsInStock;
-	private Integer UnitsOnOrder;
-	private Integer ReorderLevel;
-	private Boolean Discontinued;
+	private String productName;
+	private String quantityPerUnit;
+	private Double unitPrice;
+	private Integer unitsInStock;
+	private Integer unitsOnOrder;
+	private Integer reorderLevel;
+	private Boolean discontinued;
 
 	public enum supply {
 		suppliedProduct
@@ -35,15 +35,15 @@ public class Products extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Products(Integer productId,String ProductName,String QuantityPerUnit,Double UnitPrice,Integer UnitsInStock,Integer UnitsOnOrder,Integer ReorderLevel,Boolean Discontinued) {
+	public Products(Integer productId,String productName,String quantityPerUnit,Double unitPrice,Integer unitsInStock,Integer unitsOnOrder,Integer reorderLevel,Boolean discontinued) {
 		this.productId = productId;
-		this.ProductName = ProductName;
-		this.QuantityPerUnit = QuantityPerUnit;
-		this.UnitPrice = UnitPrice;
-		this.UnitsInStock = UnitsInStock;
-		this.UnitsOnOrder = UnitsOnOrder;
-		this.ReorderLevel = ReorderLevel;
-		this.Discontinued = Discontinued;
+		this.productName = productName;
+		this.quantityPerUnit = quantityPerUnit;
+		this.unitPrice = unitPrice;
+		this.unitsInStock = unitsInStock;
+		this.unitsOnOrder = unitsOnOrder;
+		this.reorderLevel = reorderLevel;
+		this.discontinued = discontinued;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -55,7 +55,7 @@ public class Products extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Products Products = (Products) o;
-		boolean eqSimpleAttr = Objects.equals(productId,Products.productId) && Objects.equals(ProductName,Products.ProductName) && Objects.equals(QuantityPerUnit,Products.QuantityPerUnit) && Objects.equals(UnitPrice,Products.UnitPrice) && Objects.equals(UnitsInStock,Products.UnitsInStock) && Objects.equals(UnitsOnOrder,Products.UnitsOnOrder) && Objects.equals(ReorderLevel,Products.ReorderLevel) && Objects.equals(Discontinued,Products.Discontinued);
+		boolean eqSimpleAttr = Objects.equals(productId,Products.productId) && Objects.equals(productName,Products.productName) && Objects.equals(quantityPerUnit,Products.quantityPerUnit) && Objects.equals(unitPrice,Products.unitPrice) && Objects.equals(unitsInStock,Products.unitsInStock) && Objects.equals(unitsOnOrder,Products.unitsOnOrder) && Objects.equals(reorderLevel,Products.reorderLevel) && Objects.equals(discontinued,Products.discontinued);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(supplier, Products.supplier) &&
@@ -68,13 +68,13 @@ public class Products extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Products { " + "productId="+productId +", "+
-					"ProductName="+ProductName +", "+
-					"QuantityPerUnit="+QuantityPerUnit +", "+
-					"UnitPrice="+UnitPrice +", "+
-					"UnitsInStock="+UnitsInStock +", "+
-					"UnitsOnOrder="+UnitsOnOrder +", "+
-					"ReorderLevel="+ReorderLevel +", "+
-					"Discontinued="+Discontinued +"}"; 
+					"productName="+productName +", "+
+					"quantityPerUnit="+quantityPerUnit +", "+
+					"unitPrice="+unitPrice +", "+
+					"unitsInStock="+unitsInStock +", "+
+					"unitsOnOrder="+unitsOnOrder +", "+
+					"reorderLevel="+reorderLevel +", "+
+					"discontinued="+discontinued +"}"; 
 	}
 	
 	public Integer getProductId() {
@@ -85,53 +85,53 @@ public class Products extends LoggingPojo {
 		this.productId = productId;
 	}
 	public String getProductName() {
-		return ProductName;
+		return productName;
 	}
 
-	public void setProductName(String ProductName) {
-		this.ProductName = ProductName;
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 	public String getQuantityPerUnit() {
-		return QuantityPerUnit;
+		return quantityPerUnit;
 	}
 
-	public void setQuantityPerUnit(String QuantityPerUnit) {
-		this.QuantityPerUnit = QuantityPerUnit;
+	public void setQuantityPerUnit(String quantityPerUnit) {
+		this.quantityPerUnit = quantityPerUnit;
 	}
 	public Double getUnitPrice() {
-		return UnitPrice;
+		return unitPrice;
 	}
 
-	public void setUnitPrice(Double UnitPrice) {
-		this.UnitPrice = UnitPrice;
+	public void setUnitPrice(Double unitPrice) {
+		this.unitPrice = unitPrice;
 	}
 	public Integer getUnitsInStock() {
-		return UnitsInStock;
+		return unitsInStock;
 	}
 
-	public void setUnitsInStock(Integer UnitsInStock) {
-		this.UnitsInStock = UnitsInStock;
+	public void setUnitsInStock(Integer unitsInStock) {
+		this.unitsInStock = unitsInStock;
 	}
 	public Integer getUnitsOnOrder() {
-		return UnitsOnOrder;
+		return unitsOnOrder;
 	}
 
-	public void setUnitsOnOrder(Integer UnitsOnOrder) {
-		this.UnitsOnOrder = UnitsOnOrder;
+	public void setUnitsOnOrder(Integer unitsOnOrder) {
+		this.unitsOnOrder = unitsOnOrder;
 	}
 	public Integer getReorderLevel() {
-		return ReorderLevel;
+		return reorderLevel;
 	}
 
-	public void setReorderLevel(Integer ReorderLevel) {
-		this.ReorderLevel = ReorderLevel;
+	public void setReorderLevel(Integer reorderLevel) {
+		this.reorderLevel = reorderLevel;
 	}
 	public Boolean getDiscontinued() {
-		return Discontinued;
+		return discontinued;
 	}
 
-	public void setDiscontinued(Boolean Discontinued) {
-		this.Discontinued = Discontinued;
+	public void setDiscontinued(Boolean discontinued) {
+		this.discontinued = discontinued;
 	}
 
 	

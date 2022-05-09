@@ -67,7 +67,7 @@ public class TerritoriesServiceImpl extends TerritoriesService {
 				if(attr == TerritoriesAttribute.territoryID ) {
 					res.add("TerritoryID = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == TerritoriesAttribute.TerritoryDescription ) {
+				if(attr == TerritoriesAttribute.territoryDescription ) {
 					res.add("TerritoryDescription = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
 			}
@@ -109,7 +109,7 @@ public class TerritoriesServiceImpl extends TerritoriesService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == TerritoriesAttribute.TerritoryDescription ) {
+					if(attr == TerritoriesAttribute.territoryDescription ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -137,7 +137,7 @@ public class TerritoriesServiceImpl extends TerritoriesService {
 						if(op == Operator.NOT_EQUALS)
 							where =  "TerritoryID IS NOT NULL";
 					}
-					if(attr == TerritoriesAttribute.TerritoryDescription ) {
+					if(attr == TerritoriesAttribute.territoryDescription ) {
 						if(op == Operator.EQUALS)
 							where =  "TerritoryDescription IS NULL";
 						if(op == Operator.NOT_EQUALS)

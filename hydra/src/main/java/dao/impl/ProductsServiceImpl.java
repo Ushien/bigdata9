@@ -67,25 +67,25 @@ public class ProductsServiceImpl extends ProductsService {
 				if(attr == ProductsAttribute.productId ) {
 					res.add("ProductID = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ProductsAttribute.ProductName ) {
+				if(attr == ProductsAttribute.productName ) {
 					res.add("ProductName = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ProductsAttribute.QuantityPerUnit ) {
+				if(attr == ProductsAttribute.quantityPerUnit ) {
 					res.add("QuantityPerUnit = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ProductsAttribute.UnitPrice ) {
+				if(attr == ProductsAttribute.unitPrice ) {
 					res.add("UnitPrice = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ProductsAttribute.UnitsInStock ) {
+				if(attr == ProductsAttribute.unitsInStock ) {
 					res.add("UnitsInStock = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ProductsAttribute.UnitsOnOrder ) {
+				if(attr == ProductsAttribute.unitsOnOrder ) {
 					res.add("UnitsOnOrder = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ProductsAttribute.ReorderLevel ) {
+				if(attr == ProductsAttribute.reorderLevel ) {
 					res.add("ReorderLevel = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == ProductsAttribute.Discontinued ) {
+				if(attr == ProductsAttribute.discontinued ) {
 					res.add("Discontinued = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
 			}
@@ -127,7 +127,7 @@ public class ProductsServiceImpl extends ProductsService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ProductsAttribute.ProductName ) {
+					if(attr == ProductsAttribute.productName ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -144,7 +144,7 @@ public class ProductsServiceImpl extends ProductsService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ProductsAttribute.QuantityPerUnit ) {
+					if(attr == ProductsAttribute.quantityPerUnit ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -161,7 +161,7 @@ public class ProductsServiceImpl extends ProductsService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ProductsAttribute.UnitPrice ) {
+					if(attr == ProductsAttribute.unitPrice ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -178,7 +178,7 @@ public class ProductsServiceImpl extends ProductsService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ProductsAttribute.UnitsInStock ) {
+					if(attr == ProductsAttribute.unitsInStock ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -195,7 +195,7 @@ public class ProductsServiceImpl extends ProductsService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ProductsAttribute.UnitsOnOrder ) {
+					if(attr == ProductsAttribute.unitsOnOrder ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -212,7 +212,7 @@ public class ProductsServiceImpl extends ProductsService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ProductsAttribute.ReorderLevel ) {
+					if(attr == ProductsAttribute.reorderLevel ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -229,7 +229,7 @@ public class ProductsServiceImpl extends ProductsService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == ProductsAttribute.Discontinued ) {
+					if(attr == ProductsAttribute.discontinued ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -257,43 +257,43 @@ public class ProductsServiceImpl extends ProductsService {
 						if(op == Operator.NOT_EQUALS)
 							where =  "ProductID IS NOT NULL";
 					}
-					if(attr == ProductsAttribute.ProductName ) {
+					if(attr == ProductsAttribute.productName ) {
 						if(op == Operator.EQUALS)
 							where =  "ProductName IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "ProductName IS NOT NULL";
 					}
-					if(attr == ProductsAttribute.QuantityPerUnit ) {
+					if(attr == ProductsAttribute.quantityPerUnit ) {
 						if(op == Operator.EQUALS)
 							where =  "QuantityPerUnit IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "QuantityPerUnit IS NOT NULL";
 					}
-					if(attr == ProductsAttribute.UnitPrice ) {
+					if(attr == ProductsAttribute.unitPrice ) {
 						if(op == Operator.EQUALS)
 							where =  "UnitPrice IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "UnitPrice IS NOT NULL";
 					}
-					if(attr == ProductsAttribute.UnitsInStock ) {
+					if(attr == ProductsAttribute.unitsInStock ) {
 						if(op == Operator.EQUALS)
 							where =  "UnitsInStock IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "UnitsInStock IS NOT NULL";
 					}
-					if(attr == ProductsAttribute.UnitsOnOrder ) {
+					if(attr == ProductsAttribute.unitsOnOrder ) {
 						if(op == Operator.EQUALS)
 							where =  "UnitsOnOrder IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "UnitsOnOrder IS NOT NULL";
 					}
-					if(attr == ProductsAttribute.ReorderLevel ) {
+					if(attr == ProductsAttribute.reorderLevel ) {
 						if(op == Operator.EQUALS)
 							where =  "ReorderLevel IS NULL";
 						if(op == Operator.NOT_EQUALS)
 							where =  "ReorderLevel IS NOT NULL";
 					}
-					if(attr == ProductsAttribute.Discontinued ) {
+					if(attr == ProductsAttribute.discontinued ) {
 						if(op == Operator.EQUALS)
 							where =  "Discontinued IS NULL";
 						if(op == Operator.NOT_EQUALS)
@@ -455,7 +455,7 @@ public class ProductsServiceImpl extends ProductsService {
 				.withColumnRenamed("homePage", "Suppliers_homePage")
 				.withColumnRenamed("logEvents", "Suppliers_logEvents"),
 				productsTDOsupplysuppliedProduct.col("relDB_Products_supply_SupplierRef").equalTo(suppliersTDOsupplysupplier.col("relDB_Products_supply_SupplierID")));
-		Dataset<Products> res_Products_supply = res_supply.select( "productId", "ProductName", "QuantityPerUnit", "UnitPrice", "UnitsInStock", "UnitsOnOrder", "ReorderLevel", "Discontinued", "logEvents").as(Encoders.bean(Products.class));
+		Dataset<Products> res_Products_supply = res_supply.select( "productId", "productName", "quantityPerUnit", "unitPrice", "unitsInStock", "unitsOnOrder", "reorderLevel", "discontinued", "logEvents").as(Encoders.bean(Products.class));
 		
 		res_Products_supply = res_Products_supply.dropDuplicates(new String[] {"productId"});
 		datasetsPOJO.add(res_Products_supply);

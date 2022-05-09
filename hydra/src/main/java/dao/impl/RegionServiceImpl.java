@@ -67,7 +67,7 @@ public class RegionServiceImpl extends RegionService {
 				if(attr == RegionAttribute.regionID ) {
 					res.add("RegionID = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == RegionAttribute.RegionDescription ) {
+				if(attr == RegionAttribute.regionDescription ) {
 					res.add("RegionDescription = " + Util.getDelimitedSQLValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
 			}
@@ -109,7 +109,7 @@ public class RegionServiceImpl extends RegionService {
 						preparedValue = Util.getDelimitedSQLValue(cl, preparedValue);
 						preparedValues.add(preparedValue);
 					}
-					if(attr == RegionAttribute.RegionDescription ) {
+					if(attr == RegionAttribute.regionDescription ) {
 						isConditionAttrEncountered = true;
 						String valueString = Util.transformSQLValue(value);
 						String sqlOp = op.getSQLOperator();
@@ -137,7 +137,7 @@ public class RegionServiceImpl extends RegionService {
 						if(op == Operator.NOT_EQUALS)
 							where =  "RegionID IS NOT NULL";
 					}
-					if(attr == RegionAttribute.RegionDescription ) {
+					if(attr == RegionAttribute.regionDescription ) {
 						if(op == Operator.EQUALS)
 							where =  "RegionDescription IS NULL";
 						if(op == Operator.NOT_EQUALS)

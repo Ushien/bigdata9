@@ -319,164 +319,164 @@ public abstract class ShipsService {
 					Integer firstNotNull_shippedOrder_id = Util.getIntegerValue(r.getAs("shippedOrder_0.id"));
 					shippedOrder_res.setId(firstNotNull_shippedOrder_id);
 					// attribute 'Orders.orderDate'
-					LocalDate firstNotNull_shippedOrder_OrderDate = Util.getLocalDateValue(r.getAs("shippedOrder_0.orderDate"));
+					LocalDate firstNotNull_shippedOrder_orderDate = Util.getLocalDateValue(r.getAs("shippedOrder_0.orderDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate shippedOrder_orderDate2 = Util.getLocalDateValue(r.getAs("shippedOrder_" + i + ".orderDate"));
-						if (firstNotNull_shippedOrder_OrderDate != null && shippedOrder_orderDate2 != null && !firstNotNull_shippedOrder_OrderDate.equals(shippedOrder_orderDate2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_shippedOrder_OrderDate + " and " + shippedOrder_orderDate2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_shippedOrder_OrderDate + " and " + shippedOrder_orderDate2 + "." );
+						if (firstNotNull_shippedOrder_orderDate != null && shippedOrder_orderDate2 != null && !firstNotNull_shippedOrder_orderDate.equals(shippedOrder_orderDate2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_shippedOrder_orderDate + " and " + shippedOrder_orderDate2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.orderDate': " + firstNotNull_shippedOrder_orderDate + " and " + shippedOrder_orderDate2 + "." );
 						}
-						if (firstNotNull_shippedOrder_OrderDate == null && shippedOrder_orderDate2 != null) {
-							firstNotNull_shippedOrder_OrderDate = shippedOrder_orderDate2;
+						if (firstNotNull_shippedOrder_orderDate == null && shippedOrder_orderDate2 != null) {
+							firstNotNull_shippedOrder_orderDate = shippedOrder_orderDate2;
 						}
 					}
-					shippedOrder_res.setOrderDate(firstNotNull_shippedOrder_OrderDate);
+					shippedOrder_res.setOrderDate(firstNotNull_shippedOrder_orderDate);
 					// attribute 'Orders.requiredDate'
-					LocalDate firstNotNull_shippedOrder_RequiredDate = Util.getLocalDateValue(r.getAs("shippedOrder_0.requiredDate"));
+					LocalDate firstNotNull_shippedOrder_requiredDate = Util.getLocalDateValue(r.getAs("shippedOrder_0.requiredDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate shippedOrder_requiredDate2 = Util.getLocalDateValue(r.getAs("shippedOrder_" + i + ".requiredDate"));
-						if (firstNotNull_shippedOrder_RequiredDate != null && shippedOrder_requiredDate2 != null && !firstNotNull_shippedOrder_RequiredDate.equals(shippedOrder_requiredDate2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_shippedOrder_RequiredDate + " and " + shippedOrder_requiredDate2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_shippedOrder_RequiredDate + " and " + shippedOrder_requiredDate2 + "." );
+						if (firstNotNull_shippedOrder_requiredDate != null && shippedOrder_requiredDate2 != null && !firstNotNull_shippedOrder_requiredDate.equals(shippedOrder_requiredDate2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_shippedOrder_requiredDate + " and " + shippedOrder_requiredDate2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.requiredDate': " + firstNotNull_shippedOrder_requiredDate + " and " + shippedOrder_requiredDate2 + "." );
 						}
-						if (firstNotNull_shippedOrder_RequiredDate == null && shippedOrder_requiredDate2 != null) {
-							firstNotNull_shippedOrder_RequiredDate = shippedOrder_requiredDate2;
+						if (firstNotNull_shippedOrder_requiredDate == null && shippedOrder_requiredDate2 != null) {
+							firstNotNull_shippedOrder_requiredDate = shippedOrder_requiredDate2;
 						}
 					}
-					shippedOrder_res.setRequiredDate(firstNotNull_shippedOrder_RequiredDate);
+					shippedOrder_res.setRequiredDate(firstNotNull_shippedOrder_requiredDate);
 					// attribute 'Orders.shippedDate'
-					LocalDate firstNotNull_shippedOrder_ShippedDate = Util.getLocalDateValue(r.getAs("shippedOrder_0.shippedDate"));
+					LocalDate firstNotNull_shippedOrder_shippedDate = Util.getLocalDateValue(r.getAs("shippedOrder_0.shippedDate"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						LocalDate shippedOrder_shippedDate2 = Util.getLocalDateValue(r.getAs("shippedOrder_" + i + ".shippedDate"));
-						if (firstNotNull_shippedOrder_ShippedDate != null && shippedOrder_shippedDate2 != null && !firstNotNull_shippedOrder_ShippedDate.equals(shippedOrder_shippedDate2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_shippedOrder_ShippedDate + " and " + shippedOrder_shippedDate2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_shippedOrder_ShippedDate + " and " + shippedOrder_shippedDate2 + "." );
+						if (firstNotNull_shippedOrder_shippedDate != null && shippedOrder_shippedDate2 != null && !firstNotNull_shippedOrder_shippedDate.equals(shippedOrder_shippedDate2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_shippedOrder_shippedDate + " and " + shippedOrder_shippedDate2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shippedDate': " + firstNotNull_shippedOrder_shippedDate + " and " + shippedOrder_shippedDate2 + "." );
 						}
-						if (firstNotNull_shippedOrder_ShippedDate == null && shippedOrder_shippedDate2 != null) {
-							firstNotNull_shippedOrder_ShippedDate = shippedOrder_shippedDate2;
+						if (firstNotNull_shippedOrder_shippedDate == null && shippedOrder_shippedDate2 != null) {
+							firstNotNull_shippedOrder_shippedDate = shippedOrder_shippedDate2;
 						}
 					}
-					shippedOrder_res.setShippedDate(firstNotNull_shippedOrder_ShippedDate);
+					shippedOrder_res.setShippedDate(firstNotNull_shippedOrder_shippedDate);
 					// attribute 'Orders.freight'
-					Double firstNotNull_shippedOrder_Freight = Util.getDoubleValue(r.getAs("shippedOrder_0.freight"));
+					Double firstNotNull_shippedOrder_freight = Util.getDoubleValue(r.getAs("shippedOrder_0.freight"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						Double shippedOrder_freight2 = Util.getDoubleValue(r.getAs("shippedOrder_" + i + ".freight"));
-						if (firstNotNull_shippedOrder_Freight != null && shippedOrder_freight2 != null && !firstNotNull_shippedOrder_Freight.equals(shippedOrder_freight2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_shippedOrder_Freight + " and " + shippedOrder_freight2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_shippedOrder_Freight + " and " + shippedOrder_freight2 + "." );
+						if (firstNotNull_shippedOrder_freight != null && shippedOrder_freight2 != null && !firstNotNull_shippedOrder_freight.equals(shippedOrder_freight2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_shippedOrder_freight + " and " + shippedOrder_freight2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.freight': " + firstNotNull_shippedOrder_freight + " and " + shippedOrder_freight2 + "." );
 						}
-						if (firstNotNull_shippedOrder_Freight == null && shippedOrder_freight2 != null) {
-							firstNotNull_shippedOrder_Freight = shippedOrder_freight2;
+						if (firstNotNull_shippedOrder_freight == null && shippedOrder_freight2 != null) {
+							firstNotNull_shippedOrder_freight = shippedOrder_freight2;
 						}
 					}
-					shippedOrder_res.setFreight(firstNotNull_shippedOrder_Freight);
+					shippedOrder_res.setFreight(firstNotNull_shippedOrder_freight);
 					// attribute 'Orders.shipName'
-					String firstNotNull_shippedOrder_ShipName = Util.getStringValue(r.getAs("shippedOrder_0.shipName"));
+					String firstNotNull_shippedOrder_shipName = Util.getStringValue(r.getAs("shippedOrder_0.shipName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shippedOrder_shipName2 = Util.getStringValue(r.getAs("shippedOrder_" + i + ".shipName"));
-						if (firstNotNull_shippedOrder_ShipName != null && shippedOrder_shipName2 != null && !firstNotNull_shippedOrder_ShipName.equals(shippedOrder_shipName2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_shippedOrder_ShipName + " and " + shippedOrder_shipName2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_shippedOrder_ShipName + " and " + shippedOrder_shipName2 + "." );
+						if (firstNotNull_shippedOrder_shipName != null && shippedOrder_shipName2 != null && !firstNotNull_shippedOrder_shipName.equals(shippedOrder_shipName2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_shippedOrder_shipName + " and " + shippedOrder_shipName2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipName': " + firstNotNull_shippedOrder_shipName + " and " + shippedOrder_shipName2 + "." );
 						}
-						if (firstNotNull_shippedOrder_ShipName == null && shippedOrder_shipName2 != null) {
-							firstNotNull_shippedOrder_ShipName = shippedOrder_shipName2;
+						if (firstNotNull_shippedOrder_shipName == null && shippedOrder_shipName2 != null) {
+							firstNotNull_shippedOrder_shipName = shippedOrder_shipName2;
 						}
 					}
-					shippedOrder_res.setShipName(firstNotNull_shippedOrder_ShipName);
+					shippedOrder_res.setShipName(firstNotNull_shippedOrder_shipName);
 					// attribute 'Orders.shipAddress'
-					String firstNotNull_shippedOrder_ShipAddress = Util.getStringValue(r.getAs("shippedOrder_0.shipAddress"));
+					String firstNotNull_shippedOrder_shipAddress = Util.getStringValue(r.getAs("shippedOrder_0.shipAddress"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shippedOrder_shipAddress2 = Util.getStringValue(r.getAs("shippedOrder_" + i + ".shipAddress"));
-						if (firstNotNull_shippedOrder_ShipAddress != null && shippedOrder_shipAddress2 != null && !firstNotNull_shippedOrder_ShipAddress.equals(shippedOrder_shipAddress2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_shippedOrder_ShipAddress + " and " + shippedOrder_shipAddress2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_shippedOrder_ShipAddress + " and " + shippedOrder_shipAddress2 + "." );
+						if (firstNotNull_shippedOrder_shipAddress != null && shippedOrder_shipAddress2 != null && !firstNotNull_shippedOrder_shipAddress.equals(shippedOrder_shipAddress2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_shippedOrder_shipAddress + " and " + shippedOrder_shipAddress2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipAddress': " + firstNotNull_shippedOrder_shipAddress + " and " + shippedOrder_shipAddress2 + "." );
 						}
-						if (firstNotNull_shippedOrder_ShipAddress == null && shippedOrder_shipAddress2 != null) {
-							firstNotNull_shippedOrder_ShipAddress = shippedOrder_shipAddress2;
+						if (firstNotNull_shippedOrder_shipAddress == null && shippedOrder_shipAddress2 != null) {
+							firstNotNull_shippedOrder_shipAddress = shippedOrder_shipAddress2;
 						}
 					}
-					shippedOrder_res.setShipAddress(firstNotNull_shippedOrder_ShipAddress);
+					shippedOrder_res.setShipAddress(firstNotNull_shippedOrder_shipAddress);
 					// attribute 'Orders.shipCity'
-					String firstNotNull_shippedOrder_ShipCity = Util.getStringValue(r.getAs("shippedOrder_0.shipCity"));
+					String firstNotNull_shippedOrder_shipCity = Util.getStringValue(r.getAs("shippedOrder_0.shipCity"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shippedOrder_shipCity2 = Util.getStringValue(r.getAs("shippedOrder_" + i + ".shipCity"));
-						if (firstNotNull_shippedOrder_ShipCity != null && shippedOrder_shipCity2 != null && !firstNotNull_shippedOrder_ShipCity.equals(shippedOrder_shipCity2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_shippedOrder_ShipCity + " and " + shippedOrder_shipCity2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_shippedOrder_ShipCity + " and " + shippedOrder_shipCity2 + "." );
+						if (firstNotNull_shippedOrder_shipCity != null && shippedOrder_shipCity2 != null && !firstNotNull_shippedOrder_shipCity.equals(shippedOrder_shipCity2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_shippedOrder_shipCity + " and " + shippedOrder_shipCity2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCity': " + firstNotNull_shippedOrder_shipCity + " and " + shippedOrder_shipCity2 + "." );
 						}
-						if (firstNotNull_shippedOrder_ShipCity == null && shippedOrder_shipCity2 != null) {
-							firstNotNull_shippedOrder_ShipCity = shippedOrder_shipCity2;
+						if (firstNotNull_shippedOrder_shipCity == null && shippedOrder_shipCity2 != null) {
+							firstNotNull_shippedOrder_shipCity = shippedOrder_shipCity2;
 						}
 					}
-					shippedOrder_res.setShipCity(firstNotNull_shippedOrder_ShipCity);
+					shippedOrder_res.setShipCity(firstNotNull_shippedOrder_shipCity);
 					// attribute 'Orders.shipRegion'
-					String firstNotNull_shippedOrder_ShipRegion = Util.getStringValue(r.getAs("shippedOrder_0.shipRegion"));
+					String firstNotNull_shippedOrder_shipRegion = Util.getStringValue(r.getAs("shippedOrder_0.shipRegion"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shippedOrder_shipRegion2 = Util.getStringValue(r.getAs("shippedOrder_" + i + ".shipRegion"));
-						if (firstNotNull_shippedOrder_ShipRegion != null && shippedOrder_shipRegion2 != null && !firstNotNull_shippedOrder_ShipRegion.equals(shippedOrder_shipRegion2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_shippedOrder_ShipRegion + " and " + shippedOrder_shipRegion2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_shippedOrder_ShipRegion + " and " + shippedOrder_shipRegion2 + "." );
+						if (firstNotNull_shippedOrder_shipRegion != null && shippedOrder_shipRegion2 != null && !firstNotNull_shippedOrder_shipRegion.equals(shippedOrder_shipRegion2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_shippedOrder_shipRegion + " and " + shippedOrder_shipRegion2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipRegion': " + firstNotNull_shippedOrder_shipRegion + " and " + shippedOrder_shipRegion2 + "." );
 						}
-						if (firstNotNull_shippedOrder_ShipRegion == null && shippedOrder_shipRegion2 != null) {
-							firstNotNull_shippedOrder_ShipRegion = shippedOrder_shipRegion2;
+						if (firstNotNull_shippedOrder_shipRegion == null && shippedOrder_shipRegion2 != null) {
+							firstNotNull_shippedOrder_shipRegion = shippedOrder_shipRegion2;
 						}
 					}
-					shippedOrder_res.setShipRegion(firstNotNull_shippedOrder_ShipRegion);
+					shippedOrder_res.setShipRegion(firstNotNull_shippedOrder_shipRegion);
 					// attribute 'Orders.shipPostalCode'
-					String firstNotNull_shippedOrder_ShipPostalCode = Util.getStringValue(r.getAs("shippedOrder_0.shipPostalCode"));
+					String firstNotNull_shippedOrder_shipPostalCode = Util.getStringValue(r.getAs("shippedOrder_0.shipPostalCode"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shippedOrder_shipPostalCode2 = Util.getStringValue(r.getAs("shippedOrder_" + i + ".shipPostalCode"));
-						if (firstNotNull_shippedOrder_ShipPostalCode != null && shippedOrder_shipPostalCode2 != null && !firstNotNull_shippedOrder_ShipPostalCode.equals(shippedOrder_shipPostalCode2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_shippedOrder_ShipPostalCode + " and " + shippedOrder_shipPostalCode2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_shippedOrder_ShipPostalCode + " and " + shippedOrder_shipPostalCode2 + "." );
+						if (firstNotNull_shippedOrder_shipPostalCode != null && shippedOrder_shipPostalCode2 != null && !firstNotNull_shippedOrder_shipPostalCode.equals(shippedOrder_shipPostalCode2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_shippedOrder_shipPostalCode + " and " + shippedOrder_shipPostalCode2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipPostalCode': " + firstNotNull_shippedOrder_shipPostalCode + " and " + shippedOrder_shipPostalCode2 + "." );
 						}
-						if (firstNotNull_shippedOrder_ShipPostalCode == null && shippedOrder_shipPostalCode2 != null) {
-							firstNotNull_shippedOrder_ShipPostalCode = shippedOrder_shipPostalCode2;
+						if (firstNotNull_shippedOrder_shipPostalCode == null && shippedOrder_shipPostalCode2 != null) {
+							firstNotNull_shippedOrder_shipPostalCode = shippedOrder_shipPostalCode2;
 						}
 					}
-					shippedOrder_res.setShipPostalCode(firstNotNull_shippedOrder_ShipPostalCode);
+					shippedOrder_res.setShipPostalCode(firstNotNull_shippedOrder_shipPostalCode);
 					// attribute 'Orders.shipCountry'
-					String firstNotNull_shippedOrder_ShipCountry = Util.getStringValue(r.getAs("shippedOrder_0.shipCountry"));
+					String firstNotNull_shippedOrder_shipCountry = Util.getStringValue(r.getAs("shippedOrder_0.shipCountry"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shippedOrder_shipCountry2 = Util.getStringValue(r.getAs("shippedOrder_" + i + ".shipCountry"));
-						if (firstNotNull_shippedOrder_ShipCountry != null && shippedOrder_shipCountry2 != null && !firstNotNull_shippedOrder_ShipCountry.equals(shippedOrder_shipCountry2)) {
-							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_shippedOrder_ShipCountry + " and " + shippedOrder_shipCountry2 + "." );
-							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_shippedOrder_ShipCountry + " and " + shippedOrder_shipCountry2 + "." );
+						if (firstNotNull_shippedOrder_shipCountry != null && shippedOrder_shipCountry2 != null && !firstNotNull_shippedOrder_shipCountry.equals(shippedOrder_shipCountry2)) {
+							ships_res.addLogEvent("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_shippedOrder_shipCountry + " and " + shippedOrder_shipCountry2 + "." );
+							logger.warn("Data consistency problem for [Orders - id :"+shippedOrder_res.getId()+"]: different values found for attribute 'Orders.shipCountry': " + firstNotNull_shippedOrder_shipCountry + " and " + shippedOrder_shipCountry2 + "." );
 						}
-						if (firstNotNull_shippedOrder_ShipCountry == null && shippedOrder_shipCountry2 != null) {
-							firstNotNull_shippedOrder_ShipCountry = shippedOrder_shipCountry2;
+						if (firstNotNull_shippedOrder_shipCountry == null && shippedOrder_shipCountry2 != null) {
+							firstNotNull_shippedOrder_shipCountry = shippedOrder_shipCountry2;
 						}
 					}
-					shippedOrder_res.setShipCountry(firstNotNull_shippedOrder_ShipCountry);
+					shippedOrder_res.setShipCountry(firstNotNull_shippedOrder_shipCountry);
 					// attribute 'Shippers.shipperID'
 					Integer firstNotNull_shipper_shipperID = Util.getIntegerValue(r.getAs("shipper_0.shipperID"));
 					shipper_res.setShipperID(firstNotNull_shipper_shipperID);
 					// attribute 'Shippers.companyName'
-					String firstNotNull_shipper_CompanyName = Util.getStringValue(r.getAs("shipper_0.companyName"));
+					String firstNotNull_shipper_companyName = Util.getStringValue(r.getAs("shipper_0.companyName"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shipper_companyName2 = Util.getStringValue(r.getAs("shipper_" + i + ".companyName"));
-						if (firstNotNull_shipper_CompanyName != null && shipper_companyName2 != null && !firstNotNull_shipper_CompanyName.equals(shipper_companyName2)) {
-							ships_res.addLogEvent("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_shipper_CompanyName + " and " + shipper_companyName2 + "." );
-							logger.warn("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_shipper_CompanyName + " and " + shipper_companyName2 + "." );
+						if (firstNotNull_shipper_companyName != null && shipper_companyName2 != null && !firstNotNull_shipper_companyName.equals(shipper_companyName2)) {
+							ships_res.addLogEvent("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_shipper_companyName + " and " + shipper_companyName2 + "." );
+							logger.warn("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.companyName': " + firstNotNull_shipper_companyName + " and " + shipper_companyName2 + "." );
 						}
-						if (firstNotNull_shipper_CompanyName == null && shipper_companyName2 != null) {
-							firstNotNull_shipper_CompanyName = shipper_companyName2;
+						if (firstNotNull_shipper_companyName == null && shipper_companyName2 != null) {
+							firstNotNull_shipper_companyName = shipper_companyName2;
 						}
 					}
-					shipper_res.setCompanyName(firstNotNull_shipper_CompanyName);
+					shipper_res.setCompanyName(firstNotNull_shipper_companyName);
 					// attribute 'Shippers.phone'
-					String firstNotNull_shipper_Phone = Util.getStringValue(r.getAs("shipper_0.phone"));
+					String firstNotNull_shipper_phone = Util.getStringValue(r.getAs("shipper_0.phone"));
 					for (int i = 1; i < datasetsPOJO.size(); i++) {
 						String shipper_phone2 = Util.getStringValue(r.getAs("shipper_" + i + ".phone"));
-						if (firstNotNull_shipper_Phone != null && shipper_phone2 != null && !firstNotNull_shipper_Phone.equals(shipper_phone2)) {
-							ships_res.addLogEvent("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_shipper_Phone + " and " + shipper_phone2 + "." );
-							logger.warn("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_shipper_Phone + " and " + shipper_phone2 + "." );
+						if (firstNotNull_shipper_phone != null && shipper_phone2 != null && !firstNotNull_shipper_phone.equals(shipper_phone2)) {
+							ships_res.addLogEvent("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_shipper_phone + " and " + shipper_phone2 + "." );
+							logger.warn("Data consistency problem for [Shippers - id :"+shipper_res.getShipperID()+"]: different values found for attribute 'Shippers.phone': " + firstNotNull_shipper_phone + " and " + shipper_phone2 + "." );
 						}
-						if (firstNotNull_shipper_Phone == null && shipper_phone2 != null) {
-							firstNotNull_shipper_Phone = shipper_phone2;
+						if (firstNotNull_shipper_phone == null && shipper_phone2 != null) {
+							firstNotNull_shipper_phone = shipper_phone2;
 						}
 					}
-					shipper_res.setPhone(firstNotNull_shipper_Phone);
+					shipper_res.setPhone(firstNotNull_shipper_phone);
 	
 					ships_res.setShippedOrder(shippedOrder_res);
 					ships_res.setShipper(shipper_res);

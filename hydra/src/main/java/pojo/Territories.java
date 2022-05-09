@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Territories extends LoggingPojo {
 
 	private String territoryID;
-	private String TerritoryDescription;
+	private String territoryDescription;
 
 	public enum locatedIn {
 		territories
@@ -28,9 +28,9 @@ public class Territories extends LoggingPojo {
 	/*
 	* Constructor on simple attribute 
 	*/
-	public Territories(String territoryID,String TerritoryDescription) {
+	public Territories(String territoryID,String territoryDescription) {
 		this.territoryID = territoryID;
-		this.TerritoryDescription = TerritoryDescription;
+		this.territoryDescription = territoryDescription;
 	}
 	@Override
     public Object clone() throws CloneNotSupportedException {
@@ -42,7 +42,7 @@ public class Territories extends LoggingPojo {
 		if(this==o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Territories Territories = (Territories) o;
-		boolean eqSimpleAttr = Objects.equals(territoryID,Territories.territoryID) && Objects.equals(TerritoryDescription,Territories.TerritoryDescription);
+		boolean eqSimpleAttr = Objects.equals(territoryID,Territories.territoryID) && Objects.equals(territoryDescription,Territories.territoryDescription);
 		boolean eqComplexAttr = false;
 		eqComplexAttr = true && 
 	Objects.equals(region, Territories.region) &&
@@ -54,7 +54,7 @@ public class Territories extends LoggingPojo {
 	@Override
 	public String toString(){
 		return "Territories { " + "territoryID="+territoryID +", "+
-					"TerritoryDescription="+TerritoryDescription +"}"; 
+					"territoryDescription="+territoryDescription +"}"; 
 	}
 	
 	public String getTerritoryID() {
@@ -65,11 +65,11 @@ public class Territories extends LoggingPojo {
 		this.territoryID = territoryID;
 	}
 	public String getTerritoryDescription() {
-		return TerritoryDescription;
+		return territoryDescription;
 	}
 
-	public void setTerritoryDescription(String TerritoryDescription) {
-		this.TerritoryDescription = TerritoryDescription;
+	public void setTerritoryDescription(String territoryDescription) {
+		this.territoryDescription = territoryDescription;
 	}
 
 	

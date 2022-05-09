@@ -1,5 +1,5 @@
 package conditions;
 
 public enum OrdersAttribute implements Attributes{
-	id, OrderDate, RequiredDate, ShippedDate, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry
+	id, orderDate, requiredDate, shippedDate, freight, shipName, shipAddress, shipCity, shipRegion, shipPostalCode, shipCountry
 }

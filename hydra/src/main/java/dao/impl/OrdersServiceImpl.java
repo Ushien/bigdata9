@@ -68,58 +68,58 @@ public class OrdersServiceImpl extends OrdersService {
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.OrderDate ) {
+				if(attr == OrdersAttribute.orderDate ) {
 					String fieldName = "OrderDate";
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.RequiredDate ) {
+				if(attr == OrdersAttribute.requiredDate ) {
 					String fieldName = "RequiredDate";
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.ShippedDate ) {
+				if(attr == OrdersAttribute.shippedDate ) {
 					String fieldName = "ShippedDate";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.Freight ) {
+				if(attr == OrdersAttribute.freight ) {
 					String fieldName = "Freight";
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.ShipName ) {
+				if(attr == OrdersAttribute.shipName ) {
 					String fieldName = "ShipName";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.ShipAddress ) {
+				if(attr == OrdersAttribute.shipAddress ) {
 					String fieldName = "ShipAddress";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.ShipCity ) {
+				if(attr == OrdersAttribute.shipCity ) {
 					String fieldName = "ShipCity";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.ShipRegion ) {
+				if(attr == OrdersAttribute.shipRegion ) {
 					String fieldName = "ShipRegion";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.ShipPostalCode ) {
+				if(attr == OrdersAttribute.shipPostalCode ) {
 					String fieldName = "ShipPostalCode";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
 					res.add(fieldName + " : " + Util.getDelimitedMongoValue((value == null ? null : value.getClass()), (value == null ? null : value.toString())));
 				}
-				if(attr == OrdersAttribute.ShipCountry ) {
+				if(attr == OrdersAttribute.shipCountry ) {
 					String fieldName = "ShipCountry";
 					fieldName = "ShipmentInfo." + fieldName;
 					fieldName = "'" + fieldName + "'";
@@ -161,7 +161,7 @@ public class OrdersServiceImpl extends OrdersService {
 	
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.OrderDate ) {
+					if(attr == OrdersAttribute.orderDate ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -175,7 +175,7 @@ public class OrdersServiceImpl extends OrdersService {
 	
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.RequiredDate ) {
+					if(attr == OrdersAttribute.requiredDate ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -189,7 +189,7 @@ public class OrdersServiceImpl extends OrdersService {
 	
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.ShippedDate ) {
+					if(attr == OrdersAttribute.shippedDate ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -204,7 +204,7 @@ public class OrdersServiceImpl extends OrdersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.Freight ) {
+					if(attr == OrdersAttribute.freight ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -218,7 +218,7 @@ public class OrdersServiceImpl extends OrdersService {
 	
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.ShipName ) {
+					if(attr == OrdersAttribute.shipName ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -233,7 +233,7 @@ public class OrdersServiceImpl extends OrdersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.ShipAddress ) {
+					if(attr == OrdersAttribute.shipAddress ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -248,7 +248,7 @@ public class OrdersServiceImpl extends OrdersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.ShipCity ) {
+					if(attr == OrdersAttribute.shipCity ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -263,7 +263,7 @@ public class OrdersServiceImpl extends OrdersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.ShipRegion ) {
+					if(attr == OrdersAttribute.shipRegion ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -278,7 +278,7 @@ public class OrdersServiceImpl extends OrdersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.ShipPostalCode ) {
+					if(attr == OrdersAttribute.shipPostalCode ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -293,7 +293,7 @@ public class OrdersServiceImpl extends OrdersService {
 						res = "ShipmentInfo." + res;
 					res = "'" + res;
 					}
-					if(attr == OrdersAttribute.ShipCountry ) {
+					if(attr == OrdersAttribute.shipCountry ) {
 						isConditionAttrEncountered = true;
 					
 						String mongoOp = op.getMongoDBOperator();
@@ -380,7 +380,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.OrderDate ) {
+					if(attr == OrdersAttribute.orderDate ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -399,7 +399,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.RequiredDate ) {
+					if(attr == OrdersAttribute.requiredDate ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -418,7 +418,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.ShippedDate ) {
+					if(attr == OrdersAttribute.shippedDate ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -440,7 +440,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.Freight ) {
+					if(attr == OrdersAttribute.freight ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -459,7 +459,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.ShipName ) {
+					if(attr == OrdersAttribute.shipName ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -481,7 +481,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.ShipAddress ) {
+					if(attr == OrdersAttribute.shipAddress ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -503,7 +503,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.ShipCity ) {
+					if(attr == OrdersAttribute.shipCity ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -525,7 +525,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.ShipRegion ) {
+					if(attr == OrdersAttribute.shipRegion ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -547,7 +547,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.ShipPostalCode ) {
+					if(attr == OrdersAttribute.shipPostalCode ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -569,7 +569,7 @@ public class OrdersServiceImpl extends OrdersService {
 						else
 							query = bson;
 					}
-					if(attr == OrdersAttribute.ShipCountry ) {
+					if(attr == OrdersAttribute.shipCountry ) {
 						isConditionAttrEncountered = true;
 						String mongoOp = op.getMongoDBOperator();
 						String preparedValue = valueString;
@@ -678,7 +678,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.OrderDate for field OrderDate			
+					// 	attribute Orders.orderDate for field OrderDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("OrderDate")) {
 						if(nestedRow.getAs("OrderDate")==null)
@@ -688,7 +688,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.RequiredDate for field RequiredDate			
+					// 	attribute Orders.requiredDate for field RequiredDate			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("RequiredDate")) {
 						if(nestedRow.getAs("RequiredDate")==null)
@@ -698,7 +698,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.Freight for field Freight			
+					// 	attribute Orders.freight for field Freight			
 					nestedRow =  r1;
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("Freight")) {
 						if(nestedRow.getAs("Freight")==null)
@@ -708,7 +708,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShippedDate for field ShippedDate			
+					// 	attribute Orders.shippedDate for field ShippedDate			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShippedDate")) {
@@ -719,7 +719,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipName for field ShipName			
+					// 	attribute Orders.shipName for field ShipName			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipName")) {
@@ -730,7 +730,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipAddress for field ShipAddress			
+					// 	attribute Orders.shipAddress for field ShipAddress			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipAddress")) {
@@ -741,7 +741,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCity for field ShipCity			
+					// 	attribute Orders.shipCity for field ShipCity			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCity")) {
@@ -752,7 +752,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipRegion for field ShipRegion			
+					// 	attribute Orders.shipRegion for field ShipRegion			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipRegion")) {
@@ -763,7 +763,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipPostalCode for field ShipPostalCode			
+					// 	attribute Orders.shipPostalCode for field ShipPostalCode			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipPostalCode")) {
@@ -774,7 +774,7 @@ public class OrdersServiceImpl extends OrdersService {
 							toAdd1 = true;					
 							}
 					}
-					// 	attribute Orders.ShipCountry for field ShipCountry			
+					// 	attribute Orders.shipCountry for field ShipCountry			
 					nestedRow =  r1;
 					nestedRow = (nestedRow == null) ? null : (Row) nestedRow.getAs("ShipmentInfo");
 					if(nestedRow != null && Arrays.asList(nestedRow.schema().fieldNames()).contains("ShipCountry")) {
@@ -841,7 +841,7 @@ public class OrdersServiceImpl extends OrdersService {
 				.withColumnRenamed("fax", "Customers_fax")
 				.withColumnRenamed("logEvents", "Customers_logEvents"),
 				ordersTDOboughtboughtOrder.col("mongoDB_Orders_bought_CustomerRef").equalTo(customersTDOboughtcustomer.col("mongoDB_Orders_bought_custid")));
-		Dataset<Orders> res_Orders_bought = res_bought.select( "id", "OrderDate", "RequiredDate", "ShippedDate", "Freight", "ShipName", "ShipAddress", "ShipCity", "ShipRegion", "ShipPostalCode", "ShipCountry", "logEvents").as(Encoders.bean(Orders.class));
+		Dataset<Orders> res_Orders_bought = res_bought.select( "id", "orderDate", "requiredDate", "shippedDate", "freight", "shipName", "shipAddress", "shipCity", "shipRegion", "shipPostalCode", "shipCountry", "logEvents").as(Encoders.bean(Orders.class));
 		
 		res_Orders_bought = res_Orders_bought.dropDuplicates(new String[] {"id"});
 		datasetsPOJO.add(res_Orders_bought);
@@ -877,7 +877,7 @@ public class OrdersServiceImpl extends OrdersService {
 			.withColumnRenamed("logEvents", "Customers_logEvents")
 			.join(ordersTDOpurchasesboughtOrder,
 				functions.array_contains(customersTDOpurchasescustomer.col("kvDB_CustomersPurchased_purchases_orderref"),ordersTDOpurchasesboughtOrder.col("kvDB_CustomersPurchased_purchases_OrderID")));
-		Dataset<Orders> res_Orders_purchases = res_purchases.select( "id", "OrderDate", "RequiredDate", "ShippedDate", "Freight", "ShipName", "ShipAddress", "ShipCity", "ShipRegion", "ShipPostalCode", "ShipCountry", "logEvents").as(Encoders.bean(Orders.class));
+		Dataset<Orders> res_Orders_purchases = res_purchases.select( "id", "orderDate", "requiredDate", "shippedDate", "freight", "shipName", "shipAddress", "shipCity", "shipRegion", "shipPostalCode", "shipCountry", "logEvents").as(Encoders.bean(Orders.class));
 		res_Orders_purchases = res_Orders_purchases.dropDuplicates(new String[] {"id"});
 		datasetsPOJO.add(res_Orders_purchases);
 		
@@ -940,7 +940,7 @@ public class OrdersServiceImpl extends OrdersService {
 				.withColumnRenamed("salary", "Employees_salary")
 				.withColumnRenamed("logEvents", "Employees_logEvents"),
 				ordersTDOencodedprocessedOrder.col("mongoDB_Orders_encoded_EmployeeRef").equalTo(employeesTDOencodedemployeeInCharge.col("mongoDB_Orders_encoded_EmployeeID")));
-		Dataset<Orders> res_Orders_encoded = res_encoded.select( "id", "OrderDate", "RequiredDate", "ShippedDate", "Freight", "ShipName", "ShipAddress", "ShipCity", "ShipRegion", "ShipPostalCode", "ShipCountry", "logEvents").as(Encoders.bean(Orders.class));
+		Dataset<Orders> res_Orders_encoded = res_encoded.select( "id", "orderDate", "requiredDate", "shippedDate", "freight", "shipName", "shipAddress", "shipCity", "shipRegion", "shipPostalCode", "shipCountry", "logEvents").as(Encoders.bean(Orders.class));
 		
 		res_Orders_encoded = res_Orders_encoded.dropDuplicates(new String[] {"id"});
 		datasetsPOJO.add(res_Orders_encoded);
